@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ff5c61",
+                        "background-light": "#f8f5f5",
+                        "background-dark": "#230f0f",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .fill-1 { font-variation-settings: 'FILL' 1; }
+    </style>
+</head>
+<body class="bg-[#F7F7F7] dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<!-- Header/Navigation -->
+<main class="mx-auto flex w-full max-w-[1280px] flex-1 flex-col px-10 py-10">
+<!-- Page Title Section -->
+<div class="mb-8">
+<h1 class="text-3xl font-extrabold text-slate-800 dark:text-slate-100 tracking-tight">Manage Availability</h1>
+<p class="mt-2 text-slate-500 dark:text-slate-400 text-lg">Block off dates you are unavailable to prevent double-booking</p>
+</div>
+<!-- Two-Column Layout -->
+<div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
+<!-- Left Column: Calendar Card -->
+<div class="lg:col-span-2">
+<div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-8 shadow-sm">
+<div class="flex items-center justify-between mb-8">
+<h3 class="text-xl font-bold text-slate-800 dark:text-slate-200"><div class="flex gap-3">
+<select class="rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 px-3 py-2 text-sm font-semibold focus:border-primary focus:ring-primary outline-none">
+<option selected="">October</option>
+<option>November</option>
+<option>December</option>
+<option>January</option>
+<option>February</option>
+<option>March</option>
+<option>April</option>
+<option>May</option>
+<option>June</option>
+<option>July</option>
+<option>August</option>
+<option>September</option>
+</select>
+<select class="rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 px-3 py-2 text-sm font-semibold focus:border-primary focus:ring-primary outline-none">
+<option selected="">2023</option>
+<option>2024</option>
+<option>2025</option>
+</select>
+</div></h3>
+<div class="flex gap-2">
+<button class="flex size-10 items-center justify-center rounded-lg border border-slate-200 dark:border-slate-700 hover:bg-slate-50 transition-colors">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="flex size-10 items-center justify-center rounded-lg border border-slate-200 dark:border-slate-700 hover:bg-slate-50 transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Calendar Grid -->
+<div class="grid grid-cols-7 gap-px overflow-hidden rounded-lg bg-slate-100 dark:bg-slate-800 border border-slate-100 dark:border-slate-800">
+<!-- Days Header -->
+<div class="bg-slate-50 dark:bg-slate-900 py-3 text-center text-xs font-bold uppercase tracking-wider text-slate-400">Sun</div>
+<div class="bg-slate-50 dark:bg-slate-900 py-3 text-center text-xs font-bold uppercase tracking-wider text-slate-400">Mon</div>
+<div class="bg-slate-50 dark:bg-slate-900 py-3 text-center text-xs font-bold uppercase tracking-wider text-slate-400">Tue</div>
+<div class="bg-slate-50 dark:bg-slate-900 py-3 text-center text-xs font-bold uppercase tracking-wider text-slate-400">Wed</div>
+<div class="bg-slate-50 dark:bg-slate-900 py-3 text-center text-xs font-bold uppercase tracking-wider text-slate-400">Thu</div>
+<div class="bg-slate-50 dark:bg-slate-900 py-3 text-center text-xs font-bold uppercase tracking-wider text-slate-400">Fri</div>
+<div class="bg-slate-50 dark:bg-slate-900 py-3 text-center text-xs font-bold uppercase tracking-wider text-slate-400">Sat</div>
+<!-- Past Dates -->
+<div class="bg-slate-50/50 dark:bg-slate-900/50 min-h-[100px] p-2 opacity-40">
+<span class="text-sm font-medium text-slate-400">24</span>
+</div>
+<div class="bg-slate-50/50 dark:bg-slate-900/50 min-h-[100px] p-2 opacity-40">
+<span class="text-sm font-medium text-slate-400">25</span>
+</div>
+<div class="bg-slate-50/50 dark:bg-slate-900/50 min-h-[100px] p-2 opacity-40">
+<span class="text-sm font-medium text-slate-400">26</span>
+</div>
+<div class="bg-slate-50/50 dark:bg-slate-900/50 min-h-[100px] p-2 opacity-40">
+<span class="text-sm font-medium text-slate-400">27</span>
+</div>
+<div class="bg-slate-50/50 dark:bg-slate-900/50 min-h-[100px] p-2 opacity-40">
+<span class="text-sm font-medium text-slate-400">28</span>
+</div>
+<div class="bg-slate-50/50 dark:bg-slate-900/50 min-h-[100px] p-2 opacity-40">
+<span class="text-sm font-medium text-slate-400">29</span>
+</div>
+<div class="bg-slate-50/50 dark:bg-slate-900/50 min-h-[100px] p-2 opacity-40">
+<span class="text-sm font-medium text-slate-400">30</span>
+</div>
+<!-- Current Month Dates -->
+<div class="bg-white dark:bg-slate-900 min-h-[100px] p-2 group cursor-pointer hover:bg-slate-50 transition-colors">
+<span class="text-sm font-bold text-slate-700 dark:text-slate-300">1</span>
+</div>
+<div class="bg-white dark:bg-slate-900 min-h-[100px] p-2 group cursor-pointer hover:bg-slate-50 transition-colors">
+<span class="text-sm font-bold text-slate-700 dark:text-slate-300">2</span>
+</div>
+<div class="bg-slate-100 dark:bg-slate-800 min-h-[100px] p-2 relative">
+<span class="text-sm font-bold text-slate-700 dark:text-slate-300">3</span>
+<div class="absolute bottom-2 right-2 flex items-center gap-1">
+<div class="size-2 rounded-full bg-primary"></div>
+<span class="text-[10px] font-bold text-slate-500">Booking</span>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-900 min-h-[100px] p-2 group cursor-pointer hover:bg-slate-50 transition-colors">
+<span class="text-sm font-bold text-slate-700 dark:text-slate-300">4</span>
+</div>
+<div class="bg-white dark:bg-slate-900 min-h-[100px] p-2 group cursor-pointer hover:bg-slate-50 transition-colors">
+<span class="text-sm font-bold text-slate-700 dark:text-slate-300">5</span>
+</div>
+<div class="bg-white dark:bg-slate-900 min-h-[100px] p-2 group cursor-pointer hover:bg-slate-50 transition-colors">
+<span class="text-sm font-bold text-slate-700 dark:text-slate-300">6</span>
+</div>
+<div class="bg-white dark:bg-slate-900 min-h-[100px] p-2 group cursor-pointer hover:bg-slate-50 transition-colors">
+<span class="text-sm font-bold text-slate-700 dark:text-slate-300">7</span>
+</div>
+<!-- Selected Range 12-14 -->
+<div class="bg-white dark:bg-slate-900 min-h-[100px] p-2 group cursor-pointer hover:bg-slate-50 transition-colors">
+<span class="text-sm font-bold text-slate-700 dark:text-slate-300">8</span>
+</div>
+<div class="bg-white dark:bg-slate-900 min-h-[100px] p-2 group cursor-pointer hover:bg-slate-50 transition-colors">
+<span class="text-sm font-bold text-slate-700 dark:text-slate-300">9</span>
+</div>
+<div class="bg-white dark:bg-slate-900 min-h-[100px] p-2 group cursor-pointer hover:bg-slate-50 transition-colors">
+<span class="text-sm font-bold text-slate-700 dark:text-slate-300">10</span>
+</div>
+<div class="bg-white dark:bg-slate-900 min-h-[100px] p-2 group cursor-pointer hover:bg-slate-50 transition-colors">
+<span class="text-sm font-bold text-slate-700 dark:text-slate-300">11</span>
+</div>
+<div class="bg-primary min-h-[100px] p-2 relative shadow-inner">
+<span class="text-sm font-bold text-white">12</span>
+<span class="absolute top-2 right-2 material-symbols-outlined text-white text-sm fill-1">lock</span>
+</div>
+<div class="bg-primary min-h-[100px] p-2 relative shadow-inner">
+<span class="text-sm font-bold text-white">13</span>
+<span class="absolute top-2 right-2 material-symbols-outlined text-white text-sm fill-1">lock</span>
+</div>
+<div class="bg-primary min-h-[100px] p-2 relative shadow-inner">
+<span class="text-sm font-bold text-white">14</span>
+<span class="absolute top-2 right-2 material-symbols-outlined text-white text-sm fill-1">lock</span>
+</div>
+<!-- Rest of the month -->
+<div class="bg-white dark:bg-slate-900 min-h-[100px] p-2 group cursor-pointer hover:bg-slate-50 transition-colors">
+<span class="text-sm font-bold text-slate-700 dark:text-slate-300">15</span>
+</div>
+<div class="bg-slate-100 dark:bg-slate-800 min-h-[100px] p-2 relative">
+<span class="text-sm font-bold text-slate-700 dark:text-slate-300">16</span>
+<div class="absolute bottom-2 right-2 flex items-center gap-1">
+<div class="size-2 rounded-full bg-primary"></div>
+<span class="text-[10px] font-bold text-slate-500">Booking</span>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-900 min-h-[100px] p-2 group cursor-pointer hover:bg-slate-50 transition-colors">
+<span class="text-sm font-bold text-slate-700 dark:text-slate-300">17</span>
+</div>
+<div class="bg-white dark:bg-slate-900 min-h-[100px] p-2 group cursor-pointer hover:bg-slate-50 transition-colors">
+<span class="text-sm font-bold text-slate-700 dark:text-slate-300">18</span>
+</div>
+<div class="bg-white dark:bg-slate-900 min-h-[100px] p-2 group cursor-pointer hover:bg-slate-50 transition-colors">
+<span class="text-sm font-bold text-slate-700 dark:text-slate-300">19</span>
+</div>
+<div class="bg-white dark:bg-slate-900 min-h-[100px] p-2 group cursor-pointer hover:bg-slate-50 transition-colors">
+<span class="text-sm font-bold text-slate-700 dark:text-slate-300">20</span>
+</div>
+<div class="bg-white dark:bg-slate-900 min-h-[100px] p-2 group cursor-pointer hover:bg-slate-50 transition-colors">
+<span class="text-sm font-bold text-slate-700 dark:text-slate-300">21</span>
+</div>
+<div class="bg-white dark:bg-slate-900 min-h-[100px] p-2 group cursor-pointer hover:bg-slate-50 transition-colors">
+<span class="text-sm font-bold text-slate-700 dark:text-slate-300">22</span>
+</div>
+<div class="bg-white dark:bg-slate-900 min-h-[100px] p-2 group cursor-pointer hover:bg-slate-50 transition-colors">
+<span class="text-sm font-bold text-slate-700 dark:text-slate-300">23</span>
+</div>
+<div class="bg-white dark:bg-slate-900 min-h-[100px] p-2 group cursor-pointer hover:bg-slate-50 transition-colors">
+<span class="text-sm font-bold text-slate-700 dark:text-slate-300">24</span>
+</div>
+<div class="bg-white dark:bg-slate-900 min-h-[100px] p-2 group cursor-pointer hover:bg-slate-50 transition-colors">
+<span class="text-sm font-bold text-slate-700 dark:text-slate-300">25</span>
+</div>
+<div class="bg-white dark:bg-slate-900 min-h-[100px] p-2 group cursor-pointer hover:bg-slate-50 transition-colors">
+<span class="text-sm font-bold text-slate-700 dark:text-slate-300">26</span>
+</div>
+<div class="bg-white dark:bg-slate-900 min-h-[100px] p-2 group cursor-pointer hover:bg-slate-50 transition-colors">
+<span class="text-sm font-bold text-slate-700 dark:text-slate-300">27</span>
+</div>
+<div class="bg-white dark:bg-slate-900 min-h-[100px] p-2 group cursor-pointer hover:bg-slate-50 transition-colors">
+<span class="text-sm font-bold text-slate-700 dark:text-slate-300">28</span>
+</div>
+<div class="bg-white dark:bg-slate-900 min-h-[100px] p-2 group cursor-pointer hover:bg-slate-50 transition-colors">
+<span class="text-sm font-bold text-slate-700 dark:text-slate-300">29</span>
+</div>
+<div class="bg-white dark:bg-slate-900 min-h-[100px] p-2 group cursor-pointer hover:bg-slate-50 transition-colors">
+<span class="text-sm font-bold text-slate-700 dark:text-slate-300">30</span>
+</div>
+<div class="bg-white dark:bg-slate-900 min-h-[100px] p-2 group cursor-pointer hover:bg-slate-50 transition-colors">
+<span class="text-sm font-bold text-slate-700 dark:text-slate-300">31</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Edit Card -->
+<div class="lg:col-span-1">
+<div class="sticky top-8 flex flex-col gap-6">
+<div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 shadow-md">
+<h3 class="text-lg font-bold text-slate-800 dark:text-slate-100">Edit Selected Dates</h3>
+<div class="mt-6 flex flex-col gap-5">
+<div class="grid grid-cols-2 gap-3">
+<div class="flex flex-col gap-1.5">
+<label class="text-xs font-bold uppercase tracking-wider text-slate-400">Start Date</label>
+<div class="relative">
+<input class="w-full rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 pl-3 pr-10 py-2 text-sm font-semibold focus:border-primary focus:ring-primary outline-none" type="text" value="10/12/2023"/>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 text-lg">calendar_today</span>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="text-xs font-bold uppercase tracking-wider text-slate-400">End Date</label>
+<div class="relative">
+<input class="w-full rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 pl-3 pr-10 py-2 text-sm font-semibold focus:border-primary focus:ring-primary outline-none" type="text" value="10/14/2023"/>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 text-lg">calendar_today</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-3">
+<label class="text-sm font-bold text-slate-700 dark:text-slate-300">Status</label>
+<div class="grid grid-cols-2 gap-2"><button class="flex items-center justify-center gap-2 rounded-lg border border-[#DCE0E0] py-3 px-4 text-sm font-bold text-slate-600 hover:bg-slate-50 transition-all">
+    Available
+</button>
+<button class="flex items-center justify-center gap-2 rounded-lg bg-[#FF5A5F] py-3 px-4 text-sm font-bold text-white transition-all shadow-md">
+<span class="material-symbols-outlined text-white">block</span>
+    Blocked
+</button></div>
+</div><div class="flex items-center gap-2 mt-1">
+<input class="h-4 w-4 rounded border-slate-300 text-primary focus:ring-primary" id="recurring" type="checkbox"/>
+<label class="text-sm font-medium text-[#767676]" for="recurring">Apply to all recurring Thursdays</label>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-sm font-bold text-slate-700 dark:text-slate-300" for="internal-note">Internal Note</label>
+<textarea class="w-full rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-3 text-sm focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all placeholder:text-slate-400" id="internal-note" placeholder="e.g. Vacation, Wedding out of town..." rows="3"></textarea>
+</div>
+<button class="w-full rounded-lg bg-primary py-4 text-sm font-extrabold text-white shadow-lg shadow-primary/30 hover:bg-primary/90 transition-all active:scale-[0.98]">
+                                        Update Availability
+                                    </button>
+</div>
+</div>
+<!-- Additional Tips Card -->
+<div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-primary/5 p-6">
+<div class="flex gap-3">
+<span class="material-symbols-outlined text-primary">lightbulb</span>
+<div>
+<h4 class="text-sm font-bold text-primary">Pro Tip</h4>
+<p class="mt-1 text-sm text-slate-600 dark:text-slate-400 leading-relaxed">Regularly updating your availability increases your profile's visibility and helps clients book with confidence.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+</div>
+</div>
+</body></html>

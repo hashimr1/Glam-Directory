@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Glam Directory - Artist Onboarding</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ff5c61", 
+                        "primary-dark": "#e04f54",
+                        "background-light": "#f8f5f5",
+                        "background-dark": "#230f0f",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#2d1b1b",
+                        "text-main": "#484848",
+                        "text-sub": "#767676",
+                        "border-light": "#DCE0E0",
+                        "border-dark": "#3d2b2b"
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: "Plus Jakarta Sans", sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen flex flex-col font-display antialiased transition-colors duration-200">
+<main class="flex-grow flex justify-center py-10 px-4 sm:px-6">
+<div class="w-full max-w-[800px] flex flex-col gap-8">
+<div class="flex flex-col gap-4">
+<div class="flex justify-between items-end">
+<span class="text-sm font-semibold text-text-sub dark:text-slate-400 uppercase tracking-wider">Step 4 of 4</span>
+<span class="text-sm font-medium text-primary">Final Step</span>
+</div>
+<div class="h-2 w-full bg-border-light dark:bg-border-dark rounded-full overflow-hidden">
+<div class="h-full w-full bg-primary rounded-full"></div>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">Add Your Services &amp; Pricing</h1>
+<p class="text-lg text-text-sub dark:text-slate-300">List the makeup services you offer and set your rates for potential clients.</p>
+</div>
+<div class="bg-surface-light dark:bg-surface-dark rounded-xl shadow-sm border border-border-light dark:border-border-dark overflow-hidden">
+<div class="p-6 border-b border-border-light dark:border-border-dark bg-slate-50 dark:bg-surface-dark/50">
+<h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-1">Your Services</h3>
+<p class="text-sm text-text-sub dark:text-slate-400">Services visible on your profile</p>
+</div>
+<div class="divide-y divide-border-light dark:divide-border-dark">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between p-5 gap-4 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors group">
+<div class="flex items-start gap-4">
+<div class="relative h-16 w-16 shrink-0 rounded-lg overflow-hidden bg-slate-100 border border-border-light dark:border-border-dark">
+<img alt="Bride makeup" class="h-full w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQKRj_MxnaSiCdGQTovfGVzrDgRoBAnL4geID2iZXIW8_6UJkqkYkDwukVPRFYrJyt0vAM4GVHh3chcCrhk2d2ZV07_m3JoYQfjGj0GA5osmXohERwWZGlhSAiNp3_3nQdSVuhCi9hryzF5QAnxjrr7oPsMBRWT8J18YttbnAM9pVMkie0tbf6Klt-3Vy2-gCq2Q5Lh12rUYakwIDJpnn_CZT_cWK-a39pinbAOtwq0bdSenARJ5HhcsUjOd5IoekjcjfeaDp5eLBh"/>
+</div>
+<div>
+<h4 class="text-base font-bold text-slate-900 dark:text-white">Bride's Day-of Makeup</h4>
+<div class="flex gap-2 items-center mt-1">
+<span class="inline-flex items-center rounded-full bg-slate-100 dark:bg-slate-800 px-2.5 py-0.5 text-xs font-medium text-slate-800 dark:text-slate-300">
+                                        Bridal
+                                    </span>
+<span class="text-sm text-text-sub dark:text-slate-400">• 90 mins</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between sm:justify-end w-full sm:w-auto gap-6 pl-20 sm:pl-0">
+<span class="text-lg font-bold text-slate-900 dark:text-white">$250</span>
+<div class="flex items-center gap-2 opacity-100 sm:opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-2 text-text-sub hover:text-primary dark:text-slate-400 dark:hover:text-primary transition-colors rounded-full hover:bg-primary/5">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+</button>
+<button class="p-2 text-text-sub hover:text-red-600 dark:text-slate-400 dark:hover:text-red-400 transition-colors rounded-full hover:bg-red-50 dark:hover:bg-red-900/20">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</button>
+</div>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row sm:items-center justify-between p-5 gap-4 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors group">
+<div class="flex items-start gap-4">
+<div class="relative h-16 w-16 shrink-0 rounded-lg overflow-hidden bg-slate-100 border border-border-light dark:border-border-dark">
+<img alt="Bridesmaid makeup" class="h-full w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0svqk_TZvkKqrFPleilPWeYhyuHORGxTNxd94l3eEbWeCsdpWPGG7jxXqnCKutx2776T9zO4siOUHQnsms2Q4nD9itFUiShSMMNEiEyAOW6fUyDzraRTuCacG6YL537R8HJfKUPxbg_CkLWpRPeHhfsVgClwD7WcvmnyULxNWVUqoM80A4vE5a2G53cfqYQujBbMFIS99SgNBP88Yzuku36cmCJrOq3w1V10LWgGQezbWwCV5qeQfSBu-e-z43SowJ_pW9EPsFL2p"/>
+</div>
+<div>
+<h4 class="text-base font-bold text-slate-900 dark:text-white">Bridesmaid Makeup</h4>
+<div class="flex gap-2 items-center mt-1">
+<span class="inline-flex items-center rounded-full bg-slate-100 dark:bg-slate-800 px-2.5 py-0.5 text-xs font-medium text-slate-800 dark:text-slate-300">
+                                        Bridal Party
+                                    </span>
+<span class="text-sm text-text-sub dark:text-slate-400">• 45 mins</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between sm:justify-end w-full sm:w-auto gap-6 pl-20 sm:pl-0">
+<span class="text-lg font-bold text-slate-900 dark:text-white">$120</span>
+<div class="flex items-center gap-2 opacity-100 sm:opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-2 text-text-sub hover:text-primary dark:text-slate-400 dark:hover:text-primary transition-colors rounded-full hover:bg-primary/5">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+</button>
+<button class="p-2 text-text-sub hover:text-red-600 dark:text-slate-400 dark:hover:text-red-400 transition-colors rounded-full hover:bg-red-50 dark:hover:bg-red-900/20">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="p-4 bg-slate-50 dark:bg-surface-dark/50 border-t border-border-light dark:border-border-dark">
+<button class="w-full py-3 border-2 border-dashed border-border-light hover:border-primary/50 text-primary font-bold rounded-lg transition-all duration-200 flex items-center justify-center gap-2 group bg-white dark:bg-surface-dark">
+<span class="material-symbols-outlined group-hover:scale-110 transition-transform">add_circle</span>
+                        Add Another Service
+                    </button>
+</div>
+</div>
+<div class="bg-surface-light dark:bg-surface-dark rounded-xl p-6 md:p-8 border border-border-light dark:border-border-dark shadow-lg relative overflow-hidden">
+<div class="absolute top-0 left-0 w-1 h-full bg-primary"></div>
+<h3 class="text-xl font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">edit_note</span>
+                    New Service Details
+                </h3>
+<div class="flex flex-col md:flex-row gap-6">
+<div class="shrink-0">
+<div class="w-full md:w-32 group relative">
+<label class="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2">Service Photo</label>
+<div class="h-32 w-32 rounded-lg border-2 border-dashed border-border-light dark:border-border-dark hover:border-primary cursor-pointer flex flex-col items-center justify-center bg-background-light dark:bg-black/20 transition-colors group-hover:bg-primary/5">
+<span class="material-symbols-outlined text-3xl text-text-sub mb-1 group-hover:text-primary transition-colors">add_a_photo</span>
+<span class="text-xs font-medium text-text-sub group-hover:text-primary transition-colors text-center px-2">Add Photo</span>
+</div>
+<input accept="image/*" class="hidden" type="file"/>
+</div>
+</div>
+<div class="flex-grow grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="col-span-1 md:col-span-2">
+<label class="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2">Service Name</label>
+<input class="w-full rounded-lg border-border-light bg-background-light dark:bg-black/20 dark:border-border-dark px-4 py-3 text-slate-900 dark:text-white placeholder:text-slate-400 focus:border-primary focus:ring-primary dark:focus:ring-primary shadow-sm" placeholder="e.g. Full Glam Evening Look" type="text"/>
+</div>
+<div class="col-span-1">
+<label class="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2">Category</label>
+<div class="relative">
+<select class="w-full appearance-none rounded-lg border-border-light bg-background-light dark:bg-black/20 dark:border-border-dark px-4 py-3 text-slate-900 dark:text-white focus:border-primary focus:ring-primary shadow-sm pr-10">
+<option>Bridal</option>
+<option>Editorial</option>
+<option>Special Event</option>
+<option>Lessons</option>
+</select>
+<div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-slate-500">
+<span class="material-symbols-outlined">expand_more</span>
+</div>
+</div>
+</div>
+<div class="col-span-1">
+<label class="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2">Price (Starting at)</label>
+<div class="relative">
+<div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+<span class="text-slate-500 font-semibold">$</span>
+</div>
+<input class="w-full rounded-lg border-border-light bg-background-light dark:bg-black/20 dark:border-border-dark pl-8 pr-4 py-3 text-slate-900 dark:text-white placeholder:text-slate-400 focus:border-primary focus:ring-primary shadow-sm" placeholder="0.00" type="number"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end">
+<button class="bg-primary hover:bg-primary-dark text-white font-semibold py-2 px-6 rounded-lg transition-colors shadow-sm text-sm">Save Service</button>
+</div>
+</div>
+<div class="flex items-center justify-between mt-2 pb-10">
+<button class="text-text-sub dark:text-slate-400 font-semibold hover:underline transition-colors flex items-center gap-1 group -ml-4">
+<span class="material-symbols-outlined text-xl group-hover:-translate-x-1 transition-transform text-[#767676]">chevron_left</span>
+<span class="text-[#767676]">Back</span>
+</button>
+<button class="bg-primary hover:bg-primary-dark text-white font-bold py-3.5 px-8 rounded-lg shadow-md hover:shadow-lg transition-all duration-200 transform hover:-translate-y-0.5 flex items-center gap-2">
+                    Complete Profile
+                </button>
+</div>
+</div>
+</main>
+</body></html>

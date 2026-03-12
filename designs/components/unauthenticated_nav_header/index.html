@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#FF5A5F",
+                        "background-light": "#f8f5f5",
+                        "background-dark": "#230f0f",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<title>Glam Directory</title>
+</head>
+<body class="bg-white font-display antialiased">
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-white group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-[#DCE0E0] px-6 md:px-10 lg:px-20 py-4 bg-white sticky top-0 z-50">
+<div class="flex items-center gap-3">
+<div class="flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl" data-icon="brush">brush</span>
+</div>
+<h1 class="text-[#484848] text-xl font-extrabold leading-tight tracking-tight">
+                    Glam Directory
+                </h1>
+</div>
+<div class="flex-1"></div>
+<div class="flex items-center gap-4">
+<div class="relative group">
+<button class="flex items-center gap-3 rounded-full border border-gray-200 bg-white p-1 pl-3 pr-2 shadow-sm hover:shadow-md transition-shadow">
+<div class="flex flex-col items-end mr-1 hidden sm:flex">
+<span class="text-sm font-bold text-[#484848]">Jessica D.</span>
+</div>
+<div class="h-8 w-8 overflow-hidden rounded-full bg-gray-100 ring-2 ring-white">
+<img alt="User Profile" class="h-full w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOnjqWSX9MqmvnrbQUci-ZhI31KAFNX197OD1xtmuxEXPC0yQsBH0J2h81DwAr1X0xISVT8i_p5ovivFrz8uBnFsQk0BjKQgra67yge74x2e5JqWJaSAbjJx4jslVfzI52D-a_dG7W0sLfLVB6QHCYi6l76J4o_mbclQiCUOLHB1D8BLJQE4vdw_Q_xoyfdP8l9vyprTAmzQhZ1_dFJiw0WyxAD8U4gy9m7coM6UrRcC6tzm3fdG61UoT8hx-WWELH5a-P9_xeBKDP"/>
+</div>
+<div class="flex items-center justify-center h-8 w-8 rounded-full bg-gray-50 text-gray-500">
+<span class="material-symbols-outlined text-xl">menu</span>
+</div>
+</button>
+<div class="absolute right-0 top-full mt-3 w-60 origin-top-right rounded-xl bg-white shadow-[0_6px_16px_rgba(0,0,0,0.12)] border border-[#DCE0E0] focus:outline-none z-50 overflow-hidden">
+<div class="py-2">
+<a class="block px-4 py-3 text-sm font-semibold text-[#484848] hover:bg-gray-50 transition-colors" href="#">Bookings</a><a class="block px-4 py-3 text-sm font-semibold text-[#484848] hover:bg-gray-50 transition-colors" href="#">Saved Artists</a>
+<a class="block px-4 py-3 text-sm font-semibold text-[#484848] hover:bg-gray-50 transition-colors" href="#">Profile</a>
+<div class="my-1 border-t border-gray-100"></div>
+<a class="block px-4 py-3 text-sm font-semibold text-primary hover:bg-gray-50 transition-colors" href="#">Become an Artist</a>
+<div class="my-1 border-t border-gray-100"></div>
+<a class="block px-4 py-3 text-sm text-[#484848] hover:bg-gray-50 transition-colors" href="#">Sign Out</a>
+</div>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-1">
+<div class="h-[500px]"></div>
+</main>
+</div>
+</div>
+</body></html>

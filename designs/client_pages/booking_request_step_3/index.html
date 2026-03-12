@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Review &amp; Submit - Glam Directory</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ff5c61",
+                        "rausch": "#FF5A5F",
+                        "background-light": "#f8f5f5",
+                        "background-dark": "#230f0f",
+                        "medium-gray": "#767676",
+                        "light-gray-border": "#DCE0E0",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen flex flex-col antialiased">
+<main class="flex-1 w-full max-w-[1280px] mx-auto px-4 py-8 md:px-10 md:py-12">
+<div class="flex flex-col lg:flex-row gap-12 relative">
+<div class="flex-1 w-full lg:w-2/3 flex flex-col gap-8">
+<div class="flex flex-col gap-3">
+<div class="flex gap-6 justify-between items-end">
+<h1 class="text-3xl font-bold tracking-tight text-slate-900 dark:text-white">Review your request</h1>
+<div class="text-right">
+<span class="text-sm font-medium text-slate-500 dark:text-slate-400">Step 3 of 3</span>
+</div>
+</div>
+<div class="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-2">
+<div class="bg-primary h-2 rounded-full" style="width: 100%"></div>
+</div>
+<p class="text-slate-600 dark:text-slate-300 text-base leading-relaxed mt-2">
+                        Please review the details of your booking request below. The artist will confirm availability within 24 hours.
+                    </p>
+</div>
+<div class="flex gap-4 p-4 rounded-xl bg-blue-50 dark:bg-blue-900/20 border border-blue-100 dark:border-blue-800 text-blue-900 dark:text-blue-100">
+<span class="material-symbols-outlined text-blue-600 dark:text-blue-400 shrink-0">info</span>
+<div class="text-sm">
+<p class="font-bold mb-1">Note: All payments are handled privately between you and the artist.</p>
+<p class="opacity-90">Please arrange final payment details directly once your request is approved.</p>
+</div>
+</div>
+<section class="border-t border-slate-200 dark:border-slate-800 pt-6">
+<div class="flex justify-between items-center mb-6">
+<h3 class="text-xl font-bold">Event Details</h3>
+<button class="text-primary text-sm font-bold hover:underline">Edit</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="flex gap-3">
+<div class="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-500 dark:text-slate-400">
+<span class="material-symbols-outlined">calendar_month</span>
+</div>
+<div>
+<p class="text-sm text-slate-500 dark:text-slate-400 font-medium">Date</p>
+<p class="font-semibold">Saturday, Oct 24, 2026</p>
+</div>
+</div>
+<div class="flex gap-3">
+<div class="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-500 dark:text-slate-400">
+<span class="material-symbols-outlined">schedule</span>
+</div>
+<div>
+<p class="text-sm text-slate-500 dark:text-slate-400 font-medium">Time</p>
+<p class="font-semibold">10:00 AM - 2:00 PM</p>
+</div>
+</div>
+<div class="flex gap-3 md:col-span-2">
+<div class="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-500 dark:text-slate-400">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<div>
+<p class="text-sm text-slate-500 dark:text-slate-400 font-medium">Location</p>
+<p class="font-semibold">The Grand Plaza Hotel, Suite 405</p>
+<p class="text-sm text-slate-500 dark:text-slate-400">123 Wedding Lane, Beverly Hills, CA 90210</p>
+</div>
+</div>
+</div>
+</section>
+<section class="border-t border-slate-200 dark:border-slate-800 pt-6">
+<div class="flex justify-between items-center mb-6">
+<h3 class="text-xl font-bold">Services Requested</h3>
+<button class="text-primary text-sm font-bold hover:underline">Edit</button>
+</div>
+<div class="flex flex-col gap-4">
+<div class="flex justify-between items-center p-4 rounded-lg bg-white dark:bg-[#2c1515] border border-slate-100 dark:border-slate-800 shadow-sm">
+<div class="flex gap-4 items-center">
+<div class="w-16 h-16 rounded bg-slate-200 dark:bg-slate-700 overflow-hidden shrink-0 relative">
+<img alt="Bridal makeup service preview" class="w-full h-full object-cover" data-alt="Close up of eye makeup application" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7gg8NSLg5PB0xJjnGac1gqdt6KzbzzmEmPUblsT0Eft4tgntlqePa9z7r5SsBWScP4zeHEi_sdF3KSmquAbzXUpKg9eiVEI6VxM3SgBXQ_880fGNKHBakZ7YfWBbEeCfwF5IgHuhH6jD6fpX3GpKQe6EjttWJk4YlGMXmH9MeIgbwcRNqM6FImayV0ecTtI5Al6Kl10KV908KD-rlNW5RbK3vroWu365u1GT2nwmW6otigqIT5WPvpJpdW0RIH6pZz5359yq4mIyb"/>
+</div>
+<div>
+<h4 class="font-bold text-lg">Bridal Makeup Package</h4>
+<p class="text-sm text-slate-500 dark:text-slate-400">Includes trial session &amp; lashes</p>
+</div>
+</div>
+<div class="text-right">
+<p class="text-sm text-slate-500 dark:text-slate-400">Qty: 1</p>
+</div>
+</div>
+<div class="flex justify-between items-center p-4 rounded-lg bg-white dark:bg-[#2c1515] border border-slate-100 dark:border-slate-800 shadow-sm">
+<div class="flex gap-4 items-center">
+<div class="w-16 h-16 rounded bg-slate-200 dark:bg-slate-700 overflow-hidden shrink-0 relative">
+<img alt="Bridesmaid makeup service preview" class="w-full h-full object-cover" data-alt="Makeup brushes and palette on table" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCe6GHmPhUlgUw21nlv8PNMSFkS6e1Yt60WEEWJny6p7lrzCC0GPMCNbXF7NKpfgr6zhr9KkRG-JrpDutuqokWm6wK0jPZUkFN1qihMQYomQltpqshABctUQKFPliEXvFIWwqvEhH5Btxu_9YBE4APWQuLMWDzv14OU7FlB9ELfuS-BmG2MtvKskFAT5WoWh1-GrNZMl3_WhkTKuNSTc7TBxxXalwDo-2NyKQPOL1S_G1MRc27_k-4oFPcCHAmd7cObv_nULe-uBkw0"/>
+</div>
+<div>
+<h4 class="font-bold text-lg">Bridesmaid Glam</h4>
+<p class="text-sm text-slate-500 dark:text-slate-400">Full face application</p>
+</div>
+</div>
+<div class="text-right">
+<p class="text-sm text-slate-500 dark:text-slate-400">Qty: 3</p>
+</div>
+</div>
+</div>
+</section>
+<section class="border-t border-slate-200 dark:border-slate-800 pt-6 pb-6">
+<div class="flex justify-between items-center mb-4">
+<h3 class="text-xl font-bold">Note to Artist</h3>
+<button class="text-primary text-sm font-bold hover:underline">Edit</button>
+</div>
+<p class="text-slate-600 dark:text-slate-300 italic">"Hi Sarah! We are so excited to work with you. Please note that one of the bridesmaids has sensitive skin, so hypoallergenic products would be appreciated. Thanks!"</p>
+</section>
+<div class="mt-4 pb-12 flex items-center justify-between border-t border-slate-200 dark:border-slate-800 pt-8">
+<a class="text-medium-gray hover:text-slate-900 dark:hover:text-white font-medium text-lg transition-colors" href="#">
+                        Back
+                    </a>
+<button class="w-full sm:w-auto bg-rausch hover:bg-[#ff3b41] text-white text-lg font-bold py-4 px-12 rounded-xl transition-transform hover:scale-[1.01] active:scale-[0.99] shadow-lg shadow-rausch/30">
+                        Submit Request
+                    </button>
+</div>
+<p class="text-xs text-slate-500 dark:text-slate-400 text-center -mt-8 mb-8 sm:text-right max-w-full sm:ml-auto sm:mr-0 sm:max-w-md">
+                        By clicking 'Submit Request', you agree to the Glam Directory Terms of Service.
+                    </p>
+</div>
+<div class="hidden lg:block lg:w-1/3">
+<div class="sticky top-12">
+<div class="bg-white dark:bg-[#2c1515] rounded-xl border border-light-gray-border dark:border-slate-800 overflow-hidden">
+<div class="p-6">
+<div class="flex items-center gap-4">
+<div class="w-14 h-14 rounded-full bg-slate-200 overflow-hidden shrink-0 relative border border-slate-100 dark:border-slate-700">
+<img alt="Sarah Jenkins Artist Profile" class="w-full h-full object-cover" data-alt="Portrait of a smiling female makeup artist" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4vGcs1A-d1hXFYIc1_3svWgCIMFva7cXPxyjTNSieNx7zFv8wuy9CkFVZxDrMCkWzGMhBxDRrV6aBAola-GI-nKLkf59_dhqZPOpMZYZSJ47fDUoGsNafbyssS6Ypc4kS51sEVOODdpb7VJPoouMlDfJVhzhz9ZcriMDrMEYvDUgHStYkimJ3Q5RGOdOuqj0tMXPF5QnZqj6cB3TT_99z8ob2i-7JnyNVHVoJ_EydaHrtldAH9BowL4Ndfk-1S4IyxFR9vBcAlNpt"/>
+</div>
+<div>
+<h3 class="text-lg font-bold text-slate-900 dark:text-white">Sarah Jenkins</h3>
+</div>
+</div>
+</div>
+<hr class="border-slate-200 dark:border-slate-800 mx-6"/>
+<div class="p-6 space-y-5">
+<div>
+<h4 class="text-base font-bold text-slate-900 dark:text-white mb-3">Event Details</h4>
+<div class="space-y-2">
+<div class="flex justify-between text-slate-700 dark:text-slate-300 text-sm">
+<span>Date:</span>
+<span class="font-medium text-right">Saturday, Oct 24, 2026</span>
+</div>
+<div class="flex justify-between text-slate-700 dark:text-slate-300 text-sm">
+<span>Time:</span>
+<span class="font-medium text-right">10:00 AM - 2:00 PM</span>
+</div>
+</div>
+</div>
+<div>
+<h4 class="text-base font-bold text-slate-900 dark:text-white mb-3">Services Summary</h4>
+<ul class="space-y-2 text-sm text-slate-700 dark:text-slate-300">
+<li class="flex justify-between">
+<span>1x Bridal Makeup Package</span>
+</li>
+<li class="flex justify-between">
+<span>3x Bridesmaid Glam</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:hidden w-full border-t border-slate-200 dark:border-slate-800 pt-8">
+<h3 class="font-bold text-xl mb-4">Request Summary</h3>
+<div class="bg-white dark:bg-[#2c1515] p-6 rounded-xl border border-light-gray-border dark:border-slate-800 shadow-sm">
+<div class="flex items-center gap-4 mb-4">
+<img alt="Sarah Jenkins" class="w-12 h-12 rounded-full object-cover" data-alt="Small thumbnail of artist portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuJENYmv7In6YLnhVDL_7rlE69_WNL6v8lPgPNVrkykVQNtxet9vssUnGn1kjSEOYHxjbzF0DDy4yMEcsCUl-EE2xis-coXRgvt-u6BlWdURNfI06t9c7BC8r1WJSl5EBqF26Nq3SG1NP9OyeFcFpgIjOnmg_bZOXfj09R4V-BEKcwRgjxSF91megeYgVdRZXVdOlIeC-NF7tLXjAuENIMq1zvfuTYYoCxLuMXdNlyf-boBCmS6EplJSOWB8FudSwQn2XbG9iZdlXJ"/>
+<div>
+<p class="font-bold">Sarah Jenkins</p>
+</div>
+</div>
+<div class="text-sm text-slate-500 dark:text-slate-400 flex flex-col gap-2">
+<div class="flex justify-between">
+<span>Date:</span>
+<span class="text-slate-900 dark:text-slate-200 font-medium">Oct 24, 2026</span>
+</div>
+<div class="flex justify-between">
+<span>Time:</span>
+<span class="text-slate-900 dark:text-slate-200 font-medium">10:00 AM - 2:00 PM</span>
+</div>
+<div class="pt-2 border-t border-slate-100 dark:border-slate-700 mt-2">
+<p class="font-medium text-slate-900 dark:text-white mb-1">Services:</p>
+<p>1x Bridal Makeup Package</p>
+<p>3x Bridesmaid Glam</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</body></html>

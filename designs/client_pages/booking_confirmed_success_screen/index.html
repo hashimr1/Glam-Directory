@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Booking Confirmed - Glam Directory</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ff5c61",
+                        "background-light": "#f8f5f5",
+                        "background-dark": "#230f0f",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display min-h-screen flex items-center justify-center p-4">
+<main class="w-full max-w-2xl bg-white dark:bg-[#2c1818] rounded-xl shadow-sm border border-slate-200 dark:border-primary/20 p-8 md:p-10 flex flex-col items-center animate-in fade-in zoom-in duration-500">
+<div class="mb-6 relative">
+<div class="size-24 rounded-full bg-primary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-6xl text-primary font-bold">check</span>
+</div>
+</div>
+<div class="text-center mb-8 max-w-lg">
+<h1 class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-slate-100 mb-3 tracking-tight">
+                Your Booking is Confirmed!
+            </h1>
+<p class="text-slate-500 dark:text-slate-400 text-lg leading-relaxed">
+                Sarah Jenkins has been notified of your confirmation. You can now coordinate final details and payment privately.
+            </p>
+</div>
+<div class="w-full bg-background-light dark:bg-[#361e1e] rounded-lg border border-slate-200 dark:border-primary/10 overflow-hidden mb-8">
+<div class="p-6 border-b border-slate-200 dark:border-primary/10 flex items-center gap-4">
+<div class="size-16 rounded-full bg-slate-200 bg-cover bg-center shrink-0 border-2 border-white dark:border-primary/20 shadow-sm" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDN0EF_hwg_3S79zwSiKLkL0GuYql_I_-UXg-K8B63GQO8BEY4-dEDMcBoLHAx6ZqToJvNMI4Se1cOaKzk6GbbInonh_SlwGzfxj5QMlirSJR9maQcCTVSfU-EqV9JLnqcCcSrmFaRJfARPV5TTV9aXkQgZHJ0ylq62o4_6fX5thBujNrA1al-uBZZW3974XnB679p-9DwgRDH7tuzliGG1OIECFoDVZdIjM6fYgvjpDKRmc7b5aNgVbD0lY7OZC_dCIg3_Q0NvD6_C');"></div>
+<div class="flex-1 min-w-0">
+<p class="text-xs font-semibold uppercase tracking-wider text-primary mb-0.5">Artist</p>
+<h3 class="text-lg font-bold text-slate-900 dark:text-slate-100 truncate">Sarah Jenkins</h3>
+<div class="flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-sm text-yellow-500 fill-1">star</span>
+<span class="text-sm font-medium text-slate-700 dark:text-slate-300">4.9</span>
+<span class="text-sm text-slate-400 dark:text-slate-500">(128 reviews)</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 divide-y sm:divide-y-0 sm:divide-x divide-slate-200 dark:divide-primary/10">
+<div class="p-5 flex flex-col gap-1">
+<span class="text-sm font-medium text-slate-500 dark:text-slate-400">Booking ID</span>
+<span class="text-base font-bold text-slate-900 dark:text-slate-100 font-mono">#BK-9821</span>
+</div>
+<div class="p-5 flex flex-col gap-1">
+<span class="text-sm font-medium text-slate-500 dark:text-slate-400">Event Date</span>
+<span class="text-base font-bold text-slate-900 dark:text-slate-100">Oct 24, 2024</span>
+</div>
+<div class="p-5 flex flex-col gap-1 sm:border-t border-slate-200 dark:border-primary/10">
+<span class="text-sm font-medium text-slate-500 dark:text-slate-400">Service</span>
+<span class="text-base font-bold text-slate-900 dark:text-slate-100">Bridal Makeup Package</span>
+</div>
+<div class="p-5 flex flex-col gap-1 sm:border-t border-slate-200 dark:border-primary/10 bg-primary/5 dark:bg-primary/10">
+<span class="text-sm font-medium text-primary">Total Quote</span>
+<span class="text-xl font-bold text-primary">$450.00</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col items-center gap-3 w-full max-w-sm">
+<button class="w-full flex items-center justify-center gap-2 bg-primary hover:bg-red-500 text-white h-12 px-8 rounded-lg font-bold text-sm transition-colors shadow-sm hover:shadow-md">
+<span class="material-symbols-outlined text-lg">calendar_month</span>
+                View My Bookings
+            </button>
+<a class="group flex items-center gap-1 text-slate-500 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200 text-sm font-semibold transition-colors py-1" href="#">
+<span class="material-symbols-outlined text-lg group-hover:-translate-x-1 transition-transform">arrow_back</span>
+                Return to Home
+            </a>
+</div>
+</main>
+
+</body></html>

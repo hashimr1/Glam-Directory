@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Glam Directory - Artist Onboarding</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#fb5157",
+                        "background-light": "#f8f5f5",
+                        "background-dark": "#230f10",
+                        "medium-gray": "#767676",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+<main class="flex-1 flex flex-col items-center py-8 sm:py-12 px-4 sm:px-6">
+<div class="w-full max-w-[800px] flex flex-col gap-8">
+<div class="flex flex-col gap-3">
+<div class="flex justify-between items-end">
+<div class="flex flex-col gap-1">
+<span class="text-primary text-sm font-bold uppercase tracking-wider">Step 2 of 4</span>
+<h1 class="text-slate-900 dark:text-white text-3xl sm:text-4xl font-black tracking-tight">Portfolio</h1>
+</div>
+<span class="text-slate-500 dark:text-slate-400 text-sm font-medium hidden sm:block">50% Completed</span>
+</div>
+<div class="h-2 w-full bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
+<div class="h-full bg-primary w-1/2 rounded-full transition-all duration-500 ease-out"></div>
+</div>
+</div>
+<div class="bg-white dark:bg-[#1a0b0c] rounded-xl shadow-sm border border-slate-100 dark:border-slate-800 p-6 sm:p-10 flex flex-col gap-8">
+<div class="flex flex-col gap-2">
+<h2 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">Showcase Your Best Work</h2>
+<p class="text-slate-500 dark:text-slate-400 leading-relaxed max-w-2xl">
+                        Upload high-quality images of your makeup artistry to attract clients. We recommend at least 5 photos showcasing diverse looks and excellent lighting.
+                    </p>
+</div>
+<div class="relative group cursor-pointer">
+<input class="absolute inset-0 w-full h-full opacity-0 z-10 cursor-pointer" multiple="" type="file"/>
+<div class="flex flex-col items-center justify-center gap-4 rounded-xl border-2 border-dashed border-slate-300 dark:border-slate-700 group-hover:border-primary group-hover:bg-primary/5 transition-all duration-300 py-16 px-6 text-center">
+<div class="size-16 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-400 dark:text-slate-500 group-hover:text-primary group-hover:bg-white dark:group-hover:bg-[#230f10] transition-colors shadow-sm">
+<span class="material-symbols-outlined text-3xl">cloud_upload</span>
+</div>
+<div class="flex flex-col gap-1">
+<p class="text-slate-900 dark:text-white text-lg font-bold">Click to upload or drag and drop</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm">SVG, PNG, JPG or GIF (max. 5MB)</p>
+</div>
+<button class="mt-2 pointer-events-none rounded-lg bg-slate-900 dark:bg-white text-white dark:text-slate-900 px-5 py-2.5 text-sm font-bold shadow-md">
+                            Select Files
+                        </button>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<div class="flex justify-between items-center">
+<h3 class="text-sm font-bold text-slate-900 dark:text-white uppercase tracking-wider">Uploaded Photos (4)</h3>
+<button class="text-primary text-sm font-semibold hover:underline">Edit All</button>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+<div class="relative group aspect-square rounded-lg overflow-hidden bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm">
+<img alt="Close up of eye makeup with glitter" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Close up of eye makeup with glitter" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDBSP-y51Fpze_y1I1k1EX0IaoXb6N-wzZi_9lRk4hggbe5EnoXou6NExHqmR9KPCgzPu1zqY1NZhSzptMJqY6_42o07Ewu-Y7ROF-OnPdKOry6aT606UU3v5OSZEgI7OT8xaviQH_23oN-7Ebx6bbWNjb8lUbJneeiVS_eFPVDIqjxXi_QfTjECdUrCmFRtIevRK7CmZvDnjPqGwb0COGwyejR6xFZRodgErnYYqSzwID4ngTnyYQKLV9uuUVjT-ujBGjLvElhG4r"/>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2">
+<button class="p-1.5 bg-white/90 rounded-full text-slate-900 hover:text-primary hover:bg-white transition-colors">
+<span class="material-symbols-outlined text-lg">delete</span>
+</button>
+</div>
+<div class="absolute top-2 right-2 bg-green-500 border-2 border-white dark:border-[#1a0b0c] size-4 rounded-full"></div>
+</div>
+<div class="relative group aspect-square rounded-lg overflow-hidden bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm">
+<img alt="Bridal makeup portrait soft lighting" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Bridal makeup portrait soft lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdryJWbvGmij5gBWVpUeDiAZuzo1NgqOiW5CDqyl3BmTXKpZu8ApXTlsPyiYRpYkiYRGZ81-ozpmQt0LvR7kuWWA9S9oB7q7Cms98csCxaJ9wUHOKrRjpk3yEb32XWWauTQU7cOXCD2JOOiUc92UoRcwC4tws4zunoljJqZPDZ5SM0YXjbfNmdTrzRvyXBY4DbClFTCqISIpkTPhng-5E7_DkVXr_tD7Jo99toxmzNsWNDfcnPad4GUAHxeEiAi4MbNzv-oIinUGew"/>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2">
+<button class="p-1.5 bg-white/90 rounded-full text-slate-900 hover:text-primary hover:bg-white transition-colors">
+<span class="material-symbols-outlined text-lg">delete</span>
+</button>
+</div>
+<div class="absolute top-2 right-2 bg-green-500 border-2 border-white dark:border-[#1a0b0c] size-4 rounded-full"></div>
+</div>
+<div class="relative group aspect-square rounded-lg overflow-hidden bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm">
+<img alt="Creative artistic makeup colorful" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Creative artistic makeup colorful" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkoHD45QsTJ85wQl8Dt0u6kfisVlF3xz0-E7UXOXrr9Jdoy3y8Q8kYp1dKzNaf50rE7pGGIxtj9IEaB9VgFHYJR6Q1tEd28CWU8-U2Zf5cInOP77pYeweEvLtathqwKIjPq4BaU9Ja0T_gsycPA6hOjOxdPYEeBxX5AjuOsoLi8N3EC8ShcdjlYB-2AjKugmlntiFfgy_njMGjgiG1b9VgGH8pdk8oXkIogJP9SSLDg1GkIgvp7xfA07Vx1CSJiR20I-c_5LOZf0DA"/>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2">
+<button class="p-1.5 bg-white/90 rounded-full text-slate-900 hover:text-primary hover:bg-white transition-colors">
+<span class="material-symbols-outlined text-lg">delete</span>
+</button>
+</div>
+<div class="absolute top-2 right-2 bg-green-500 border-2 border-white dark:border-[#1a0b0c] size-4 rounded-full"></div>
+</div>
+<div class="relative aspect-square rounded-lg overflow-hidden bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 flex flex-col items-center justify-center gap-2 p-2">
+<div class="w-8 h-8 border-4 border-slate-200 dark:border-slate-600 border-t-primary rounded-full animate-spin"></div>
+<span class="text-xs font-medium text-slate-500 dark:text-slate-400">Uploading...</span>
+</div>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-0 pb-12">
+<button class="flex items-center gap-1 text-[var(--medium-gray)] text-[#767676] hover:text-slate-900 dark:hover:text-white text-sm font-semibold transition-colors">
+<span class="material-symbols-outlined text-lg">chevron_left</span>
+                    Back
+                </button>
+<div class="flex gap-4">
+<button class="hidden sm:flex items-center justify-center rounded-lg h-12 px-6 text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white font-bold transition-colors">
+                        Skip for now
+                    </button>
+<button class="flex min-w-[140px] items-center justify-center gap-2 rounded-lg h-12 px-8 bg-primary hover:bg-red-600 text-white text-base font-bold shadow-lg shadow-red-500/20 transition-all hover:shadow-red-500/30">
+<span>Next Step</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+
+</body></html>

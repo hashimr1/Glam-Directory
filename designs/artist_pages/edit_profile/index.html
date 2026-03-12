@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ff5a5f",
+                        "background-light": "#f7f7f7",
+                        "background-dark": "#230f0f",
+                        "neutral-gray": {
+                            "dark": "#484848",
+                            "medium": "#767676",
+                            "light": "#dce0e0",
+                            "border": "#ebebeb"
+                        }
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<title>Edit Profile &amp; Portfolio | Artist Dashboard</title>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-neutral-gray-dark min-h-screen">
+<!-- Sticky Header -->
+<header class="sticky top-0 z-50 bg-white dark:bg-background-dark border-b border-neutral-gray-light px-4 md:px-8 py-4">
+<div class="max-w-5xl mx-auto flex items-center justify-between">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-neutral-gray-dark cursor-pointer">arrow_back</span>
+<h1 class="text-xl md:text-2xl font-bold text-neutral-gray-dark dark:text-slate-100">Edit Profile</h1>
+</div>
+<div class="flex items-center gap-6">
+<button class="text-neutral-gray-medium hover:text-neutral-gray-dark font-semibold text-sm transition-colors">Cancel</button>
+<button class="bg-primary hover:bg-primary/90 text-white px-6 py-2.5 rounded-lg font-bold text-sm shadow-sm transition-all">
+                    Save Changes
+                </button>
+</div>
+</div>
+</header>
+<main class="max-w-5xl mx-auto p-4 md:p-8 space-y-6">
+<!-- Card 1: Basic Information -->
+<section class="bg-white dark:bg-slate-900 border border-neutral-gray-light dark:border-slate-800 rounded-xl overflow-hidden shadow-sm">
+<div class="p-6 border-b border-neutral-gray-border dark:border-slate-800">
+<h2 class="text-lg font-bold">Basic Information</h2>
+<p class="text-neutral-gray-medium text-sm">Update your public profile and professional bio.</p>
+</div>
+<div class="p-6 flex flex-col md:flex-row gap-8">
+<div class="flex-shrink-0 flex flex-col items-center gap-3">
+<div class="relative group cursor-pointer">
+<div class="size-32 rounded-full overflow-hidden border-2 border-neutral-gray-light bg-neutral-gray-border" data-alt="Professional makeup artist portrait profile picture" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD-0MOIqIRR1uaxlgwwxf2OkUUh7lFFqOmXxc7S2biizm4uy36U1WzdHUlHPFH9g8MqChhGprgE4Csq24qy1RHeHn203UYJJRaUzpt04HSmcWfOjikraMsHEvJzhxWYQpCW8svlEEBQSGTKpzCVXr817Y5-xuRNvhJfCEccfJyOEdgdylhJti37YMlV6vnidyAicDgG6k9xqZyzc-7lZuoO-AJcXdmnFmN5nS6URllJratR4wMYE02FT9ahFZdThVSM2yd3ogcdsj6g'); background-size: cover;">
+</div>
+<div class="absolute inset-0 bg-black/40 rounded-full flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-white text-2xl">photo_camera</span>
+<span class="text-white text-[10px] font-bold uppercase tracking-wider">Edit Photo</span>
+</div>
+</div>
+</div>
+<div class="flex-grow space-y-4">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="space-y-1.5">
+<label class="text-sm font-bold text-neutral-gray-dark dark:text-slate-200">Business / Display Name</label>
+<input class="w-full border border-neutral-gray-light dark:border-slate-700 dark:bg-slate-800 rounded-lg p-3 text-sm focus:ring-primary focus:border-primary outline-none" type="text" value="Glow by Sarah"/>
+</div>
+<div class="space-y-1.5">
+<label class="text-sm font-bold text-neutral-gray-dark dark:text-slate-200">Primary City / Service Area</label>
+<input class="w-full border border-neutral-gray-light dark:border-slate-700 dark:bg-slate-800 rounded-lg p-3 text-sm focus:ring-primary focus:border-primary outline-none" type="text" value="Los Angeles, CA"/>
+</div>
+</div><div class="space-y-3 pt-2">
+<label class="block text-sm font-bold text-neutral-gray-dark dark:text-slate-200">
+        Service Type <span class="text-primary">*</span>
+</label>
+<div class="flex flex-col sm:flex-row gap-4">
+<label class="inline-flex items-center cursor-pointer">
+<input class="form-checkbox h-5 w-5 rounded border-neutral-gray-light text-primary focus:ring-primary transition duration-150 ease-in-out" name="service_type" type="checkbox" value="commercial"/>
+<span class="ml-2 text-neutral-gray-medium dark:text-slate-300 text-sm font-medium">Commercial Studio</span>
+</label>
+<label class="inline-flex items-center cursor-pointer">
+<input class="form-checkbox h-5 w-5 rounded border-neutral-gray-light text-primary focus:ring-primary transition duration-150 ease-in-out" name="service_type" type="checkbox" value="home"/>
+<span class="ml-2 text-neutral-gray-medium dark:text-slate-300 text-sm font-medium">Home Studio</span>
+</label>
+<label class="inline-flex items-center cursor-pointer">
+<input checked="" class="form-checkbox h-5 w-5 rounded border-neutral-gray-light text-primary focus:ring-primary transition duration-150 ease-in-out" name="service_type" type="checkbox" value="travel"/>
+<span class="ml-2 text-neutral-gray-medium dark:text-slate-300 text-sm font-medium">Travel to Client Location</span>
+</label>
+</div>
+</div>
+<div class="space-y-4 pt-2">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="text-sm font-bold text-neutral-gray-dark dark:text-slate-200">Travel Fee</span>
+<span class="text-xs text-neutral-gray-medium mt-1">Do you charge extra for travel to certain locations?</span>
+</div>
+<div class="relative inline-block w-12 mr-2 align-middle select-none transition duration-200 ease-in">
+<input checked="" class="peer absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer border-neutral-gray-light checked:border-primary transition-all duration-300 top-0 left-0 checked:translate-x-full" id="travel-fee-toggle" name="travel-fee-toggle" type="checkbox"/>
+<label class="block overflow-hidden h-6 rounded-full bg-neutral-gray-light peer-checked:bg-primary cursor-pointer transition-colors duration-300" for="travel-fee-toggle"></label>
+</div>
+</div>
+<div class="space-y-1.5">
+<label class="block text-sm font-bold text-neutral-gray-dark dark:text-slate-200" for="travel-fee-details">
+            Travel Fee Details
+        </label>
+<div class="relative">
+<input class="w-full border border-neutral-gray-light dark:border-slate-700 dark:bg-slate-800 rounded-lg p-3 pr-10 text-sm focus:ring-primary focus:border-primary outline-none" id="travel-fee-details" name="travel-fee-details" placeholder="e.g., $50 for locations over 20 miles, or detailed mileage rates" type="text"/>
+<div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none text-neutral-gray-medium">
+<span class="material-symbols-outlined text-[20px]">directions_car</span>
+</div>
+</div>
+</div>
+</div>
+<div class="space-y-1.5">
+<label class="text-sm font-bold text-neutral-gray-dark dark:text-slate-200">Bio / Experience</label>
+<textarea class="w-full border border-neutral-gray-light dark:border-slate-700 dark:bg-slate-800 rounded-lg p-3 text-sm focus:ring-primary focus:border-primary outline-none" placeholder="Share your professional journey and style..." rows="4">Certified makeup artist with over 8 years of experience in bridal, editorial, and special effects makeup. Passionate about enhancing natural beauty.</textarea>
+</div>
+</div>
+</div>
+</section>
+<!-- Card 2: Portfolio Gallery -->
+<section class="bg-white dark:bg-slate-900 border border-neutral-gray-light dark:border-slate-800 rounded-xl overflow-hidden shadow-sm">
+<div class="p-6 border-b border-neutral-gray-border dark:border-slate-800 flex justify-between items-center">
+<div>
+<h2 class="text-lg font-bold">Portfolio Gallery</h2>
+<p class="text-neutral-gray-medium text-sm">Showcase your best work to potential clients.</p>
+</div>
+<span class="text-xs font-bold text-neutral-gray-medium">12 / 24 Photos</span>
+</div>
+<div class="p-6">
+<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+<!-- Portfolio Items -->
+<div class="aspect-square rounded-lg bg-cover bg-center relative group" data-alt="Close up makeup work editorial look" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBxxtbROxi9ZSwwi08jAMsX9ldKToMtzMBYcitAWNf8HTrSKunseHXd5LF8ma7MPLk-Rpet_ZHRQf8Yc2wCWM5ICijkd8lDxQKwVCEnI5niNH0byxbDN3zGnQ54PDtJct1oiGVXsixxLsB4O57SEUlQGoYxKyckh2ZgRoik-T50CwMDukogv4girweT8XWyzO_h0mh6D0fAh357Ox3Z4s1TqxiB-Sxfc8z0UO4NrMj0a4LojPeK4JkjYAGd0H6tW0FYUfTvdYzvO4BP');">
+<div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center rounded-lg">
+<button class="bg-white/20 hover:bg-white/40 p-1.5 rounded-full text-white">
+<span class="material-symbols-outlined text-sm">close</span>
+</button>
+</div>
+</div>
+<div class="aspect-square rounded-lg bg-cover bg-center" data-alt="Bridal makeup transformation photo" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCMocIuji8mjJnS7wTaztH8A5KjP0UYqNU9Irg3EzltTKR0q4QhXx8tUl1Uvc7seXNe0-S99VK5FZzADnrGZzqJ6BJrbz34VJdLIvsX8ynk6wMLdLl2LygChKIt5pzPV-0glGvEwiIMHXee8J-JjQHQ691D2LEUhNCI44Co-WTd90sW2KIkTWqifM2YezzxGyl3FpFsd8pTI4wYWdPNEpzT-bMpryGEnizAaCj58GuHAOQPWuZlU7CvRYZRaFxNSuskcKIklFFZKcHy');"></div>
+<div class="aspect-square rounded-lg bg-cover bg-center" data-alt="Glamour makeup session results" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD8NRXONWkSEt3uJMVDSEG9PG7zn1fAGhXNqZacN6Aw9DUsNu3g8SwlFngsXC45yI8Voj_9oHiBFPR8-hyftvM9ip_mbnoqxWvnrYHyLENsPBfdFs9C52fpkcxRTpgio-nGnUA-iYEsrse4zhb03LnIjvYy3UR6nbPR0MQIy-9VIfxUVcMIKjOtMmFiZuI6R5_BJCFU1tMkz8CHezaUhdQVs39zsQNrinULfTHVMXt5s21WefzSy9an1TK6t8YNv366lNoTxd2XuQ56');"></div>
+<div class="aspect-square rounded-lg bg-cover bg-center" data-alt="Special effects makeup work sample" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCOM0zzlAeiwaKBSXYuR9lHhGENmkiMl3Ce_IJZb464eUFUssliozj4wOl7xGUYxKleDljaNFVZD6W_RYo3lcLoHyg1VW7HuEIeB0xM8iAm7GBYYuIbywdGr3T5if5Cs-sGJdjdOu5rHpa7kHpTROcA1zsOArZyxfvpzpsW_nCy3QP-HdtOhWOeCyTNNhFOHaUi--Ql1sEopAsd6HNqcEIRhYA96hFXxXgtvxNKk5hATdrUnaCpDGQ5JQNIOUzs39w5N5xvDdgWnA8w');"></div>
+<!-- Upload Box -->
+<button class="aspect-square rounded-lg border-2 border-dashed border-neutral-gray-light hover:border-primary hover:bg-primary/5 transition-all flex flex-col items-center justify-center gap-2 group">
+<span class="material-symbols-outlined text-neutral-gray-medium group-hover:text-primary">add_a_photo</span>
+<span class="text-[11px] font-bold text-neutral-gray-medium group-hover:text-primary uppercase tracking-tight">Add New Photos</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Card 3: Specializations & Tags -->
+<section class="bg-white dark:bg-slate-900 border border-neutral-gray-light dark:border-slate-800 rounded-xl overflow-hidden shadow-sm">
+<div class="p-6 border-b border-neutral-gray-border dark:border-slate-800">
+<h2 class="text-lg font-bold">Specializations &amp; Tags</h2>
+<p class="text-neutral-gray-medium text-sm">Help clients find you by selecting your expertise.</p>
+</div>
+<div class="p-6 space-y-8"><!-- Event Type -->
+<div class="space-y-3">
+<h3 class="text-xs font-bold uppercase tracking-widest text-neutral-gray-medium">Event Type</h3>
+<div class="flex flex-wrap gap-2">
+<span class="px-4 py-1.5 bg-primary text-white text-sm font-semibold rounded-full cursor-pointer">Bridal / Weddings</span>
+<span class="px-4 py-1.5 border border-neutral-gray-light dark:border-slate-700 text-neutral-gray-medium text-sm font-semibold rounded-full cursor-pointer hover:bg-neutral-gray-border">Bridal Party</span>
+<span class="px-4 py-1.5 bg-primary text-white text-sm font-semibold rounded-full cursor-pointer">Prom / Formal</span>
+<span class="px-4 py-1.5 border border-neutral-gray-light dark:border-slate-700 text-neutral-gray-medium text-sm font-semibold rounded-full cursor-pointer hover:bg-neutral-gray-border">Photoshoot / Editorial</span>
+<span class="px-4 py-1.5 border border-neutral-gray-light dark:border-slate-700 text-neutral-gray-medium text-sm font-semibold rounded-full cursor-pointer hover:bg-neutral-gray-border">Film / TV / Production</span>
+<span class="px-4 py-1.5 border border-neutral-gray-light dark:border-slate-700 text-neutral-gray-medium text-sm font-semibold rounded-full cursor-pointer hover:bg-neutral-gray-border">Special Event / Gala</span>
+<span class="px-4 py-1.5 border border-neutral-gray-light dark:border-slate-700 text-neutral-gray-medium text-sm font-semibold rounded-full cursor-pointer hover:bg-neutral-gray-border">Halloween / Costume</span>
+<span class="px-4 py-1.5 border border-neutral-gray-light dark:border-slate-700 text-neutral-gray-medium text-sm font-semibold rounded-full cursor-pointer hover:bg-neutral-gray-border">Pageant</span>
+</div>
+</div>
+<!-- Aesthetic -->
+<div class="space-y-3">
+<h3 class="text-xs font-bold uppercase tracking-widest text-neutral-gray-medium">Makeup Aesthetic</h3>
+<div class="flex flex-wrap gap-2">
+<span class="px-4 py-1.5 bg-primary text-white text-sm font-semibold rounded-full cursor-pointer">Natural &amp; Clean</span>
+<span class="px-4 py-1.5 border border-neutral-gray-light dark:border-slate-700 text-neutral-gray-medium text-sm font-semibold rounded-full cursor-pointer hover:bg-neutral-gray-border">Soft Glam</span>
+<span class="px-4 py-1.5 border border-neutral-gray-light dark:border-slate-700 text-neutral-gray-medium text-sm font-semibold rounded-full cursor-pointer hover:bg-neutral-gray-border">Full Glam</span>
+<span class="px-4 py-1.5 border border-neutral-gray-light dark:border-slate-700 text-neutral-gray-medium text-sm font-semibold rounded-full cursor-pointer hover:bg-neutral-gray-border">Avant-Garde / Creative</span>
+<span class="px-4 py-1.5 border border-neutral-gray-light dark:border-slate-700 text-neutral-gray-medium text-sm font-semibold rounded-full cursor-pointer hover:bg-neutral-gray-border">Vintage</span>
+<span class="px-4 py-1.5 border border-neutral-gray-light dark:border-slate-700 text-neutral-gray-medium text-sm font-semibold rounded-full cursor-pointer hover:bg-neutral-gray-border">Gothic / Edgy</span>
+</div>
+</div>
+<!-- Techniques -->
+<div class="space-y-3">
+<h3 class="text-xs font-bold uppercase tracking-widest text-neutral-gray-medium">Techniques &amp; Specialties</h3>
+<div class="flex flex-wrap gap-2">
+<span class="px-4 py-1.5 border border-neutral-gray-light dark:border-slate-700 text-neutral-gray-medium text-sm font-semibold rounded-full cursor-pointer hover:bg-neutral-gray-border">Airbrush Application</span>
+<span class="px-4 py-1.5 bg-primary text-white text-sm font-semibold rounded-full cursor-pointer">Special Effects (SFX)</span>
+<span class="px-4 py-1.5 border border-neutral-gray-light dark:border-slate-700 text-neutral-gray-medium text-sm font-semibold rounded-full cursor-pointer hover:bg-neutral-gray-border">Tattoo Coverage</span>
+<span class="px-4 py-1.5 border border-neutral-gray-light dark:border-slate-700 text-neutral-gray-medium text-sm font-semibold rounded-full cursor-pointer hover:bg-neutral-gray-border">Corrective Makeup</span>
+<span class="px-4 py-1.5 border border-neutral-gray-light dark:border-slate-700 text-neutral-gray-medium text-sm font-semibold rounded-full cursor-pointer hover:bg-neutral-gray-border">Mature Skin Specialty</span>
+<span class="px-4 py-1.5 border border-neutral-gray-light dark:border-slate-700 text-neutral-gray-medium text-sm font-semibold rounded-full cursor-pointer hover:bg-neutral-gray-border">Melanin-Rich Specialty</span>
+<span class="px-4 py-1.5 border border-neutral-gray-light dark:border-slate-700 text-neutral-gray-medium text-sm font-semibold rounded-full cursor-pointer hover:bg-neutral-gray-border">South Asian / Desi Bridal</span>
+<span class="px-4 py-1.5 border border-neutral-gray-light dark:border-slate-700 text-neutral-gray-medium text-sm font-semibold rounded-full cursor-pointer hover:bg-neutral-gray-border">Body Painting</span>
+</div>
+</div>
+<!-- Product Preferences -->
+<div class="space-y-3">
+<h3 class="text-xs font-bold uppercase tracking-widest text-neutral-gray-medium">Product Preferences</h3>
+<div class="flex flex-wrap gap-2">
+<span class="px-4 py-1.5 border border-neutral-gray-light dark:border-slate-700 text-neutral-gray-medium text-sm font-semibold rounded-full cursor-pointer hover:bg-neutral-gray-border">Cruelty-Free Products</span>
+<span class="px-4 py-1.5 border border-neutral-gray-light dark:border-slate-700 text-neutral-gray-medium text-sm font-semibold rounded-full cursor-pointer hover:bg-neutral-gray-border">Vegan Products</span>
+<span class="px-4 py-1.5 border border-neutral-gray-light dark:border-slate-700 text-neutral-gray-medium text-sm font-semibold rounded-full cursor-pointer hover:bg-neutral-gray-border">Clean Beauty</span>
+</div>
+</div></div>
+</section>
+<!-- Card 4: Services & Display Pricing -->
+<section class="bg-white dark:bg-slate-900 border border-neutral-gray-light dark:border-slate-800 rounded-xl overflow-hidden shadow-sm mb-12">
+<div class="p-6 border-b border-neutral-gray-border dark:border-slate-800">
+<h2 class="text-lg font-bold">Services &amp; Display Pricing</h2>
+<p class="text-neutral-gray-medium text-sm">List your standard services. Prices can be 'starting at'.</p>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-neutral-gray-border/30 dark:bg-slate-800/50">
+<th class="px-6 py-4 text-xs font-bold uppercase tracking-widest text-neutral-gray-medium">Service Name</th>
+<th class="px-6 py-4 text-xs font-bold uppercase tracking-widest text-neutral-gray-medium">Category</th>
+<th class="px-6 py-4 text-xs font-bold uppercase tracking-widest text-neutral-gray-medium">Price</th>
+<th class="px-6 py-4 text-xs font-bold uppercase tracking-widest text-neutral-gray-medium text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-neutral-gray-border dark:divide-slate-800">
+<tr class="group hover:bg-neutral-gray-border/10">
+<td class="px-6 py-4 text-sm font-semibold">Bridal Makeup Trial</td>
+<td class="px-6 py-4 text-sm text-neutral-gray-medium">Bridal</td>
+<td class="px-6 py-4 text-sm font-bold">$150.00</td>
+<td class="px-6 py-4 text-right space-x-2">
+<button class="p-1 hover:text-primary text-neutral-gray-medium transition-colors">
+<span class="material-symbols-outlined text-lg">edit</span>
+</button>
+<button class="p-1 hover:text-red-500 text-neutral-gray-medium transition-colors">
+<span class="material-symbols-outlined text-lg">delete</span>
+</button>
+</td>
+</tr>
+<tr class="group hover:bg-neutral-gray-border/10">
+<td class="px-6 py-4 text-sm font-semibold">Full Glam Session</td>
+<td class="px-6 py-4 text-sm text-neutral-gray-medium">Event</td>
+<td class="px-6 py-4 text-sm font-bold">$125.00</td>
+<td class="px-6 py-4 text-right space-x-2">
+<button class="p-1 hover:text-primary text-neutral-gray-medium transition-colors">
+<span class="material-symbols-outlined text-lg">edit</span>
+</button>
+<button class="p-1 hover:text-red-500 text-neutral-gray-medium transition-colors">
+<span class="material-symbols-outlined text-lg">delete</span>
+</button>
+</td>
+</tr>
+<tr class="group hover:bg-neutral-gray-border/10">
+<td class="px-6 py-4 text-sm font-semibold">One-on-One Lesson</td>
+<td class="px-6 py-4 text-sm text-neutral-gray-medium">Education</td>
+<td class="px-6 py-4 text-sm font-bold">$200.00</td>
+<td class="px-6 py-4 text-right space-x-2">
+<button class="p-1 hover:text-primary text-neutral-gray-medium transition-colors">
+<span class="material-symbols-outlined text-lg">edit</span>
+</button>
+<button class="p-1 hover:text-red-500 text-neutral-gray-medium transition-colors">
+<span class="material-symbols-outlined text-lg">delete</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="p-4 bg-neutral-gray-border/10 dark:bg-slate-800/30 flex justify-center">
+<button class="flex items-center gap-2 px-6 py-2 border-2 border-neutral-gray-light dark:border-slate-700 rounded-lg text-sm font-bold text-neutral-gray-medium hover:border-primary hover:text-primary transition-all">
+<span class="material-symbols-outlined text-sm">add</span>
+                    Add New Service
+                </button>
+</div>
+</section>
+</main>
+</body></html>

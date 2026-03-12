@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Artist Review &amp; Quote Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ff5c61",
+                        "background-light": "#f8f5f5",
+                        "background-dark": "#230f0f",
+                        "border-light": "#e5e0df",
+                        "border-dark": "#4a3a3a",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+<main class="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-8 max-w-7xl">
+<div class="flex flex-col lg:flex-row gap-8">
+<div class="flex-1 min-w-0">
+<div class="mb-6">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold mb-3 uppercase tracking-wide">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+                        New Request
+                    </div>
+<h1 class="text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl mb-2">Review request from Emily Roberts</h1>
+<p class="text-slate-500 dark:text-slate-400">Request ID: #GD-8921 • Received 2 hours ago</p>
+</div>
+<div class="bg-white dark:bg-[#2a1a1a] rounded-xl border border-[#DCE0E0] dark:border-border-dark shadow-sm overflow-hidden mb-6 p-6">
+<h3 class="text-xl font-bold mb-6 text-slate-900 dark:text-white">Event Details</h3>
+<div class="flex flex-col sm:flex-row gap-6 sm:gap-12">
+<div class="flex items-start gap-3">
+<div class="size-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-[20px]">calendar_month</span>
+</div>
+<div>
+<span class="block text-xs font-bold uppercase text-slate-400 mb-0.5">Date</span>
+<p class="text-[#484848] dark:text-slate-200 font-semibold text-lg">Oct 12, 2024</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<div class="size-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-[20px]">schedule</span>
+</div>
+<div>
+<span class="block text-xs font-bold uppercase text-slate-400 mb-0.5">Time</span>
+<p class="text-[#484848] dark:text-slate-200 font-semibold text-lg">8:00 AM</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<div class="size-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-[20px]">location_on</span>
+</div>
+<div>
+<span class="block text-xs font-bold uppercase text-slate-400 mb-0.5">Location</span>
+<p class="text-[#484848] dark:text-slate-200 font-semibold text-lg">The Grand Hotel, NYC</p>
+</div>
+</div>
+</div>
+</div>
+<section class="bg-white dark:bg-[#2a1a1a] rounded-xl border border-border-light dark:border-border-dark shadow-sm p-6 mb-6">
+<h3 class="text-xl font-bold mb-4">
+                        Services Requested
+                    </h3>
+<div class="space-y-4">
+<div class="flex items-start sm:items-center justify-between p-4 rounded-lg bg-background-light dark:bg-background-dark/50 border border-transparent hover:border-primary/20 transition-all">
+<div class="flex gap-4">
+<div class="size-16 rounded-lg overflow-hidden shrink-0 bg-gray-200">
+<img alt="Bridal Makeup Thumbnail" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqB0Qh7nb9ZroJubl1sUlIvsYEFrP6oxRt8gLgzZxg3sD8c2mPZLMou8e2uu5c9-mysOx5rvfn3euR3Ryvdev5sl2DoQlbqi6XQO7oDqCo3gf8w_ouW9MzA-RHIeLuiJeEt81ywStO4DGK9QehqOYtC6AZcn2T9c_6dIOCzTJauxlhRUYwx-g1kXVUPFKcA5KYVnsEhYuCQ43Ozqdg8kD1-J3prTCWw5tbze0cByxDcDXLR2bb_6w6TM6dMwi2EGFUnCA7dlF8_8BS"/>
+</div>
+<div>
+<h4 class="font-bold text-slate-900 dark:text-slate-100">Bridal Makeup</h4>
+<p class="text-sm text-slate-500 dark:text-slate-400">1 Client • Full glam with lashes • Airbrush included</p>
+</div>
+</div>
+<div class="text-right shrink-0 mt-2 sm:mt-0">
+<span class="block font-bold text-lg">$300</span>
+<span class="text-xs text-slate-400">Base price</span>
+</div>
+</div>
+<div class="flex items-start sm:items-center justify-between p-4 rounded-lg bg-background-light dark:bg-background-dark/50 border border-transparent hover:border-primary/20 transition-all">
+<div class="flex gap-4">
+<div class="size-16 rounded-lg overflow-hidden shrink-0 bg-gray-200">
+<img alt="Bridesmaid Makeup Thumbnail" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmlrOg-DWE2cu40Vtg49GU8OmWV4P5Dh9uPUvqtDnXYoTKvl0tI6grj74sZG0ZUAhabD-09qI1GodAngLybW6-J4ULLjG4B8zdimEEli2AaJtknyoHPcpU9ZBYgkqrN-scuuHhGulOt5nYqIdaEbAcF3BqUB_9-TVxM0q9Vy8MHJplQ34LV7fJqMRlRvWJQV_ZFKOfcKuHQd14mYuz2rkxXwr5pH9pybWHf5T6vUiXFfLKyLX2nM7389as6k0wgscWZp-kN5qIRAMz"/>
+</div>
+<div>
+<h4 class="font-bold text-slate-900 dark:text-slate-100">Bridesmaid Makeup</h4>
+<p class="text-sm text-slate-500 dark:text-slate-400">3 Clients • Soft glam • Regular foundation</p>
+</div>
+</div>
+<div class="text-right shrink-0 mt-2 sm:mt-0">
+<span class="block font-bold text-lg">$150<span class="text-sm font-normal text-slate-400">/each</span></span>
+<span class="text-xs text-slate-400">Total: $450</span>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-white dark:bg-[#2a1a1a] rounded-xl border border-border-light dark:border-border-dark shadow-sm p-6 mb-6">
+<h3 class="text-xl font-bold mb-4">
+                        Client Needs
+                    </h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+<div>
+<span class="block text-xs font-bold uppercase text-slate-400 mb-1">Skin Type</span>
+<p class="font-medium text-slate-900 dark:text-slate-100">Combination (Oily T-zone)</p>
+</div>
+<div>
+<span class="block text-xs font-bold uppercase text-slate-400 mb-1">Preferences</span>
+<p class="font-medium text-slate-900 dark:text-slate-100">Cruelty-free products preferred, no heavy contouring.</p>
+</div>
+</div>
+<div class="mb-6">
+<span class="block text-xs font-bold uppercase text-slate-400 mb-2">Notes from Emily</span>
+<div class="bg-background-light dark:bg-background-dark/50 p-4 rounded-lg text-slate-700 dark:text-slate-300 italic text-sm border-l-4 border-primary/50">
+                            "Hi! We are really excited. My bridesmaids and I are looking for a very natural, glowing look. One of my bridesmaids has sensitive skin. Can we schedule a trial run for the bride?"
+                        </div>
+</div>
+<div>
+<span class="block text-xs font-bold uppercase text-slate-400 mb-3">Inspiration Board</span>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+<div class="aspect-square rounded-lg bg-gray-200 overflow-hidden cursor-pointer hover:opacity-90 transition-opacity">
+<img alt="Natural makeup look with glowing skin" class="w-full h-full object-cover" data-alt="Natural makeup look close up" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqB0Qh7nb9ZroJubl1sUlIvsYEFrP6oxRt8gLgzZxg3sD8c2mPZLMou8e2uu5c9-mysOx5rvfn3euR3Ryvdev5sl2DoQlbqi6XQO7oDqCo3gf8w_ouW9MzA-RHIeLuiJeEt81ywStO4DGK9QehqOYtC6AZcn2T9c_6dIOCzTJauxlhRUYwx-g1kXVUPFKcA5KYVnsEhYuCQ43Ozqdg8kD1-J3prTCWw5tbze0cByxDcDXLR2bb_6w6TM6dMwi2EGFUnCA7dlF8_8BS"/>
+</div>
+<div class="aspect-square rounded-lg bg-gray-200 overflow-hidden cursor-pointer hover:opacity-90 transition-opacity">
+<img alt="Soft glam makeup style" class="w-full h-full object-cover" data-alt="Soft glam eye makeup detail" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmlrOg-DWE2cu40Vtg49GU8OmWV4P5Dh9uPUvqtDnXYoTKvl0tI6grj74sZG0ZUAhabD-09qI1GodAngLybW6-J4ULLjG4B8zdimEEli2AaJtknyoHPcpU9ZBYgkqrN-scuuHhGulOt5nYqIdaEbAcF3BqUB_9-TVxM0q9Vy8MHJplQ34LV7fJqMRlRvWJQV_ZFKOfcKuHQd14mYuz2rkxXwr5pH9pybWHf5T6vUiXFfLKyLX2nM7389as6k0wgscWZp-kN5qIRAMz"/>
+</div>
+<div class="aspect-square rounded-lg bg-gray-200 overflow-hidden cursor-pointer hover:opacity-90 transition-opacity">
+<img alt="Makeup products flatlay" class="w-full h-full object-cover" data-alt="High end cosmetic products" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBU9ZofT4-Cr2aWTwUtkl-W1_KzYKz7-jE67CKzfg6G0hVXr6Pt-NVaauyA98SoflMizRV_1_23kdxgrXePgGXdRG9Sobc2t2U-BEdrHnmQACfpU3ortNKE9-GJJdAF0RQxQDC_tlxyUiETHZa7-yGqam3RGWjK3B8ihwlZ7ElZvzoyb_QQRpoj0-QxkN7_e1d3z57fpGQlzTh50HCjOg38E88jY9z9dOjjcuMz2HJH804ia-01daNLb38480qoOMoMKmQozhRufQ47"/>
+</div>
+<div class="aspect-square rounded-lg bg-primary/10 flex flex-col items-center justify-center text-primary cursor-pointer hover:bg-primary/20 transition-colors">
+<span class="material-symbols-outlined text-3xl mb-1">grid_view</span>
+<span class="text-xs font-bold">View All</span>
+</div>
+</div>
+</div>
+</section>
+</div>
+<div class="w-full lg:w-[400px] shrink-0">
+<div class="sticky top-8">
+<div class="bg-white dark:bg-[#2a1a1a] rounded-xl border border-border-light dark:border-border-dark shadow-lg overflow-hidden flex flex-col">
+<div class="p-6 border-b border-border-light dark:border-border-dark">
+<h3 class="text-xl font-bold mb-1">Build Your Quote</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400">Review services and confirm pricing.</p>
+</div>
+<div class="p-6 space-y-6">
+<div class="space-y-4">
+<div>
+<label class="block text-xs font-bold uppercase text-slate-400 mb-1.5">Bridal Makeup</label>
+<div class="relative rounded-md shadow-sm">
+<div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+<span class="text-slate-500 sm:text-sm">$</span>
+</div>
+<input class="block w-full rounded-md border-0 py-2.5 pl-7 pr-12 text-slate-900 ring-1 ring-inset ring-slate-300 placeholder:text-slate-400 focus:ring-2 focus:ring-inset focus:ring-primary dark:bg-background-dark dark:ring-border-dark dark:text-white sm:text-sm sm:leading-6 font-semibold" id="price" name="price" type="number" value="300"/>
+<div class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3">
+<span class="text-slate-500 sm:text-sm">USD</span>
+</div>
+</div>
+</div>
+<div>
+<label class="block text-xs font-bold uppercase text-slate-400 mb-1.5">Bridesmaids (x3)</label>
+<div class="relative rounded-md shadow-sm">
+<div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+<span class="text-slate-500 sm:text-sm">$</span>
+</div>
+<input class="block w-full rounded-md border-0 py-2.5 pl-7 pr-12 text-slate-900 ring-1 ring-inset ring-slate-300 placeholder:text-slate-400 focus:ring-2 focus:ring-inset focus:ring-primary dark:bg-background-dark dark:ring-border-dark dark:text-white sm:text-sm sm:leading-6 font-semibold" id="price_bm" name="price_bm" type="number" value="450"/>
+<div class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3">
+<span class="text-slate-500 sm:text-sm">USD</span>
+</div>
+</div>
+</div>
+<button class="text-sm font-bold text-primary hover:text-primary/80 flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[18px]">add</span>
+                                    Add Travel Fee or Extras
+                                </button>
+</div>
+<div class="h-px bg-border-light dark:bg-border-dark"></div>
+<div class="flex justify-between items-end">
+<span class="text-sm font-medium text-slate-500 dark:text-slate-400">Total Quote</span>
+<span class="text-3xl font-bold text-slate-900 dark:text-white">$750</span>
+</div>
+<div>
+<label class="block text-sm font-medium leading-6 text-slate-900 dark:text-slate-100 mb-2" for="message">Message to Emily</label>
+<textarea class="block w-full rounded-md border-0 py-1.5 text-slate-900 shadow-sm ring-1 ring-inset ring-slate-300 placeholder:text-slate-400 focus:ring-2 focus:ring-inset focus:ring-primary dark:bg-background-dark dark:text-white dark:ring-border-dark sm:text-sm sm:leading-6" id="message" name="message" placeholder="Hi Emily! I'd love to be part of your special day..." rows="3"></textarea>
+</div>
+<div class="space-y-3 pt-2">
+<button class="w-full rounded-lg bg-primary px-4 py-3 text-sm font-bold text-white shadow-sm hover:bg-primary/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary transition-colors flex justify-center items-center gap-2">
+<span class="material-symbols-outlined text-[20px]">check</span>
+                                    Approve &amp; Send Quote
+                                </button>
+<button class="w-full text-center text-sm font-medium text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200 transition-colors">
+                                    Decline Request
+                                </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+
+</body></html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Glam Directory - Client Quote Review</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ff5c61",
+                        "background-light": "#f8f5f5",
+                        "background-dark": "#230f0f",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#2d1b1b",
+                        "text-main": "#181011",
+                        "text-sub": "#8d5e5f",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-text-main dark:text-gray-100 min-h-screen flex flex-col justify-center">
+<main class="layout-container flex grow flex-col py-8 px-4 md:px-10 lg:px-20 xl:px-40">
+<div class="flex flex-col lg:flex-row gap-8 max-w-7xl mx-auto w-full">
+<div class="flex-1 flex flex-col gap-6">
+<div class="bg-surface-light dark:bg-surface-dark rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm p-6 sm:p-8">
+<div class="flex flex-col sm:flex-row justify-between items-start gap-4 mb-6">
+<div class="flex flex-col gap-2">
+<h1 class="text-text-main dark:text-white text-3xl sm:text-4xl font-black leading-tight tracking-tight">Your Quote is Ready!</h1>
+<p class="text-text-sub dark:text-gray-400 text-base font-normal">Review the details below before confirming your booking.</p>
+</div>
+<div class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary/10 pl-3 pr-4 py-1 border border-primary/20">
+<span class="material-symbols-outlined text-primary text-lg">verified</span>
+<p class="text-primary text-sm font-bold leading-normal">Artist Approved</p>
+</div>
+</div>
+<div class="flex items-start gap-4 p-4 bg-background-light dark:bg-gray-800/50 rounded-lg border border-gray-100 dark:border-gray-700 mb-8">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-12 h-12 shrink-0 border border-gray-200 dark:border-gray-600 shadow-sm" data-alt="Makeup artist portrait" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDYfNBWOcbeboP7W1KJQXUHJkeDVSmYD8XwsijPS3DBvr4wlV8d9iXdeV-gqls6a5R57KxhXMCEg479m-Dts8qj0p_IT5isesLVNRd3SMOKLhOTO46uJI8lXs35ALGbHTecA1yx5bcolG4erGwm9c1dFHun4vO5SOoXzlF4GjI0EVN_CqeYhxTATUSpZRYAoMkKZO80Wnu6AGWMnvGyAK0NuMwLFqD-jswn7wKuc_Vf1q6c7CvcG26Z-0cpF-Pm2Am4JU4EKR4FDM91");'></div>
+<div class="flex flex-1 flex-col gap-1 items-start">
+<div class="flex justify-between w-full items-baseline">
+<p class="text-text-sub dark:text-gray-400 text-xs font-bold uppercase tracking-wider">Message from Sarah</p>
+<span class="text-xs text-text-sub/60 dark:text-gray-500">2 hours ago</span>
+</div>
+<p class="text-base text-text-main dark:text-gray-200 font-medium leading-relaxed">
+                                "Hi! I'm available for your date and have updated the quote with the travel fees we discussed. Really looking forward to being part of your big day! Let me know if you have any other questions."
+                            </p>
+</div>
+</div>
+<div class="overflow-hidden rounded-lg border border-gray-200 dark:border-gray-700">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-gray-50 dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700">
+<th class="px-6 py-4 text-xs font-semibold uppercase tracking-wider text-text-sub dark:text-gray-400 w-1/2">Service</th>
+<th class="px-6 py-4 text-xs font-semibold uppercase tracking-wider text-text-sub dark:text-gray-400 text-center">Qty</th>
+<th class="px-6 py-4 text-xs font-semibold uppercase tracking-wider text-text-sub dark:text-gray-400 text-right">Price</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-gray-100 dark:divide-gray-700 bg-white dark:bg-surface-dark">
+<tr>
+<td class="px-6 py-4">
+<div class="flex flex-col">
+<span class="text-text-main dark:text-white font-semibold">Bridal Makeup</span>
+<span class="text-text-sub dark:text-gray-500 text-sm">Includes trial session &amp; lashes</span>
+</div>
+</td>
+<td class="px-6 py-4 text-text-main dark:text-gray-300 text-center font-medium">1</td>
+<td class="px-6 py-4 text-text-main dark:text-gray-300 text-right font-medium">$250</td>
+</tr>
+<tr>
+<td class="px-6 py-4">
+<div class="flex flex-col">
+<span class="text-text-main dark:text-white font-semibold">Bridesmaid Glam</span>
+<span class="text-text-sub dark:text-gray-500 text-sm">Full face soft glam</span>
+</div>
+</td>
+<td class="px-6 py-4 text-text-main dark:text-gray-300 text-center font-medium">3</td>
+<td class="px-6 py-4 text-text-main dark:text-gray-300 text-right font-medium">$450</td>
+</tr>
+<tr>
+<td class="px-6 py-4">
+<div class="flex flex-col">
+<span class="text-text-main dark:text-white font-semibold">Travel Fee</span>
+<span class="text-text-sub dark:text-gray-500 text-sm">Up to 25 miles from studio</span>
+</div>
+</td>
+<td class="px-6 py-4 text-text-main dark:text-gray-300 text-center font-medium">1</td>
+<td class="px-6 py-4 text-text-main dark:text-gray-300 text-right font-medium">$50</td>
+</tr>
+<tr class="bg-gray-50/50 dark:bg-gray-800/30">
+<td class="px-6 py-5 text-lg font-bold text-text-main dark:text-white" colspan="2">
+                                        Total Quote
+                                    </td>
+<td class="px-6 py-5 text-lg font-bold text-primary text-right">
+                                        $750
+                                    </td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="flex flex-col-reverse sm:flex-row items-center justify-between gap-4 pt-4">
+<a class="text-text-sub dark:text-gray-400 font-medium hover:text-text-main dark:hover:text-white hover:underline transition-colors py-2" href="#">
+                        Decline Quote
+                    </a>
+<button class="w-full sm:w-auto flex items-center justify-center gap-2 bg-primary hover:bg-primary/90 text-white text-base font-bold px-8 py-3 rounded-lg shadow-lg shadow-primary/30 transition-all transform active:scale-95">
+<span>Confirm Booking</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="w-full lg:w-80 xl:w-96 shrink-0">
+<div class="sticky top-8 flex flex-col gap-6">
+<div class="bg-surface-light dark:bg-surface-dark rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm overflow-hidden">
+<div class="h-24 bg-gradient-to-r from-pink-100 to-rose-200 dark:from-pink-900/40 dark:to-rose-900/40 relative">
+<div class="absolute -bottom-8 left-6 border-4 border-white dark:border-surface-dark rounded-full overflow-hidden w-20 h-20 shadow-md">
+<div class="w-full h-full bg-cover bg-center" data-alt="Makeup artist portrait" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCHA3pjstWBIosxR6jHp9LUdj6jKjkhXXj8eMyRTpLRYiNZwO-9ZRDb6nhfY33TxibgM31Cfg0EMsqZA6bxg5u_SWT4OcqZHu_vHZtuMlTeeAVNVI1FMUhcJdlthVLuv5as8pr71w5_Pja9wChyBqVKCX73m6YXbz8SCMxY3M6XOpRE1VlTEU0cWPSyWa9ru1XP8OyoLkQjJ3fC--oTbT-IriqdAEJQWQ548U_uMkY8hN1l2vobRsvzN6KXsIizsQlmgpo2Oo1OGylU");'></div>
+</div>
+</div>
+<div class="pt-10 px-6 pb-6">
+<h3 class="text-lg font-bold text-text-main dark:text-white">Sarah Jenkins</h3>
+<div class="flex items-center gap-1 text-primary text-sm mb-4">
+<span class="material-symbols-outlined text-base fill-current">star</span>
+<span class="font-semibold">4.98</span>
+<span class="text-text-sub dark:text-gray-500 font-normal">(124 reviews)</span>
+</div>
+<div class="space-y-4 pt-4 border-t border-gray-100 dark:border-gray-700">
+<div class="flex items-start gap-3">
+<div class="bg-gray-100 dark:bg-gray-800 p-2 rounded-lg text-text-sub dark:text-gray-400">
+<span class="material-symbols-outlined text-xl">calendar_month</span>
+</div>
+<div>
+<p class="text-xs text-text-sub dark:text-gray-400 uppercase font-bold tracking-wide">Date</p>
+<p class="text-text-main dark:text-white font-semibold">Oct 24, 2024</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<div class="bg-gray-100 dark:bg-gray-800 p-2 rounded-lg text-text-sub dark:text-gray-400">
+<span class="material-symbols-outlined text-xl">schedule</span>
+</div>
+<div>
+<p class="text-xs text-text-sub dark:text-gray-400 uppercase font-bold tracking-wide">Time</p>
+<p class="text-text-main dark:text-white font-semibold">8:00 AM - 12:30 PM</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<div class="bg-gray-100 dark:bg-gray-800 p-2 rounded-lg text-text-sub dark:text-gray-400">
+<span class="material-symbols-outlined text-xl">location_on</span>
+</div>
+<div>
+<p class="text-xs text-text-sub dark:text-gray-400 uppercase font-bold tracking-wide">Location</p>
+<p class="text-text-main dark:text-white font-semibold">The Grand Hotel</p>
+<p class="text-text-sub dark:text-gray-500 text-sm">San Francisco, CA</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface-light dark:bg-surface-dark rounded-xl border border-gray-200 dark:border-gray-700 p-6 shadow-sm">
+<h4 class="text-sm font-bold text-text-main dark:text-white mb-3">Need help?</h4>
+<p class="text-text-sub dark:text-gray-400 text-sm mb-4">
+                             If you have questions about the quote, you can message the artist directly or contact support.
+                         </p>
+<button class="w-full border border-gray-300 dark:border-gray-600 text-text-main dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800 font-semibold py-2 px-4 rounded-lg text-sm transition-colors">
+                             Contact Support
+                         </button>
+</div>
+</div>
+</div>
+</div>
+</main>
+
+</body></html>

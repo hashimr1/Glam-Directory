@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#FF5A5F", // Rausch Pink requested
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221610",
+                        "gray-custom": "#484848",
+                        "border-light": "#DCE0E0",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<title>Glam Directory - Artist Portal</title>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-custom dark:text-slate-100 min-h-screen">
+<div class="relative flex h-auto min-screen w-full flex-col overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<!-- Header Section -->
+<header class="flex items-center justify-between border-b border-border-light bg-white dark:bg-slate-900 px-6 md:px-20 py-4 relative z-50">
+<div class="flex items-center gap-3 text-primary">
+<div class="size-8">
+<svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M44 4H30.6666V17.3334H17.3334V30.6666H4V44H44V4Z"></path>
+</svg>
+</div>
+<h2 class="text-gray-custom dark:text-white text-xl font-bold leading-tight tracking-tight">Glam Directory</h2>
+</div>
+<div class="flex flex-1 justify-end items-center gap-4">
+<!-- User Profile Trigger (Pill Shape) -->
+<div class="relative">
+<button class="flex items-center pl-4 pr-3 py-1.5 border border-border-light rounded-full bg-white hover:shadow-md transition-shadow cursor-pointer"><span class="text-gray-custom font-semibold text-sm mr-2">Sarah Jenkins</span>
+<div class="flex items-center gap-2">
+<div class="size-8 rounded-full bg-cover bg-center border border-border-light" data-alt="Professional headshot of a female makeup artist Sarah Jenkins" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCsgYNX6IOg7mq0AmMWWGjcB-hJnnX6kNttVNRLNbSYuTvHxuzcEV3vZr_h7kYTzkMvEaa55qackhNuakqNaAHvPodCq1NplKUhbN90tcVVlFh-LOev7Xg8Jst_dkxrsrMhpeeBUoir4FtYuOtl9CbcWGGV7LwX694ys4yq-yAE2el5iCGAQNMDdTm-rxzE7OqrYHsXpX9IM79Q5JXQH8t6W5PaLxiB8CNm4BoAD0pSr2SHQulqMaVfFc4HwYlfG9rdkMnIMcoSFE9q");'>
+</div>
+<span class="material-symbols-outlined text-gray-custom text-[20px]">menu</span>
+</div></button>
+<!-- Expanded Dropdown Menu -->
+<div class="absolute right-0 mt-3 w-64 bg-white dark:bg-slate-800 rounded-xl shadow-xl border border-border-light overflow-hidden z-[100]">
+<div class="flex flex-col py-2">
+<a class="flex items-center px-5 py-3 hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors group" href="#">
+<span class="text-sm font-medium text-gray-custom dark:text-slate-200">Manage Bookings</span>
+</a>
+<div class="h-[1px] bg-border-light mx-5"></div>
+<a class="flex items-center px-5 py-3 hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors group" href="#">
+<span class="text-sm font-medium text-gray-custom dark:text-slate-200">Edit Profile &amp; Portfolio</span>
+</a>
+<div class="h-[1px] bg-border-light mx-5"></div>
+<a class="flex items-center px-5 py-3 hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors group" href="#">
+<span class="text-sm font-medium text-gray-custom dark:text-slate-200">Manage Availability</span>
+</a>
+<div class="h-[1px] bg-border-light mx-5"></div>
+<a class="flex items-center px-5 py-3 hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors group" href="#">
+<span class="text-sm font-medium text-gray-custom dark:text-slate-200">Account Settings</span>
+</a>
+<!-- Distinct Divider -->
+<div class="h-[1px] bg-border-light w-full my-1"></div>
+<a class="flex items-center px-5 py-3 hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors" href="#">
+<span class="text-sm font-bold text-primary">View Public Profile</span>
+</a>
+<a class="flex items-center px-5 py-3 hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors" href="#">
+<span class="text-sm font-medium text-gray-custom dark:text-slate-400">Sign Out</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</header>
+<!-- Page Content Placeholder -->
+<main class="flex-1 p-8 md:p-20">
+<div class="max-w-4xl mx-auto">
+<div class="mb-8">
+<h1 class="text-3xl font-bold text-gray-custom dark:text-white mb-2">Welcome back, Sarah</h1>
+<p class="text-slate-500">Manage your business, bookings and portfolio from your dashboard.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Dashboard Card 1 -->
+<div class="bg-white dark:bg-slate-800 p-6 rounded-xl border border-border-light shadow-sm">
+<div class="flex items-center gap-4 mb-4">
+<div class="p-3 bg-primary/10 rounded-lg">
+<span class="material-symbols-outlined text-primary">event_available</span>
+</div>
+<div>
+<h3 class="font-bold text-gray-custom dark:text-white">Upcoming Bookings</h3>
+<p class="text-sm text-slate-500">You have 4 appointments today</p>
+</div>
+</div>
+<button class="w-full py-2 bg-primary text-white rounded-lg font-bold text-sm hover:opacity-90 transition-opacity">
+                                View Calendar
+                            </button>
+</div>
+<!-- Dashboard Card 2 -->
+<div class="bg-white dark:bg-slate-800 p-6 rounded-xl border border-border-light shadow-sm">
+<div class="flex items-center gap-4 mb-4">
+<div class="p-3 bg-primary/10 rounded-lg">
+<span class="material-symbols-outlined text-primary">analytics</span>
+</div>
+<div>
+<h3 class="font-bold text-gray-custom dark:text-white">Portfolio Reach</h3>
+<p class="text-sm text-slate-500">+12% views this week</p>
+</div>
+</div>
+<button class="w-full py-2 border border-primary text-primary rounded-lg font-bold text-sm hover:bg-primary/5 transition-colors">
+                                Review Analytics
+                            </button>
+</div>
+</div>
+<!-- Portfolio Preview -->
+<div class="mt-12">
+<h2 class="text-xl font-bold mb-6">Recent Portfolio Additions</h2>
+<div class="grid grid-cols-3 gap-4">
+<div class="aspect-square rounded-lg bg-cover bg-center" data-alt="Close up of artistic eye makeup with gold accents" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBLXL_5LpcIjWp95GIRduKT0Y2Uk9kCQM5mn87ML-6KZ6UpM_epyXxU40h9OPtjszx4bWhXUqkPkeSe2X7EOeFkCn--flpIOSTT4Kki2Kn_W5L1H21ap6Jn5uJrGArNj52SQO1OFPa7xMc8R57SKPIxthjx1-A9-CYsB4FllP-YybT5UJN8iDTtqymXYGxFIicSVL_PpcBQ4cAdY3AkfddAPK8YIX0uKQ4tAhDWEsLMo0LO1XhKywsVM0dkoVnfzHbOSyq06SsacA3M");'></div>
+<div class="aspect-square rounded-lg bg-cover bg-center" data-alt="Elegant bridal makeup on a smiling woman" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC8kY4rFGGi3XpBeRAccD9rriTDx_AJ1BENLMr7TZ7Hg-5RP3gudyrLUSLYZkbjEIQuUkc7g0UDTxw8DivemA9uJyDuch_gvPUtBkk_0xCeTVZH9zfpDDC8On8reotOcMeKI3MlPPe4D8pM7TXGqRhD3FgQoVbPFf6AHYaeQRGMFaM4Pd8HZnE6q2fWBzx_8cpUGDLfIKtAajFLH4RISn_lDueBtKMi6fymIqUoDn9E6NnnXkmt-i9wxLnT_1hI1guU5Q57VeSg1l6s");'></div>
+<div class="aspect-square rounded-lg bg-cover bg-center" data-alt="Selection of professional makeup brushes on a table" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuChCufbni1SaGGc43N8tXTMN9tcHzI6Eicd6WV-REoqt3WncP2yjvI0MoUDoai7YIvNWltdkhCIqrr1sg57SNKG-F0u6X3JJfPcl-JF8gfWD65ciTvcbTh25CYzSpiirtTHQJl8Sn6EOqeFypVVOFCVvyk-aChH92X9lzLeW792VJqC-fElCbcJmeFADibXsgVB1dbCzivucssZJVSmhSLUMiZAA3vvGz3HmAJXFzqrlvu8BgyS8WX9Q8eNypg8T7rZ4JIFC2j01ov-");'></div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+</body></html>

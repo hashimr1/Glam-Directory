@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Glam Directory - Artist Profile</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#FF5A5F",
+                        "primary-dark": "#e04e53",
+                        "background-light": "#f8f5f5",
+                        "background-dark": "#230f0f",
+                        "neutral-surface": "#ffffff",
+                        "neutral-surface-dark": "#2a1616",
+                        "text-main": "#484848",
+                        "text-main-dark": "#f0e6e6",
+                        "text-sub": "#767676",
+                        "text-sub-dark": "#ccaeae",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #dcd0d0;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #bfb0b0;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display min-h-screen flex flex-col text-text-main">
+    <main class="flex-grow w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="flex flex-col md:flex-row gap-8 items-start mb-8">
+            <div class="relative group cursor-pointer shrink-0">
+                <div class="size-32 md:size-40 rounded-full border-4 border-white dark:border-[#2a1616] shadow-xl overflow-hidden bg-cover bg-center"
+                    data-alt="Portrait of Sarah Jenkins makeup artist"
+                    style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCwjsGtEizCwm3rg3VKRrZ36UbnUMK745NS1xYyUCak_Tn19XIo7XfGXWhMpQBDzITtxaoqzq74L2Y_Ddiq1m5gUvBaf5wWmz7p4HYrC-sv1uIluB1mtB2ld8rOdMrznbRiyrq8Pj6Ic7jppriX6Hm7mbhXcyJw8isZ5vA-CY4Qf--0Pe0j5a3UAwv9clQlQvoUS1kfgBpP17VOkYns7DhWO2OahkMFYgmcNARZaWVAwJal5fPCxoDlvRWx0slBGhHBCGRp36lRfFSg');">
+                </div>
+                <div class="absolute bottom-2 right-2 bg-green-500 text-white p-1.5 rounded-full border-2 border-white dark:border-[#2a1616] flex items-center justify-center"
+                    title="Verified Artist">
+                    <span class="material-symbols-outlined !text-[16px]">verified</span>
+                </div>
+            </div>
+            <div class="flex-1 pt-2">
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                    <div>
+                        <h1 class="text-3xl md:text-4xl font-bold text-text-main dark:text-text-main-dark mb-2">Sarah
+                            Jenkins</h1>
+                        <p class="text-text-sub dark:text-text-sub-dark text-lg mb-3">Bridal &amp; Editorial Makeup
+                            Artist</p>
+                        <div
+                            class="flex flex-wrap items-center gap-4 text-sm font-medium text-text-main dark:text-text-main-dark">
+                            <div
+                                class="flex items-center gap-1.5 bg-neutral-surface dark:bg-neutral-surface-dark px-3 py-1 rounded-full shadow-sm">
+                                <span
+                                    class="material-symbols-outlined text-primary !text-[18px] fill-current">star</span>
+                                <span>5.0 <span class="text-text-sub dark:text-text-sub-dark font-normal">(128
+                                        reviews)</span></span>
+                            </div>
+                            <div
+                                class="flex items-center gap-1.5 bg-neutral-surface dark:bg-neutral-surface-dark px-3 py-1 rounded-full shadow-sm">
+                                <span
+                                    class="material-symbols-outlined text-text-sub dark:text-text-sub-dark !text-[18px]">location_on</span>
+                                <span>New York, NY</span>
+                            </div>
+                            <div
+                                class="flex items-center gap-1.5 bg-neutral-surface dark:bg-neutral-surface-dark px-3 py-1 rounded-full shadow-sm">
+                                <span
+                                    class="material-symbols-outlined text-text-sub dark:text-text-sub-dark !text-[18px]">language</span>
+                                <span>English, Spanish</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex gap-3">
+                        <button
+                            class="flex items-center justify-center size-10 rounded-full bg-white dark:bg-neutral-surface-dark border border-[#e7dadb] dark:border-[#3a2020] text-text-main dark:text-text-main-dark hover:bg-background-light dark:hover:bg-[#3a2020] transition-colors">
+                            <span class="material-symbols-outlined !text-[20px]">favorite</span>
+                        </button>
+                        <button
+                            class="flex items-center justify-center size-10 rounded-full bg-white dark:bg-neutral-surface-dark border border-[#e7dadb] dark:border-[#3a2020] text-text-main dark:text-text-main-dark hover:bg-background-light dark:hover:bg-[#3a2020] transition-colors">
+                            <span class="material-symbols-outlined !text-[20px]">share</span>
+                        </button>
+                    </div>
+                </div>
+                <div
+                    class="flex items-center gap-8 border-b border-[#e7dadb] dark:border-[#3a2020] mt-8 overflow-x-auto no-scrollbar">
+                    <a class="pb-3 border-b-2 border-primary text-text-main dark:text-text-main-dark font-bold text-sm whitespace-nowrap"
+                        href="#portfolio">Portfolio</a>
+                    <a class="pb-3 border-b-2 border-transparent hover:border-text-sub/30 text-text-sub dark:text-text-sub-dark font-medium text-sm whitespace-nowrap transition-colors"
+                        href="#services">Services</a>
+                    <a class="pb-3 border-b-2 border-transparent hover:border-text-sub/30 text-text-sub dark:text-text-sub-dark font-medium text-sm whitespace-nowrap transition-colors"
+                        href="#about">About</a>
+                    <a class="pb-3 border-b-2 border-transparent hover:border-text-sub/30 text-text-sub dark:text-text-sub-dark font-medium text-sm whitespace-nowrap transition-colors"
+                        href="#reviews">Reviews</a>
+                </div>
+            </div>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 relative">
+            <div class="lg:col-span-8 flex flex-col gap-12">
+                <section id="portfolio">
+                    <div class="flex items-center justify-between mb-6">
+                        <h3 class="text-2xl font-bold text-text-main dark:text-text-main-dark">Portfolio</h3>
+                        <a class="text-primary text-sm font-bold hover:underline" href="#">View all photos</a>
+                    </div>
+                    <div class="columns-1 sm:columns-2 gap-4 space-y-4">
+                        <div class="break-inside-avoid relative group rounded-xl overflow-hidden cursor-zoom-in">
+                            <img alt="Bridal makeup closeup with soft lighting"
+                                class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-500"
+                                data-alt="Bridal makeup closeup with soft lighting"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCaFPTrauxNrORlhbpAcg1jhULOA-dh3q0yTeyFb8351IBIbVAGBTgbr2h1-JwY2ARWOh146FDyc7FOtZFdKQ-9tz4egKSpVuaEmABVzdT3RTPdOcD48XkqljITsSbZpuPj3Wzkb9zP-VhGz3xwhyfxoj3UxmTA8VvKb06vf5ueQwm0KudlAgYhWzQd_-kZUPM5T9xynjx56wNCrjkidEQgcqbrBHbKIYxSRo80nldqhQQUiuUakbxOZdGLELgwHUUw5ffNctX9d7VQ" />
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                                <p class="text-white font-medium text-sm">Natural Bridal Glam</p>
+                            </div>
+                        </div>
+                        <div class="break-inside-avoid relative group rounded-xl overflow-hidden cursor-zoom-in">
+                            <img alt="Woman applying mascara in mirror"
+                                class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-500"
+                                data-alt="Woman applying mascara in mirror"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6VkWyI5JvpWhGRbbICST-FjO71Z2_xf86eFwOZlOYJK18ih02WUJPDYEIecEKc4EcUViznzBi2lapKdHD1VLQuHqkyrMpF40O5cGOIl5NtnWThPAID-zMAZHsQ-LUqY9y48WRjoIQMThu7EdmJU-9cNhls2A4JdWYAPEJFYEiPrrhSV6d_wgYv0bCqR8ovxDvuQ_Q2Hp37tpMKzR-9MBJmJeh8FzapLOwNEqtsc0s7Aav4PdVuClv7zxvtMYuMfKsmuP_RuDuZMzK" />
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                                <p class="text-white font-medium text-sm">Editorial Shoot</p>
+                            </div>
+                        </div>
+                        <div class="break-inside-avoid relative group rounded-xl overflow-hidden cursor-zoom-in">
+                            <img alt="Vibrant eye makeup detail shot"
+                                class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-500"
+                                data-alt="Vibrant eye makeup detail shot"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0euw7PDzI193FpmqPmKRrMmsbboDeFzieXVJoCG1eeP31uzg7gWHOVAwe9jpb8M_6jnh9TEInnfH_gSqUzWa7ZqY9iut-Dp1muMq6koDJGCJEKyZN6RQeYIFklg3Nh30iacgoaxdygMM-ITNoG3Y8zw2A8zPSlUNDf3JeKMW4n3X4cL-iCe3PJCBqm_iZCvh4FxW2JZqBbL4Chefq27hKB7V3MQyAtxMrxVYEZjOBG3uRrLXlGucd0bFbfwhps6Dm5ZtwgtC44sec" />
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                                <p class="text-white font-medium text-sm">Avant-Garde Eyes</p>
+                            </div>
+                        </div>
+                        <div class="break-inside-avoid relative group rounded-xl overflow-hidden cursor-zoom-in">
+                            <img alt="Bride and bridesmaids getting ready"
+                                class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-500"
+                                data-alt="Bride and bridesmaids getting ready"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8yMXJJrRGcYJeynsfgqvH7kAo9iEG7BagHNLHhPWa6MciZUOHaCmXaOr_uvYAbVW8SP9gkz7epHw8231ftIGR-B8FNCldHRuVVDOia_N0KziYw0Nueu7aMN2VM7qOiJ33RUi75zezGaFJopSarFyda5gUibCMMPBq7MMPRUxA2hKZK2aOLLUwnuh6jslkX6_PfXlqhqGdTG_3ZSrFTH5XCuQdxrOk8IuLctijcGwmfeyY5myMmKo1Ysg1TvpsNi_1jyV8wWAST6q3" />
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                                <p class="text-white font-medium text-sm">Wedding Party</p>
+                            </div>
+                        </div>
+                        <div class="break-inside-avoid relative group rounded-xl overflow-hidden cursor-zoom-in">
+                            <img alt="Flatlay of premium makeup products"
+                                class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-500"
+                                data-alt="Flatlay of premium makeup products"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIof3vuntwuAfee-mfoApwFgmMLivU1TU0pYs4wqtrvkgZjZz-sm9uElc0Prz3vkIPTy_iMRcQcaCuQyenG75oT6BE2CrfMTDCiz0QrzVye-pxVtK5xQw_2p9q201tGky9hj_uWpFITBbbkC0py2mjgTgCVI_drMf8Q_GeNXMdIZDIWAzCff1ME5WX50z0BA7N30lUDDxpPwHKekDqiAzA0iOvYEg0SOMqOtbD3vJ_M2xcBFY1juFfa-wPePS78o0mDTxTq_HoBsBq" />
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                                <p class="text-white font-medium text-sm">Product Selection</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section
+                    class="bg-white dark:bg-neutral-surface-dark rounded-2xl p-6 sm:p-8 shadow-sm border border-[#e7dadb] dark:border-[#3a2020]"
+                    id="about">
+                    <h3 class="text-2xl font-bold text-text-main dark:text-text-main-dark mb-4">About the Artist</h3>
+                    <div class="prose dark:prose-invert max-w-none text-text-sub dark:text-text-sub-dark">
+                        <p class="mb-4">
+                            Hi, I'm Sarah! With over 8 years of experience in the beauty industry, I specialize in
+                            creating timeless, radiant looks for brides and editorial campaigns. My philosophy is to
+                            enhance natural beauty rather than mask it. I believe every face tells a story, and my job
+                            is to help you tell yours with confidence and grace.
+                        </p>
+                        <p>
+                            Based in New York City, I have had the privilege of working with hundreds of brides and have
+                            been featured in top wedding publications. I use only premium, long-lasting products to
+                            ensure you look flawless from the first photo to the last dance. When I'm not with a brush
+                            in hand, I'm constantly researching the latest trends and techniques to bring the best to my
+                            clients.
+                        </p>
+                    </div>
+                </section>
+                <section
+                    class="bg-white dark:bg-neutral-surface-dark rounded-2xl p-6 sm:p-8 shadow-sm border border-[#e7dadb] dark:border-[#3a2020]"
+                    id="services">
+                    <h3 class="text-2xl font-bold text-text-main dark:text-text-main-dark mb-6">Services &amp; Pricing
+                    </h3>
+                    <div class="space-y-6">
+                        <div
+                            class="flex flex-col sm:flex-row gap-5 border-b border-[#f0e6e6] dark:border-[#3a2020] pb-6 last:border-0 last:pb-0">
+                            <div class="shrink-0">
+                                <div class="size-20 sm:size-24 rounded-lg overflow-hidden bg-gray-100">
+                                    <img alt="Bridal Trial Service"
+                                        class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6VkWyI5JvpWhGRbbICST-FjO71Z2_xf86eFwOZlOYJK18ih02WUJPDYEIecEKc4EcUViznzBi2lapKdHD1VLQuHqkyrMpF40O5cGOIl5NtnWThPAID-zMAZHsQ-LUqY9y48WRjoIQMThu7EdmJU-9cNhls2A4JdWYAPEJFYEiPrrhSV6d_wgYv0bCqR8ovxDvuQ_Q2Hp37tpMKzR-9MBJmJeh8FzapLOwNEqtsc0s7Aav4PdVuClv7zxvtMYuMfKsmuP_RuDuZMzK" />
+                                </div>
+                            </div>
+                            <div
+                                class="flex flex-col sm:flex-row justify-between items-start sm:items-center flex-1 w-full gap-4 sm:gap-0">
+                                <div class="pr-0 sm:pr-4">
+                                    <h4 class="font-bold text-text-main dark:text-text-main-dark text-lg">Bridal Trial
+                                    </h4>
+                                    <p class="text-text-sub dark:text-text-sub-dark text-sm mt-1">90 mins • In Studio
+                                        session to perfect your look before the big day.</p>
+                                </div>
+                                <div class="shrink-0 text-right">
+                                    <span class="font-bold text-primary text-lg">$150</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="flex flex-col sm:flex-row gap-5 border-b border-[#f0e6e6] dark:border-[#3a2020] pb-6 last:border-0 last:pb-0">
+                            <div class="shrink-0">
+                                <div class="size-20 sm:size-24 rounded-lg overflow-hidden bg-gray-100">
+                                    <img alt="Wedding Day Makeup Service"
+                                        class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCaFPTrauxNrORlhbpAcg1jhULOA-dh3q0yTeyFb8351IBIbVAGBTgbr2h1-JwY2ARWOh146FDyc7FOtZFdKQ-9tz4egKSpVuaEmABVzdT3RTPdOcD48XkqljITsSbZpuPj3Wzkb9zP-VhGz3xwhyfxoj3UxmTA8VvKb06vf5ueQwm0KudlAgYhWzQd_-kZUPM5T9xynjx56wNCrjkidEQgcqbrBHbKIYxSRo80nldqhQQUiuUakbxOZdGLELgwHUUw5ffNctX9d7VQ" />
+                                </div>
+                            </div>
+                            <div
+                                class="flex flex-col sm:flex-row justify-between items-start sm:items-center flex-1 w-full gap-4 sm:gap-0">
+                                <div class="pr-0 sm:pr-4">
+                                    <div class="flex items-center gap-2">
+                                        <h4 class="font-bold text-text-main dark:text-text-main-dark text-lg">Wedding
+                                            Day Makeup</h4>
+                                        <span
+                                            class="bg-primary/10 text-primary text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wide">Popular</span>
+                                    </div>
+                                    <p class="text-text-sub dark:text-text-sub-dark text-sm mt-1">120 mins • On Location
+                                        full glam including lashes and touch-up kit.</p>
+                                </div>
+                                <div class="shrink-0 text-right">
+                                    <span class="font-bold text-primary text-lg">$300</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="flex flex-col sm:flex-row gap-5 border-b border-[#f0e6e6] dark:border-[#3a2020] pb-6 last:border-0 last:pb-0">
+                            <div class="shrink-0">
+                                <div class="size-20 sm:size-24 rounded-lg overflow-hidden bg-gray-100">
+                                    <img alt="Bridal Party Service"
+                                        class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8yMXJJrRGcYJeynsfgqvH7kAo9iEG7BagHNLHhPWa6MciZUOHaCmXaOr_uvYAbVW8SP9gkz7epHw8231ftIGR-B8FNCldHRuVVDOia_N0KziYw0Nueu7aMN2VM7qOiJ33RUi75zezGaFJopSarFyda5gUibCMMPBq7MMPRUxA2hKZK2aOLLUwnuh6jslkX6_PfXlqhqGdTG_3ZSrFTH5XCuQdxrOk8IuLctijcGwmfeyY5myMmKo1Ysg1TvpsNi_1jyV8wWAST6q3" />
+                                </div>
+                            </div>
+                            <div
+                                class="flex flex-col sm:flex-row justify-between items-start sm:items-center flex-1 w-full gap-4 sm:gap-0">
+                                <div class="pr-0 sm:pr-4">
+                                    <h4 class="font-bold text-text-main dark:text-text-main-dark text-lg">Bridal Party
+                                    </h4>
+                                    <p class="text-text-sub dark:text-text-sub-dark text-sm mt-1">45 mins • Per Person
+                                        for bridesmaids, mother of the bride/groom.</p>
+                                </div>
+                                <div class="shrink-0 text-right">
+                                    <span class="font-bold text-primary text-lg">$120</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="flex flex-col sm:flex-row gap-5 border-b border-[#f0e6e6] dark:border-[#3a2020] pb-6 last:border-0 last:pb-0">
+                            <div class="shrink-0">
+                                <div class="size-20 sm:size-24 rounded-lg overflow-hidden bg-gray-100">
+                                    <img alt="Event Glam Service"
+                                        class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0euw7PDzI193FpmqPmKRrMmsbboDeFzieXVJoCG1eeP31uzg7gWHOVAwe9jpb8M_6jnh9TEInnfH_gSqUzWa7ZqY9iut-Dp1muMq6koDJGCJEKyZN6RQeYIFklg3Nh30iacgoaxdygMM-ITNoG3Y8zw2A8zPSlUNDf3JeKMW4n3X4cL-iCe3PJCBqm_iZCvh4FxW2JZqBbL4Chefq27hKB7V3MQyAtxMrxVYEZjOBG3uRrLXlGucd0bFbfwhps6Dm5ZtwgtC44sec" />
+                                </div>
+                            </div>
+                            <div
+                                class="flex flex-col sm:flex-row justify-between items-start sm:items-center flex-1 w-full gap-4 sm:gap-0">
+                                <div class="pr-0 sm:pr-4">
+                                    <h4 class="font-bold text-text-main dark:text-text-main-dark text-lg">Event Glam
+                                    </h4>
+                                    <p class="text-text-sub dark:text-text-sub-dark text-sm mt-1">60 mins • In Studio
+                                        makeup for galas, proms, or special nights out.</p>
+                                </div>
+                                <div class="shrink-0 text-right">
+                                    <span class="font-bold text-primary text-lg">$100</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section
+                    class="bg-white dark:bg-neutral-surface-dark rounded-2xl p-6 sm:p-8 shadow-sm border border-[#e7dadb] dark:border-[#3a2020]"
+                    id="reviews">
+                    <div class="flex items-center justify-between mb-8">
+                        <div>
+                            <h3 class="text-2xl font-bold text-text-main dark:text-text-main-dark">Verified Reviews</h3>
+                            <p class="text-text-sub dark:text-text-sub-dark mt-1">From clients who booked through Glam
+                                Directory</p>
+                        </div>
+                        <div class="text-right hidden sm:block">
+                            <div class="text-3xl font-bold text-text-main dark:text-text-main-dark">5.0</div>
+                            <div class="flex text-primary text-sm">
+                                <span class="material-symbols-outlined fill-current !text-[18px]">star</span>
+                                <span class="material-symbols-outlined fill-current !text-[18px]">star</span>
+                                <span class="material-symbols-outlined fill-current !text-[18px]">star</span>
+                                <span class="material-symbols-outlined fill-current !text-[18px]">star</span>
+                                <span class="material-symbols-outlined fill-current !text-[18px]">star</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="space-y-8">
+                        <div class="border-b border-[#f0e6e6] dark:border-[#3a2020] pb-8 last:border-0 last:pb-0">
+                            <div class="flex gap-4">
+                                <div class="size-12 rounded-full bg-slate-200 flex-shrink-0 bg-cover bg-center"
+                                    data-alt="Portrait of Jessica M."
+                                    style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB89jsxH2OHDGZFfqmvYsfKEUUw08ZJ4Pc1YUXMWxrQgtyRCvSqUFucY9Loc7Fd41-av9rsP3MtPdfaIRruQipXMcq6TJWpvtMdM2qjrXW7qBPIJEw8CevcEhpsC3MZXnGSjox8YKVN9cXySgfGGPCMtuZXNUrDHVDvIAgokShXftjTvoLwCLa_qjXZnoTKfAB3erToU9mVdkCmLRuy5AQm0HA-XqTC6HhTrfSp8t-H1jDAbQqKXpW_6Gc-Zm5nU7hztrqvuOJlJtet')">
+                                </div>
+                                <div class="flex-1">
+                                    <div class="flex justify-between items-start mb-2">
+                                        <div>
+                                            <h4 class="font-bold text-text-main dark:text-text-main-dark">Jessica M.
+                                            </h4>
+                                            <p class="text-xs text-text-sub dark:text-text-sub-dark">Booked: Wedding Day
+                                                Makeup</p>
+                                        </div>
+                                        <span class="text-xs text-text-sub dark:text-text-sub-dark">2 weeks ago</span>
+                                    </div>
+                                    <div class="flex text-primary mb-2">
+                                        <span class="material-symbols-outlined fill-current !text-[16px]">star</span>
+                                        <span class="material-symbols-outlined fill-current !text-[16px]">star</span>
+                                        <span class="material-symbols-outlined fill-current !text-[16px]">star</span>
+                                        <span class="material-symbols-outlined fill-current !text-[16px]">star</span>
+                                        <span class="material-symbols-outlined fill-current !text-[16px]">star</span>
+                                    </div>
+                                    <p class="text-text-main/80 dark:text-text-main-dark/80 text-sm leading-relaxed">
+                                        Sarah was absolutely incredible! She listened to exactly what I wanted for my
+                                        wedding day and executed it perfectly. My makeup lasted all night through
+                                        dancing and tears. Highly recommend!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border-b border-[#f0e6e6] dark:border-[#3a2020] pb-8 last:border-0 last:pb-0">
+                            <div class="flex gap-4">
+                                <div class="size-12 rounded-full bg-slate-200 flex-shrink-0 bg-cover bg-center"
+                                    data-alt="Portrait of Alex R."
+                                    style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAhRZUP64jqXjNvm4ybcdJUEIU3hSDqQbm_RX9ou4RD_DmUz_VmvMeOAZImFS1ex2pyHU3qNSnU_JXt8llr1O8ED68KOX1hAIDRgFDHS38TXlGdZvDeiLYdty_4DuaTlTH3gibVs7kdgV9U0XlvtlbxqSTF2nBTJmII5_4CpsvgwBQKW6aa5dB0CgbKHyXpZUSd_iTNjEtUx9ndMFPubekhfPeX4FVh6QktSzXUu8xQM_mouIyRg2Rw3wrparjOYvOG68bbh8b1tTlE')">
+                                </div>
+                                <div class="flex-1">
+                                    <div class="flex justify-between items-start mb-2">
+                                        <div>
+                                            <h4 class="font-bold text-text-main dark:text-text-main-dark">Alex R.</h4>
+                                            <p class="text-xs text-text-sub dark:text-text-sub-dark">Booked: Editorial
+                                                Shoot</p>
+                                        </div>
+                                        <span class="text-xs text-text-sub dark:text-text-sub-dark">1 month ago</span>
+                                    </div>
+                                    <div class="flex text-primary mb-2">
+                                        <span class="material-symbols-outlined fill-current !text-[16px]">star</span>
+                                        <span class="material-symbols-outlined fill-current !text-[16px]">star</span>
+                                        <span class="material-symbols-outlined fill-current !text-[16px]">star</span>
+                                        <span class="material-symbols-outlined fill-current !text-[16px]">star</span>
+                                        <span class="material-symbols-outlined fill-current !text-[16px]">star</span>
+                                    </div>
+                                    <p class="text-text-main/80 dark:text-text-main-dark/80 text-sm leading-relaxed">
+                                        Professional, punctual, and extremely talented. The look was exactly on brief
+                                        for our magazine shoot.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button
+                        class="w-full mt-6 py-3 border border-[#e7dadb] dark:border-[#3a2020] rounded-lg text-sm font-bold text-text-main dark:text-text-main-dark hover:bg-background-light dark:hover:bg-[#3a2020] transition-colors">
+                        Read all 128 reviews
+                    </button>
+                </section>
+            </div>
+            <div class="lg:col-span-4 relative">
+                <div class="sticky top-8 flex flex-col gap-6">
+                    <div
+                        class="bg-white dark:bg-neutral-surface-dark rounded-2xl shadow-lg border border-[#e7dadb] dark:border-[#3a2020] overflow-hidden">
+                        <div
+                            class="p-5 border-b border-[#e7dadb] dark:border-[#3a2020] bg-background-light/50 dark:bg-[#301c1c]/50">
+                            <h3
+                                class="font-bold text-lg text-text-main dark:text-text-main-dark flex items-center gap-2">
+                                <span class="material-symbols-outlined text-primary !text-[20px]">calendar_month</span>
+                                Availability
+                            </h3>
+                        </div>
+                        <div class="p-5">
+                            <div class="flex items-center justify-between mb-4">
+                                <button
+                                    class="p-1 hover:bg-background-light dark:hover:bg-[#3a2020] rounded-full text-text-sub dark:text-text-sub-dark">
+                                    <span class="material-symbols-outlined !text-[20px]">chevron_left</span>
+                                </button>
+                                <span class="font-bold text-text-main dark:text-text-main-dark">October 2023</span>
+                                <button
+                                    class="p-1 hover:bg-background-light dark:hover:bg-[#3a2020] rounded-full text-text-sub dark:text-text-sub-dark">
+                                    <span class="material-symbols-outlined !text-[20px]">chevron_right</span>
+                                </button>
+                            </div>
+                            <div
+                                class="grid grid-cols-7 gap-1 text-center text-xs mb-2 text-text-sub dark:text-text-sub-dark font-medium">
+                                <div>Su</div>
+                                <div>Mo</div>
+                                <div>Tu</div>
+                                <div>We</div>
+                                <div>Th</div>
+                                <div>Fr</div>
+                                <div>Sa</div>
+                            </div>
+                            <div class="grid grid-cols-7 gap-1 text-center text-sm">
+                                <div class="p-2"></div>
+                                <div class="p-2"></div>
+                                <div class="p-2 text-text-sub/50 line-through">1</div>
+                                <div class="p-2 text-text-sub/50 line-through">2</div>
+                                <div
+                                    class="p-2 rounded-lg hover:bg-primary/10 cursor-pointer text-text-main dark:text-text-main-dark font-medium">
+                                    3</div>
+                                <div
+                                    class="p-2 rounded-lg hover:bg-primary/10 cursor-pointer text-text-main dark:text-text-main-dark font-medium">
+                                    4</div>
+                                <div class="p-2 bg-primary text-white rounded-lg shadow-md font-bold cursor-pointer">5
+                                </div>
+                                <div class="p-2 text-text-sub/50 line-through">6</div>
+                                <div
+                                    class="p-2 rounded-lg hover:bg-primary/10 cursor-pointer text-text-main dark:text-text-main-dark font-medium">
+                                    7</div>
+                                <div
+                                    class="p-2 rounded-lg hover:bg-primary/10 cursor-pointer text-text-main dark:text-text-main-dark font-medium">
+                                    8</div>
+                                <div class="p-2 text-text-sub/50 line-through">9</div>
+                                <div
+                                    class="p-2 rounded-lg hover:bg-primary/10 cursor-pointer text-text-main dark:text-text-main-dark font-medium">
+                                    10</div>
+                                <div
+                                    class="p-2 rounded-lg hover:bg-primary/10 cursor-pointer text-text-main dark:text-text-main-dark font-medium">
+                                    11</div>
+                                <div class="p-2 text-text-sub/50 line-through">12</div>
+                            </div>
+                            <div class="mt-4 flex gap-4 text-xs text-text-sub dark:text-text-sub-dark justify-center">
+                                <div class="flex items-center gap-1">
+                                    <div class="size-2 rounded-full bg-primary"></div>Selected
+                                </div>
+                                <div class="flex items-center gap-1">
+                                    <div class="size-2 rounded-full bg-background-light border border-current"></div>
+                                    Available
+                                </div>
+                                <div class="flex items-center gap-1">
+                                    <div class="size-2 rounded-full bg-text-sub/20"></div>Booked
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white dark:bg-neutral-surface-dark rounded-2xl shadow-lg border border-[#e7dadb] dark:border-[#3a2020] p-6">
+                        <div class="flex justify-between items-end mb-4">
+                            <div>
+                                <span class="text-2xl font-bold text-text-main dark:text-text-main-dark">$150+</span>
+                                <span class="text-text-sub dark:text-text-sub-dark text-sm"> / session</span>
+                            </div>
+                            <div
+                                class="flex items-center gap-1 text-sm font-medium text-text-main dark:text-text-main-dark">
+                                <span
+                                    class="material-symbols-outlined text-primary !text-[16px] fill-current">star</span>
+                                <span>5.0</span>
+                            </div>
+                        </div>
+                        <button
+                            class="w-full bg-primary text-white text-lg font-bold py-3.5 rounded-lg hover:bg-primary-dark transition-all flex items-center justify-center gap-2 shadow-md">
+                            Request Booking
+                        </button>
+                        <div class="mt-4 text-center">
+                            <span class="text-xs text-text-sub dark:text-text-sub-dark">You won't be charged yet</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

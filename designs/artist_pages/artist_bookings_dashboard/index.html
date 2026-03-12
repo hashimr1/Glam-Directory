@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Glam Directory - Manage Bookings</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#FF5A5F",
+                        "background-light": "#F7F7F7",
+                        "background-dark": "#230f0f",
+                        "card-border": "#DCE0E0",
+                        "text-main": "#484848",
+                        "secondary": "#767676",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "Noto Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Custom scrollbar for cleaner look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(141, 94, 95, 0.2);
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-main antialiased min-h-screen flex flex-col">
+<!-- Header / Navbar -->
+<!-- Main Content Area -->
+<main class="flex-grow w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+<!-- Page Header -->
+<div class="mb-8">
+<h1 class="text-3xl font-extrabold text-text-main dark:text-white tracking-tight mb-2">Manage Bookings</h1>
+<p class="text-secondary dark:text-gray-400">Track your upcoming appointments and manage new client requests.</p>
+</div>
+<!-- Tabs Navigation -->
+<div class="border-b border-card-border mb-8">
+<nav aria-label="Tabs" class="-mb-px flex space-x-8">
+<a aria-current="page" class="border-primary text-primary whitespace-nowrap py-4 px-1 border-b-2 font-bold text-sm flex items-center gap-2 group" href="#">
+                    New Requests
+                    <span class="bg-primary text-white py-0.5 px-2 rounded-full text-xs font-bold">2</span>
+</a>
+<a class="border-transparent text-secondary hover:text-text-main hover:border-gray-300 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm transition-colors group" href="#">
+                    Upcoming
+                </a>
+<a class="border-transparent text-secondary hover:text-text-main hover:border-gray-300 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm transition-colors group" href="#">
+                    Past
+                </a>
+</nav>
+</div>
+<!-- Content Grid -->
+<div class="grid grid-cols-1 gap-6">
+<!-- Card 1: New Request -->
+<div class="bg-white dark:bg-[#2f1515] border border-card-border rounded-xl shadow-sm hover:shadow-md transition-shadow duration-200 overflow-hidden flex flex-col md:flex-row">
+<!-- Left Accent / Status Indicator -->
+<div class="p-6 flex-1 flex flex-col justify-between">
+<div class="flex justify-between items-start mb-4">
+<div class="flex gap-4">
+<!-- Avatar / Initials -->
+<div class="h-12 w-12 rounded-full bg-[#DCE0E0] flex items-center justify-center text-[#484848] font-bold text-lg shrink-0">ER</div>
+<div>
+<h3 class="text-lg font-bold text-text-main dark:text-white">Emily Roberts</h3>
+<div class="flex items-center gap-2 text-sm text-secondary mt-1">
+<span class="material-symbols-outlined text-[18px]">location_on</span>
+                                    New York, NY
+                                </div>
+</div>
+</div>
+<span class="inline-flex items-center rounded-md bg-red-50 px-2.5 py-1 text-xs font-bold text-primary ring-1 ring-inset ring-red-600/10 dark:bg-red-900/30 dark:text-red-300">
+                             Action Required
+                        </span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-2 mb-6">
+<div class="bg-background-light dark:bg-[#3d1f1f] p-3 rounded-lg">
+<p class="text-xs text-secondary uppercase tracking-wider font-semibold mb-1">Date</p>
+<div class="flex items-center gap-2 text-primary font-bold">
+<span class="material-symbols-outlined text-[18px]">calendar_today</span>
+                                Oct 24, 2023
+                            </div>
+</div>
+<div class="bg-background-light dark:bg-[#3d1f1f] p-3 rounded-lg">
+<p class="text-xs text-secondary uppercase tracking-wider font-semibold mb-1">Ready By</p>
+<div class="flex items-center gap-2 text-text-main dark:text-gray-200 font-medium">
+<span class="material-symbols-outlined text-[18px]">schedule</span>
+                                10:00 AM
+                            </div>
+</div>
+<div class="bg-background-light dark:bg-[#3d1f1f] p-3 rounded-lg sm:col-span-2">
+<p class="text-xs text-secondary uppercase tracking-wider font-semibold mb-1">Service Details</p>
+<div class="flex items-center gap-2 text-text-main dark:text-gray-200 font-medium">
+<span class="material-symbols-outlined text-[18px]">diversity_3</span>
+                                Bridal Party of 4
+                            </div>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-t border-card-border pt-4 mt-auto">
+<div class="text-sm text-secondary">
+                            Requested 2 hours ago
+                        </div>
+<div class="flex gap-3 w-full sm:w-auto">
+<button class="flex-1 sm:flex-none px-4 py-2 border border-card-border text-text-main rounded-lg text-sm font-bold hover:bg-gray-50 dark:text-white dark:hover:bg-[#3d1f1f] transition-colors">
+                                Decline
+                            </button>
+<button class="flex-1 sm:flex-none px-6 py-2 bg-primary text-white rounded-lg text-sm font-bold hover:bg-red-500 transition-colors shadow-sm flex items-center justify-center gap-2">
+<span>Review &amp; Quote</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 2: Confirmed -->
+<div class="bg-white dark:bg-[#2f1515] border border-card-border rounded-xl shadow-sm hover:shadow-md transition-shadow duration-200 overflow-hidden flex flex-col md:flex-row">
+<!-- Left Accent / Status Indicator -->
+<div class="p-6 flex-1 flex flex-col justify-between">
+<div class="flex justify-between items-start mb-4">
+<div class="flex gap-4">
+<!-- Avatar / Initials -->
+<div class="h-12 w-12 rounded-full bg-[#DCE0E0] flex items-center justify-center text-[#484848] font-bold text-lg shrink-0">JS</div>
+<div>
+<h3 class="text-lg font-bold text-text-main dark:text-white">Jessica Smith</h3>
+<div class="flex items-center gap-2 text-sm text-secondary mt-1">
+<span class="material-symbols-outlined text-[18px]">location_on</span>
+                                    Toronto, ON
+                                </div>
+</div>
+</div>
+<span class="inline-flex items-center rounded-md bg-[#DCE0E0] px-2.5 py-1 text-xs font-bold text-[#484848] ring-1 ring-inset ring-gray-300">Confirmed</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-2 mb-6">
+<div class="bg-background-light dark:bg-[#3d1f1f] p-3 rounded-lg">
+<p class="text-xs text-secondary uppercase tracking-wider font-semibold mb-1">Date</p>
+<div class="flex items-center gap-2 text-text-main dark:text-gray-200 font-bold">
+<span class="material-symbols-outlined text-[18px]">calendar_today</span>
+                                Nov 12, 2023
+                            </div>
+</div>
+<div class="bg-background-light dark:bg-[#3d1f1f] p-3 rounded-lg">
+<p class="text-xs text-secondary uppercase tracking-wider font-semibold mb-1">Ready By</p>
+<div class="flex items-center gap-2 text-text-main dark:text-gray-200 font-medium">
+<span class="material-symbols-outlined text-[18px]">schedule</span>
+                                08:00 AM
+                            </div>
+</div>
+<div class="bg-background-light dark:bg-[#3d1f1f] p-3 rounded-lg sm:col-span-2">
+<p class="text-xs text-secondary uppercase tracking-wider font-semibold mb-1">Service Details</p>
+<div class="flex items-center gap-2 text-text-main dark:text-gray-200 font-medium">
+<span class="material-symbols-outlined text-[18px]">star</span>
+                                Special Event
+                            </div>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-t border-card-border pt-4 mt-auto">
+<div class="flex items-center gap-2">
+<input aria-describedby="deposit-description" checked="" class="h-4 w-4 rounded border-gray-300 text-[#FF5A5F] focus:ring-[#FF5A5F] bg-gray-100 cursor-not-allowed" disabled="" id="deposit" name="deposit" type="checkbox"/>
+<label class="text-sm font-medium text-text-main dark:text-gray-300" for="deposit">Deposit Received (External)</label>
+</div>
+<div class="flex gap-3 w-full sm:w-auto">
+<button class="flex-1 sm:flex-none px-4 py-2 border border-[#DCE0E0] text-[#484848] rounded-lg text-sm font-bold hover:bg-gray-50 transition-colors flex items-center justify-center gap-2"><span class="material-symbols-outlined text-[18px]">info</span>View Contact Info</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 3: Pending (Another variation for fullness) -->
+<div class="bg-white dark:bg-[#2f1515] border border-card-border rounded-xl shadow-sm hover:shadow-md transition-shadow duration-200 overflow-hidden flex flex-col md:flex-row">
+<div class="p-6 flex-1 flex flex-col justify-between">
+<div class="flex justify-between items-start mb-4">
+<div class="flex gap-4">
+<div class="h-12 w-12 rounded-full bg-[#DCE0E0] flex items-center justify-center text-[#484848] font-bold text-lg shrink-0">AK</div>
+<div>
+<h3 class="text-lg font-bold text-text-main dark:text-white">Amanda Kline</h3>
+<div class="flex items-center gap-2 text-sm text-secondary mt-1">
+<span class="material-symbols-outlined text-[18px]">location_on</span>
+                                    Brooklyn, NY
+                                </div>
+</div>
+</div>
+<span class="inline-flex items-center rounded-md bg-gray-50 px-2.5 py-1 text-xs font-bold text-gray-600 ring-1 ring-inset ring-gray-500/10 dark:bg-gray-800 dark:text-gray-300">
+                            Quote Sent
+                        </span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-2 mb-6">
+<div class="bg-background-light dark:bg-[#3d1f1f] p-3 rounded-lg">
+<p class="text-xs text-secondary uppercase tracking-wider font-semibold mb-1">Date</p>
+<div class="flex items-center gap-2 text-text-main dark:text-gray-200 font-bold">
+<span class="material-symbols-outlined text-[18px]">calendar_today</span>
+                                Dec 02, 2023
+                            </div>
+</div>
+<div class="bg-background-light dark:bg-[#3d1f1f] p-3 rounded-lg">
+<p class="text-xs text-secondary uppercase tracking-wider font-semibold mb-1">Ready By</p>
+<div class="flex items-center gap-2 text-text-main dark:text-gray-200 font-medium">
+<span class="material-symbols-outlined text-[18px]">schedule</span>
+                                12:30 PM
+                            </div>
+</div>
+<div class="bg-background-light dark:bg-[#3d1f1f] p-3 rounded-lg sm:col-span-2">
+<p class="text-xs text-secondary uppercase tracking-wider font-semibold mb-1">Service Details</p>
+<div class="flex items-center gap-2 text-text-main dark:text-gray-200 font-medium">
+<span class="material-symbols-outlined text-[18px]">camera_alt</span>
+                                Photoshoot Makeup
+                            </div>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-t border-card-border pt-4 mt-auto">
+<div class="text-sm text-secondary italic">
+                            Awaiting client response...
+                        </div>
+<div class="flex gap-3 w-full sm:w-auto">
+<button class="flex-1 sm:flex-none px-4 py-2 border border-card-border text-text-main rounded-lg text-sm font-bold hover:bg-gray-50 dark:text-white dark:hover:bg-[#3d1f1f] transition-colors flex items-center justify-center gap-2">
+                                View Quote
+                            </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+</body></html>

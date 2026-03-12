@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Glam Directory - Booking Request</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ff5c61",
+                        "rausch": "#FF5A5F",
+                        "medium-gray": "#767676",
+                        "background-light": "#F7F7F7",
+                        "background-dark": "#230f0f",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+</head>
+<body class="dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen flex flex-col" style="background-color: #F8F5F5;">
+<main class="flex-grow flex justify-center py-8 px-4 sm:px-6 lg:px-8">
+<div class="w-full max-w-6xl flex flex-col lg:flex-row gap-12">
+<div class="flex-1 flex flex-col gap-6">
+<a class="inline-flex items-center gap-2 text-sm font-medium text-slate-500 hover:text-primary transition-colors mb-2 w-fit" href="#">
+<span class="material-symbols-outlined text-[20px]">arrow_back</span>
+                Back to artist profile
+            </a>
+<div class="flex flex-col gap-2">
+<div class="flex gap-6 justify-between items-end mb-2">
+<h1 class="text-3xl font-bold tracking-tight">Event Details</h1>
+<span class="text-sm font-medium text-slate-500">Step 1 of 3</span>
+</div>
+<div class="h-2 w-full bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden">
+<div class="h-full bg-primary w-1/3 rounded-full"></div>
+</div>
+</div>
+<form class="flex flex-col gap-8 mt-4">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<label class="flex flex-col gap-2">
+<span class="text-base font-medium">Event Date</span>
+<div class="relative">
+<input class="w-full rounded-lg border-slate-200 dark:border-slate-700 bg-white dark:bg-[#1a0a0a] h-12 px-4 text-base focus:border-primary focus:ring-primary shadow-sm" required="" type="date"/>
+</div>
+</label>
+<label class="flex flex-col gap-2">
+<span class="text-base font-medium">Ready-by Time</span>
+<div class="relative">
+<input class="w-full rounded-lg border-slate-200 dark:border-slate-700 bg-white dark:bg-[#1a0a0a] h-12 px-4 text-base focus:border-primary focus:ring-primary shadow-sm" required="" type="time"/>
+</div>
+</label>
+</div>
+<label class="flex flex-col gap-2">
+<span class="text-base font-medium">Venue Address</span>
+<div class="relative">
+<input class="w-full rounded-lg border-slate-200 dark:border-slate-700 bg-white dark:bg-[#1a0a0a] h-12 px-4 pr-10 text-base focus:border-primary focus:ring-primary shadow-sm placeholder:text-slate-400" placeholder="Enter street address, city, state" required="" type="text"/>
+<span class="material-symbols-outlined absolute right-3 top-3 text-slate-400 pointer-events-none">location_on</span>
+</div>
+</label>
+<div class="flex flex-col gap-4">
+<h3 class="text-lg font-bold">Services Required</h3>
+<p class="text-sm text-slate-500 -mt-2 mb-2">Select the number of people for each service.</p>
+<div class="flex items-center justify-between p-4 border border-slate-200 dark:border-slate-700 rounded-xl bg-white dark:bg-[#1a0a0a] shadow-sm">
+<div class="flex items-center gap-4">
+<img alt="Bridal makeup thumbnail" class="w-12 h-12 rounded-lg object-cover bg-slate-100" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzGdxp90efrWvYzZWG6gABOAT3I0PM2fv_G0guPPg2rILzU3bP1R_85rF0zNNe8GfVmius-0AnQWmQ-II1uftoKwxCmRLZl2bmQW-cRMGE_0No4S4q1vgRTL_csjGnfQhJrxAaZBItmbvuwmSMBcjQRmZDQucWbqLHsLhUTzCX_1otaF5mIhnK0KYRpLt9eC4eV_RKEqujf1UqYeO9DwNjripEvuVh7xPltTmP3iDvYYqT8cLuvVHFsAnyX6_9-TpiH2SsFKveEljs"/>
+<div>
+<h4 class="font-bold text-base">Bridal Makeup</h4>
+<p class="text-sm text-slate-500">Airbrush finish included</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="size-8 rounded-full border border-slate-300 dark:border-slate-600 flex items-center justify-center hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors disabled:opacity-50" type="button">
+<span class="material-symbols-outlined text-sm">remove</span>
+</button>
+<span class="w-4 text-center font-medium">1</span>
+<button class="size-8 rounded-full border border-slate-300 dark:border-slate-600 flex items-center justify-center hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" type="button">
+<span class="material-symbols-outlined text-sm">add</span>
+</button>
+</div>
+</div>
+<div class="flex items-center justify-between p-4 border border-slate-200 dark:border-slate-700 rounded-xl bg-white dark:bg-[#1a0a0a] shadow-sm">
+<div class="flex items-center gap-4">
+<img alt="Bridesmaids makeup thumbnail" class="w-12 h-12 rounded-lg object-cover bg-slate-100" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLKlVAEpiQA4gE6Op572RCcAwuPUe4vdl0bfUwI6_6FmsEqAeN28tugfRSWVKTRguWHztiOLdOOMeqt-aHUGImOQcRGiCvvLQwHy9YRZ8nkRHA_DFIESVAuTWbbB1MNqTtR1T0JXwSXq-HSyCUt9yQuo30o9WiXqyOhni5sAIcWZOhDV_lq9sBUhtQqFtBkkTZNisu9nvNazfbjDXnfDGPRbB80iG28L1prmnbOoU2EW6doIKpJICRKFTfbuQLKhBY7gbBK2LhVdtR"/>
+<div>
+<h4 class="font-bold text-base">Bridesmaids Makeup</h4>
+<p class="text-sm text-slate-500">Standard application</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="size-8 rounded-full border border-slate-300 dark:border-slate-600 flex items-center justify-center hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors disabled:opacity-50" type="button">
+<span class="material-symbols-outlined text-sm">remove</span>
+</button>
+<span class="w-4 text-center font-medium">0</span>
+<button class="size-8 rounded-full border border-slate-300 dark:border-slate-600 flex items-center justify-center hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" type="button">
+<span class="material-symbols-outlined text-sm">add</span>
+</button>
+</div>
+</div>
+<div class="flex items-center justify-between p-4 border border-slate-200 dark:border-slate-700 rounded-xl bg-white dark:bg-[#1a0a0a] shadow-sm">
+<div class="flex items-center gap-4">
+<img alt="Mother of the bride makeup thumbnail" class="w-12 h-12 rounded-lg object-cover bg-slate-100" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqCyXlk4jlaStfZ-JpGMgRjUHHA3m_8AxrmgzrHNyai3aBImoxSDD4yhw6GNsgLbKxjrXdxfjonoO9g39SrwO9FFsoDv00almxSqL5ZvZcY5sg7SC6_Exu7Z4EnT4R2hICQqslZ3Bqq3dj0fwXBMGx_dMghpj7KngoHg84qN5ssEFmhqaueD2evgM3d0bQ7iWJ3BgShStDNQqkYkgLC5b2m_CbO3FCVBYt01-yf23DGfdajbM8w2qmf-qgNnat6oXMK7PB7Yz4pBUi"/>
+<div>
+<h4 class="font-bold text-base">Mother of the Bride</h4>
+<p class="text-sm text-slate-500">Age-appropriate styling</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="size-8 rounded-full border border-slate-300 dark:border-slate-600 flex items-center justify-center hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors disabled:opacity-50" type="button">
+<span class="material-symbols-outlined text-sm">remove</span>
+</button>
+<span class="w-4 text-center font-medium">0</span>
+<button class="size-8 rounded-full border border-slate-300 dark:border-slate-600 flex items-center justify-center hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" type="button">
+<span class="material-symbols-outlined text-sm">add</span>
+</button>
+</div>
+</div>
+</div>
+<div class="pt-8 flex items-center justify-between border-t border-slate-200 dark:border-slate-700">
+<a class="text-[#767676] hover:text-slate-900 dark:hover:text-white font-medium transition-colors" href="#">
+                        Back
+                    </a>
+<button class="px-8 h-12 bg-[#FF5A5F] hover:bg-[#ff4449] text-white font-bold rounded-lg transition-colors shadow-md shadow-[#FF5A5F]/20 flex items-center justify-center gap-2" type="button">
+                        Next Step
+                        <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</form>
+</div>
+<div class="lg:w-[380px] shrink-0">
+<div class="sticky top-24 border border-[#DCE0E0] dark:border-slate-700 rounded-xl bg-white dark:bg-[#1a0a0a] shadow-lg p-6 flex flex-col gap-6">
+<div class="flex gap-4 items-center">
+<img alt="Professional makeup artist portrait" class="size-16 rounded-full object-cover bg-slate-200" data-alt="Portrait of a smiling professional makeup artist with natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXN8CDrYBR_L6hQ5aE9XL-LglCAMxvGMQCps057L519bxDDoZMKWl90aJRbLXLLedED6zHhCgcW7QvtjllHiT1SFQSFO7oGsUhrNxqurxfdr6lV9A_5oB2O-yCCthPRHS3LMmffa4qtmeE5qLtdbMbLELWcwdrShOIgoebgm1cAmudH_q6SRAhogxrR5kjKXPlzYH1-pmGR70Z1UWPJumzqhk9ueMZRrjEgJC4vrE2Od3j4QUFg0rgsLtgd_Bcp-LVKqpQRc_hWACr"/>
+<div class="flex flex-col">
+<span class="text-xs font-semibold text-slate-500 uppercase tracking-wide">Artist</span>
+<h3 class="font-bold text-lg leading-tight">Sarah Jenkins</h3>
+</div>
+</div>
+<div class="h-px bg-slate-200 w-full"></div>
+<div class="flex flex-col gap-4">
+<h4 class="font-bold text-base">Booking Summary</h4>
+<div class="flex justify-between items-center text-sm">
+<span class="text-slate-600 dark:text-slate-400">Date</span>
+<span class="font-medium text-slate-900 dark:text-white">Saturday, Oct 24, 2026</span>
+</div>
+<div class="flex justify-between items-center text-sm">
+<span class="text-slate-600 dark:text-slate-400">Time</span>
+<span class="font-medium text-slate-900 dark:text-white">10:00 AM - 2:00 PM</span>
+</div>
+<div class="flex flex-col gap-2 pt-2">
+<span class="text-sm text-slate-600 dark:text-slate-400">Selected Services</span>
+<ul class="text-sm font-medium space-y-2 text-slate-900 dark:text-white">
+<li class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-rausch"></span>
+                                1x Bridal Makeup Package
+                            </li>
+<li class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-rausch"></span>
+                                3x Bridesmaid Glam
+                            </li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</body></html>

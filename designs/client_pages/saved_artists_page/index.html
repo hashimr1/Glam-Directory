@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#FF5A5F", // Rausch Pink for buttons/accents
+                        "background-light": "#F7F7F7",
+                        "background-dark": "#221610",
+                        "neutral-dark": "#484848",
+                        "neutral-medium": "#767676",
+                        "neutral-border": "#DCE0E0",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Public Sans', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen">
+<div class="layout-container flex h-full grow flex-col">
+<main class="flex flex-1 justify-center py-12 px-6">
+<div class="layout-content-container flex flex-col max-w-[1200px] flex-1">
+<!-- Page Heading Section -->
+<div class="flex flex-col gap-2 p-4 mb-4">
+<h1 class="text-neutral-dark dark:text-slate-100 text-4xl font-black leading-tight tracking-[-0.033em]">
+                        Saved Artists
+                    </h1>
+<p class="text-neutral-medium dark:text-slate-400 text-base font-normal">
+                        Your curated list of professional makeup artists and stylists.
+                    </p>
+</div>
+<!-- Artist Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 p-4">
+<!-- Artist Card 1 -->
+<div class="flex flex-col gap-0 bg-white dark:bg-slate-800 border border-neutral-border dark:border-slate-700 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+<div class="relative w-full aspect-[4/3] bg-center bg-no-repeat bg-cover" data-alt="Professional makeup artist working on bridal look" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCp4uYNUecYA3M4LnSQ7iUqGHSqATMMVjDsJtPkOPeuPWRHaS3rT5NXTbwgLbILrO2S0E-T6DpPHANlmJCNA441KOJ_q9KCRIJL01JStP-oAIIWtesr0HErPIlmHmaA64f9Ozm2J3UWEcDGmuAxpetGeYRFxIjEX_XV2hOnMxmOODVZR383c7ZIq-E2CK2kGsw4l96Vt8SebGF9XnSREU9V6rs5rhGe7N0t3hOyuK5BcU3jtFQmJkRgu9oUycsisrpLG01EzrEhyzbD");'>
+<div class="absolute top-3 right-3 bg-white/90 dark:bg-slate-900/90 p-1.5 rounded-full flex items-center justify-center text-primary cursor-pointer shadow-sm">
+<span class="material-symbols-outlined !text-[20px]" style="font-variation-settings: 'FILL' 1">favorite</span>
+</div>
+</div>
+<div class="p-5 flex flex-col gap-2">
+<div class="flex flex-col">
+<p class="text-neutral-dark dark:text-slate-100 text-lg font-bold leading-tight">Elena Rossi</p>
+<div class="flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-primary !text-[16px]" style="font-variation-settings: 'FILL' 1">star</span>
+<p class="text-neutral-dark dark:text-slate-200 text-sm font-semibold leading-normal">4.9</p>
+<p class="text-neutral-medium dark:text-slate-400 text-sm font-normal leading-normal">(120 reviews)</p>
+</div>
+<p class="text-neutral-medium dark:text-slate-400 text-sm font-normal leading-normal mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined !text-[16px]">location_on</span>
+                                    Milan, Italy
+                                </p>
+</div>
+<button class="mt-3 w-full bg-primary hover:bg-primary/90 text-white font-bold py-2.5 rounded-lg transition-colors text-sm">
+                                View Profile
+                            </button>
+</div>
+</div>
+<!-- Artist Card 2 -->
+<div class="flex flex-col gap-0 bg-white dark:bg-slate-800 border border-neutral-border dark:border-slate-700 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+<div class="relative w-full aspect-[4/3] bg-center bg-no-repeat bg-cover" data-alt="Close up of high-fashion editorial makeup" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDbP0knGHLZEB5SAbJrdLUgfprE0kAL_F82DtzBJIVnTmVfc_eN9hlNx9LvdeZIfSDPo_q8S6jGjf1OWAh8K-OYAVv5gilCmkJsOmCaQ4We9WbEwInqC5D15TgZ5lyd4FMQbfBQeuh1B3frmD5TLz1DhNCrzETVjwgjog7DCQLqti144fyVxsANOvPSQwGChcra0mBGmP5GV2EH2yUL0yrA9nAItqjOFIoDXbHeCfA7rISrzPJ9xmMU-aUppJXAShsg0ADa1OOw38QP");'>
+<div class="absolute top-3 right-3 bg-white/90 dark:bg-slate-900/90 p-1.5 rounded-full flex items-center justify-center text-primary cursor-pointer shadow-sm">
+<span class="material-symbols-outlined !text-[20px]" style="font-variation-settings: 'FILL' 1">favorite</span>
+</div>
+</div>
+<div class="p-5 flex flex-col gap-2">
+<div class="flex flex-col">
+<p class="text-neutral-dark dark:text-slate-100 text-lg font-bold leading-tight">Marcus Thorne</p>
+<div class="flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-primary !text-[16px]" style="font-variation-settings: 'FILL' 1">star</span>
+<p class="text-neutral-dark dark:text-slate-200 text-sm font-semibold leading-normal">4.8</p>
+<p class="text-neutral-medium dark:text-slate-400 text-sm font-normal leading-normal">(85 reviews)</p>
+</div>
+<p class="text-neutral-medium dark:text-slate-400 text-sm font-normal leading-normal mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined !text-[16px]">location_on</span>
+                                    New York, NY
+                                </p>
+</div>
+<button class="mt-3 w-full bg-primary hover:bg-primary/90 text-white font-bold py-2.5 rounded-lg transition-colors text-sm">
+                                View Profile
+                            </button>
+</div>
+</div>
+<!-- Artist Card 3 -->
+<div class="flex flex-col gap-0 bg-white dark:bg-slate-800 border border-neutral-border dark:border-slate-700 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+<div class="relative w-full aspect-[4/3] bg-center bg-no-repeat bg-cover" data-alt="Beauty artist organizing cosmetics kit" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD9Jtw29BQJObC2hQv_3LdjDS8Yehl_FXUWykyISe454jIfasKqklJLZO5RiLygJqHHFhyUMgTeTSjlomYifDDFjZpPrvT_z_gICQ_S5BuMkbGPgJU4_1F0ah6jxlcQ5cB1oEDDNL3lJxZaG7r8sPp6e4vZzC-g42V5QrwkcwEqu1EzpC0rZdPE9mG8JgNrpRC0PmsFsa5dcu61diZZ9inyxejc4fNI8IOptv2V7nMsX4QySkdi4OuV3tnrtyVAHssdr91e5q5C4EoT");'>
+<div class="absolute top-3 right-3 bg-white/90 dark:bg-slate-900/90 p-1.5 rounded-full flex items-center justify-center text-primary cursor-pointer shadow-sm">
+<span class="material-symbols-outlined !text-[20px]" style="font-variation-settings: 'FILL' 1">favorite</span>
+</div>
+</div>
+<div class="p-5 flex flex-col gap-2">
+<div class="flex flex-col">
+<p class="text-neutral-dark dark:text-slate-100 text-lg font-bold leading-tight">Sarah Jenkins</p>
+<div class="flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-primary !text-[16px]" style="font-variation-settings: 'FILL' 1">star</span>
+<p class="text-neutral-dark dark:text-slate-200 text-sm font-semibold leading-normal">5.0</p>
+<p class="text-neutral-medium dark:text-slate-400 text-sm font-normal leading-normal">(210 reviews)</p>
+</div>
+<p class="text-neutral-medium dark:text-slate-400 text-sm font-normal leading-normal mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined !text-[16px]">location_on</span>
+                                    London, UK
+                                </p>
+</div>
+<button class="mt-3 w-full bg-primary hover:bg-primary/90 text-white font-bold py-2.5 rounded-lg transition-colors text-sm">
+                                View Profile
+                            </button>
+</div>
+</div>
+<!-- Artist Card 4 -->
+<div class="flex flex-col gap-0 bg-white dark:bg-slate-800 border border-neutral-border dark:border-slate-700 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+<div class="relative w-full aspect-[4/3] bg-center bg-no-repeat bg-cover" data-alt="Modern hairstyling session in a bright studio" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAA6U-HOdEm5lXb2F97mFNQwxghiZACeWm5jCu9QJPSiQ1TeF7hTRUTW5lPjPQplUBvP0_IEq2l5hT3KPT9Kf5O6vN2wum5n1hcV7MAubxiBNu3qAo1uso5FpRg5JhnygupkrRcfAlk7MGSckr3MH3ceQ40WEExS9Xklc5hY1awzbvOXI5IiEZLIxS_PBS8ATBE393g1o-aHfvqu112pNFDY6Ek5UoA1ksgOMXOnCS6GQA_msPjsYlLX6hu7YNQjT_KS-MZUFwu_Pcn");'>
+<div class="absolute top-3 right-3 bg-white/90 dark:bg-slate-900/90 p-1.5 rounded-full flex items-center justify-center text-primary cursor-pointer shadow-sm">
+<span class="material-symbols-outlined !text-[20px]" style="font-variation-settings: 'FILL' 1">favorite</span>
+</div>
+</div>
+<div class="p-5 flex flex-col gap-2">
+<div class="flex flex-col">
+<p class="text-neutral-dark dark:text-slate-100 text-lg font-bold leading-tight">David Chen</p>
+<div class="flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-primary !text-[16px]" style="font-variation-settings: 'FILL' 1">star</span>
+<p class="text-neutral-dark dark:text-slate-200 text-sm font-semibold leading-normal">4.7</p>
+<p class="text-neutral-medium dark:text-slate-400 text-sm font-normal leading-normal">(95 reviews)</p>
+</div>
+<p class="text-neutral-medium dark:text-slate-400 text-sm font-normal leading-normal mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined !text-[16px]">location_on</span>
+                                    San Francisco, CA
+                                </p>
+</div>
+<button class="mt-3 w-full bg-primary hover:bg-primary/90 text-white font-bold py-2.5 rounded-lg transition-colors text-sm">
+                                View Profile
+                            </button>
+</div>
+</div>
+<!-- Artist Card 5 -->
+<div class="flex flex-col gap-0 bg-white dark:bg-slate-800 border border-neutral-border dark:border-slate-700 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+<div class="relative w-full aspect-[4/3] bg-center bg-no-repeat bg-cover" data-alt="Portrait of a glamorously styled woman" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDmP0P7q0KRpeXKEsXNKP0Y2RJSCrDTNRT29vQFDBVZbSDAOu37TZpdWfl-dhmxpaXnbN5A7OmkMtFpUo77CchU9vcwg5X_-9e3xI5AUtFfEwMNvzdsv0ok9Q-4D_6QtXdzfpyIAeQzwlxNXg9ecL1HftvA-lTzokuhuZ9BgcjLOvz-YVQ1uZQY7s63beHSxES6hykJ7wLOXjVajkxNdhjbvLMKt8SFnX4yzq9Ij9lYaI0phRDt3T7urZwUr_sitbX4gknclM-IYXUY");'>
+<div class="absolute top-3 right-3 bg-white/90 dark:bg-slate-900/90 p-1.5 rounded-full flex items-center justify-center text-primary cursor-pointer shadow-sm">
+<span class="material-symbols-outlined !text-[20px]" style="font-variation-settings: 'FILL' 1">favorite</span>
+</div>
+</div>
+<div class="p-5 flex flex-col gap-2">
+<div class="flex flex-col">
+<p class="text-neutral-dark dark:text-slate-100 text-lg font-bold leading-tight">Sofia Mendez</p>
+<div class="flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-primary !text-[16px]" style="font-variation-settings: 'FILL' 1">star</span>
+<p class="text-neutral-dark dark:text-slate-200 text-sm font-semibold leading-normal">4.9</p>
+<p class="text-neutral-medium dark:text-slate-400 text-sm font-normal leading-normal">(156 reviews)</p>
+</div>
+<p class="text-neutral-medium dark:text-slate-400 text-sm font-normal leading-normal mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined !text-[16px]">location_on</span>
+                                    Barcelona, Spain
+                                </p>
+</div>
+<button class="mt-3 w-full bg-primary hover:bg-primary/90 text-white font-bold py-2.5 rounded-lg transition-colors text-sm">
+                                View Profile
+                            </button>
+</div>
+</div>
+<!-- Artist Card 6 -->
+<div class="flex flex-col gap-0 bg-white dark:bg-slate-800 border border-neutral-border dark:border-slate-700 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+<div class="relative w-full aspect-[4/3] bg-center bg-no-repeat bg-cover" data-alt="Cosmetic artist workspace with brushes and palettes" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDphPtMzfYmXZYxXe6sOzUKoj9fkqJZapDSebh561hNj_MB_oKQVeUL4pL42z4LAc0WeK0FjUO1xEEAH6TKLrjB1KIqDC11fyWqS-uwwQt59CdgIDTQjL3zjlYPnqwiinxppO0KTjEd0RD9Coag7aqHTcwqaiOJsbBJNjz9t87z_nb8ncorOAOOne5HPvOcjhoe9h2_JEiDQu6OvnQotF1eao4qB9x3DKtjWtcEOZ2G19Cu7g1osT1286n1etl6KKtjccvbZiASMFNS");'>
+<div class="absolute top-3 right-3 bg-white/90 dark:bg-slate-900/90 p-1.5 rounded-full flex items-center justify-center text-primary cursor-pointer shadow-sm">
+<span class="material-symbols-outlined !text-[20px]" style="font-variation-settings: 'FILL' 1">favorite</span>
+</div>
+</div>
+<div class="p-5 flex flex-col gap-2">
+<div class="flex flex-col">
+<p class="text-neutral-dark dark:text-slate-100 text-lg font-bold leading-tight">Oliver Smith</p>
+<div class="flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-primary !text-[16px]" style="font-variation-settings: 'FILL' 1">star</span>
+<p class="text-neutral-dark dark:text-slate-200 text-sm font-semibold leading-normal">4.6</p>
+<p class="text-neutral-medium dark:text-slate-400 text-sm font-normal leading-normal">(42 reviews)</p>
+</div>
+<p class="text-neutral-medium dark:text-slate-400 text-sm font-normal leading-normal mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined !text-[16px]">location_on</span>
+                                    Sydney, Australia
+                                </p>
+</div>
+<button class="mt-3 w-full bg-primary hover:bg-primary/90 text-white font-bold py-2.5 rounded-lg transition-colors text-sm">
+                                View Profile
+                            </button>
+</div>
+</div>
+</div>
+<!-- Empty State Placeholder (Hidden) -->
+<div class="hidden flex-col items-center justify-center py-20 px-4 text-center">
+<span class="material-symbols-outlined !text-[64px] text-neutral-border mb-4">favorite_border</span>
+<h2 class="text-2xl font-bold text-neutral-dark dark:text-slate-100">No saved artists yet</h2>
+<p class="text-neutral-medium dark:text-slate-400 max-w-sm mt-2">Start exploring our directory and save your favorite artists for quick access.</p>
+<button class="mt-6 bg-primary text-white font-bold py-3 px-8 rounded-full">
+                        Explore Directory
+                    </button>
+</div>
+</div>
+</main>
+</div>
+</body></html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Glam Directory - Premium Makeup Artist Booking</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#ff5c61",
+              "primary-dark": "#e6454a", 
+              "background-light": "#f8f5f5",
+              "background-dark": "#230f0f",
+              "text-main": "#181011",
+              "text-muted": "#8d5e5f",
+            },
+            fontFamily: {
+              display: ["Manrope", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              "2xl": "1rem",
+              full: "9999px",
+            },
+          },
+        },
+      }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-text-main font-display antialiased">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden group/design-root">
+<div class="layout-container flex h-full grow flex-col">
+
+<div class="flex flex-1 justify-center py-5 px-4 md:px-10 lg:px-20">
+<div class="layout-content-container flex flex-col max-w-[1200px] flex-1 w-full">
+<div class="@container mb-12">
+<div class="flex min-h-[560px] flex-col gap-6 bg-cover bg-center bg-no-repeat rounded-2xl items-center justify-center p-8 relative overflow-hidden shadow-xl" data-alt="Close up of bridal makeup application" style='background-image: linear-gradient(rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.5) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuAWw8RfMRNIWQ95sPcvczDiL33WMAEGYhA4tdK3Rpd5DCK-4JNSfNBC-auFG5bF7gPp6zQ8fZnUiHDfBqwZlHyt-puEn0RSA7p8h0Jp2rVXrfFeFJNNlD9-prurZSLONVGTfu2gRhEvYsxN8LhygewNhAVnvyTyB0Fybu6vA_jhLHesr3bHpNt4MSB7hW41vQB4f7fwZO0Box8HTQe7tCy83SpqIkkyg5pihw6HWVlJVK2yAj3gfFDtFZ4LdbJA5VgP-AczJYU9wq5I");'>
+<div class="relative z-10 flex flex-col gap-4 text-center max-w-[800px]">
+<h1 class="text-white text-4xl md:text-5xl lg:text-6xl font-black leading-tight tracking-[-0.02em] drop-shadow-sm">
+                                    Find the Perfect Makeup Artist for Your Special Day
+                                </h1>
+<h2 class="text-white/90 text-lg md:text-xl font-medium leading-normal max-w-[600px] mx-auto drop-shadow-sm">
+                                    Book premium makeup artists for weddings, galas, and high-end events effortlessly.
+                                </h2>
+</div>
+<div class="relative z-10 w-full max-w-[800px] mt-6">
+<label class="flex flex-col md:flex-row w-full bg-white rounded-xl shadow-2xl p-2 gap-2 md:gap-0">
+<div class="flex flex-1 items-center px-4 py-3 border-b md:border-b-0 md:border-r border-[#e7dadb]">
+<span class="material-symbols-outlined text-primary mr-3">location_on</span>
+<div class="flex flex-col w-full">
+<span class="text-xs font-bold text-text-main uppercase tracking-wider">Location</span>
+<input class="w-full text-sm font-medium text-text-main placeholder:text-text-muted focus:outline-none bg-transparent p-0 border-none focus:ring-0" placeholder="New York, NY" type="text"/>
+</div>
+</div>
+<div class="flex flex-1 items-center px-4 py-3 border-b md:border-b-0 md:border-r border-[#e7dadb]">
+<span class="material-symbols-outlined text-primary mr-3">calendar_month</span>
+<div class="flex flex-col w-full">
+<span class="text-xs font-bold text-text-main uppercase tracking-wider">Date</span>
+<input class="w-full text-sm font-medium text-text-main placeholder:text-text-muted focus:outline-none bg-transparent p-0 border-none focus:ring-0" placeholder="Add dates" type="text"/>
+</div>
+</div>
+<div class="flex flex-1 items-center px-4 py-3">
+<span class="material-symbols-outlined text-primary mr-3">brush</span>
+<div class="flex flex-col w-full">
+<span class="text-xs font-bold text-text-main uppercase tracking-wider">Service</span>
+<input class="w-full text-sm font-medium text-text-main placeholder:text-text-muted focus:outline-none bg-transparent p-0 border-none focus:ring-0" placeholder="Bridal, Editorial..." type="text"/>
+</div>
+</div>
+<div class="flex items-center p-1">
+<button class="flex w-full md:w-auto min-w-[60px] cursor-pointer items-center justify-center rounded-lg h-12 px-6 bg-primary hover:bg-primary-dark transition-colors text-white shadow-md">
+<span class="material-symbols-outlined">search</span>
+</button>
+</div>
+</label>
+</div>
+</div>
+</div>
+<div class="mb-16">
+<div class="flex justify-between items-end mb-6 px-2">
+<div>
+<h2 class="text-text-main text-3xl font-bold leading-tight tracking-tight">Featured Artists</h2>
+<p class="text-text-muted mt-2">Top-rated professionals for your next event</p>
+</div>
+<a class="hidden sm:flex items-center text-primary font-bold hover:underline" href="#">
+                                View all <span class="material-symbols-outlined ml-1 text-sm">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="group flex flex-col bg-white rounded-xl shadow-sm border border-[#e7dadb] overflow-hidden hover:shadow-lg transition-all duration-300">
+<div class="relative aspect-[4/5] overflow-hidden">
+<div class="absolute top-3 right-3 z-10 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-md flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-yellow-500 text-sm fill-current">star</span>
+<span class="text-xs font-bold text-text-main">4.9</span>
+</div>
+<div class="h-full w-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="Portrait of makeup artist Sarah Jenkins" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBebHHlamd5HjNx2tYIgenRzF505JHKuIvpXtB8mdwUeGgQQhCPfhiHJBeA7k_mW-wL7HNvxL4-6AdlOHWfXLIlZsAGY8yZbaOqJRO14ILljjaKopJ4pwEJzurPvjk7urq3e5HiylhyezD5azExFRTTGBG3AIv6b6TaLqwgL3o7h3yaQR34b8peUAQGQ97xoY3szeeW0mXWf6HJTbJaUSZi8zjidCqBU7uC8J_0KIvjxA6zDWGCyb2giAQA8NzlgMT3a7CvQN49fmuS");'></div>
+</div>
+<div class="p-4 flex flex-col gap-2">
+<div class="flex justify-between items-start">
+<h3 class="text-lg font-bold text-text-main">Sarah Jenkins</h3>
+<span class="material-symbols-outlined text-text-muted hover:text-primary cursor-pointer">favorite</span>
+</div>
+<p class="text-text-muted text-sm">Bridal Specialist • New York</p>
+<div class="mt-2 pt-3 border-t border-[#f5f0f0] flex justify-between items-center">
+<span class="text-xs font-semibold text-text-muted uppercase">Starting at</span>
+<span class="text-lg font-bold text-text-main">$250</span>
+</div>
+</div>
+</div>
+<div class="group flex flex-col bg-white rounded-xl shadow-sm border border-[#e7dadb] overflow-hidden hover:shadow-lg transition-all duration-300">
+<div class="relative aspect-[4/5] overflow-hidden">
+<div class="absolute top-3 right-3 z-10 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-md flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-yellow-500 text-sm fill-current">star</span>
+<span class="text-xs font-bold text-text-main">5.0</span>
+</div>
+<div class="h-full w-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="Portrait of makeup artist Chloe" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDnSgXwuz1KGEWeB-y9b6aNRpmfg5WEIWbfhvzmsBKNTaVSPln58Czbex2yGy8j5BT9YAXok2KeDnRuRW8HIf7uF4Y822p_5AAeaqRQbDiHSxHpEcvnZEqP2Ej1JDuELWac_zG1Q25bgPQibt3vMHthj55VppFULyySxOWBTGyiAZ1PT_hXcxAXrWxmo3360gfhws2b4uHhbIE6AualLYGIaG1gspqBRyT7rs9AB74k0TWAM27yfjp2naIb5_T70UXKE8BrtM8vfcZa");'></div>
+</div>
+<div class="p-4 flex flex-col gap-2">
+<div class="flex justify-between items-start">
+<h3 class="text-lg font-bold text-text-main">Makeup by Chloe</h3>
+<span class="material-symbols-outlined text-text-muted hover:text-primary cursor-pointer">favorite</span>
+</div>
+<p class="text-text-muted text-sm">Editorial &amp; Fashion • Brooklyn</p>
+<div class="mt-2 pt-3 border-t border-[#f5f0f0] flex justify-between items-center">
+<span class="text-xs font-semibold text-text-muted uppercase">Starting at</span>
+<span class="text-lg font-bold text-text-main">$300</span>
+</div>
+</div>
+</div>
+<div class="group flex flex-col bg-white rounded-xl shadow-sm border border-[#e7dadb] overflow-hidden hover:shadow-lg transition-all duration-300">
+<div class="relative aspect-[4/5] overflow-hidden">
+<div class="absolute top-3 right-3 z-10 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-md flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-yellow-500 text-sm fill-current">star</span>
+<span class="text-xs font-bold text-text-main">4.8</span>
+</div>
+<div class="h-full w-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="Portrait of makeup artist Elena Rodriguez" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCHwDDuEwEiP72n5Hhy0VTu06ywwpjTeVHzyzXyNFLRzSmwAUl5-vYFTjB675Bm9maAA8ydXBgfVbiXhva3BezcD0x5lrVdyZXRgmL49Ha_Eh1pN_Z7UEMQOVDJtFt2AQO27AH4FHbn4JlGZ2eADgCkYjgMRF78lpRyElYt7X08zNPziOLPZcCPC1IgXTsIFy5fMyGPdUEb1fCM7K5VmK3wOABJWWLpcppemnkmyliyu3TznXj1ACVNftcAkWjWZF6u9GlObDy6j_qs");'></div>
+</div>
+<div class="p-4 flex flex-col gap-2">
+<div class="flex justify-between items-start">
+<h3 class="text-lg font-bold text-text-main">Elena Rodriguez</h3>
+<span class="material-symbols-outlined text-text-muted hover:text-primary cursor-pointer">favorite</span>
+</div>
+<p class="text-text-muted text-sm">Event Glam • Manhattan</p>
+<div class="mt-2 pt-3 border-t border-[#f5f0f0] flex justify-between items-center">
+<span class="text-xs font-semibold text-text-muted uppercase">Starting at</span>
+<span class="text-lg font-bold text-text-main">$180</span>
+</div>
+</div>
+</div>
+<div class="group flex flex-col bg-white rounded-xl shadow-sm border border-[#e7dadb] overflow-hidden hover:shadow-lg transition-all duration-300">
+<div class="relative aspect-[4/5] overflow-hidden">
+<div class="absolute top-3 right-3 z-10 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-md flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-yellow-500 text-sm fill-current">star</span>
+<span class="text-xs font-bold text-text-main">4.9</span>
+</div>
+<div class="h-full w-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="Portrait of makeup artist from Glamour Studio" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAnxl2mHbsKH9IDREKVqPeQkW39Fg90Hqsp-o3n8nT6YVZnHqsAV4atbyv6OQacCXhTNy06a5HtZ3Ls1mEqGX0CyIWJiyQSeQoWAcZH3xdFJ4y-sT8GD3VXDCf_MBjkvXnsr8bDoudDe8a0CnaJqe_D-KxA2eLFYXJf3_UDZvtcbF4Z9blZOMf7oA6TXcZ-KcYZNMsfJQyK23zEumDSQwfum0cz9aNQ4aKfgS_MqBc4A68TCa2mvEZTZCqPF8dkqyUvRqRSk6BEFIUg");'></div>
+</div>
+<div class="p-4 flex flex-col gap-2">
+<div class="flex justify-between items-start">
+<h3 class="text-lg font-bold text-text-main">Glamour Studio</h3>
+<span class="material-symbols-outlined text-text-muted hover:text-primary cursor-pointer">favorite</span>
+</div>
+<p class="text-text-muted text-sm">Full Team Available • Queens</p>
+<div class="mt-2 pt-3 border-t border-[#f5f0f0] flex justify-between items-center">
+<span class="text-xs font-semibold text-text-muted uppercase">Starting at</span>
+<span class="text-lg font-bold text-text-main">$200</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-white rounded-2xl p-8 md:p-12 shadow-sm border border-[#e7dadb] mb-12">
+<div class="flex flex-col gap-4 mb-10 text-center">
+<h2 class="text-text-main tracking-tight text-3xl md:text-4xl font-extrabold leading-tight">
+                                How it Works
+                            </h2>
+<p class="text-text-muted text-lg font-medium leading-normal max-w-[600px] mx-auto">
+                                Booking your dream look is simple, transparent, and secure.
+                            </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="flex flex-col items-center text-center gap-4 group">
+<div class="w-20 h-20 rounded-full bg-[#fff0f1] flex items-center justify-center text-primary mb-2 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+<span class="material-symbols-outlined" style="font-size: 36px;">search</span>
+</div>
+<h3 class="text-text-main text-xl font-bold leading-tight">1. Search</h3>
+<p class="text-text-muted text-base leading-relaxed max-w-xs">
+                                    Browse portfolios, read verified reviews, and filter by your specific style and budget needs.
+                                </p>
+</div>
+<div class="flex flex-col items-center text-center gap-4 group">
+<div class="w-20 h-20 rounded-full bg-[#fff0f1] flex items-center justify-center text-primary mb-2 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+<span class="material-symbols-outlined" style="font-size: 36px;">send</span>
+</div>
+<h3 class="text-text-main text-xl font-bold leading-tight">2. Request</h3>
+<p class="text-text-muted text-base leading-relaxed max-w-xs">
+                                    Send a booking request with your event details directly to your favorite artists.
+                                </p>
+</div>
+<div class="flex flex-col items-center text-center gap-4 group">
+<div class="w-20 h-20 rounded-full bg-[#fff0f1] flex items-center justify-center text-primary mb-2 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+<span class="material-symbols-outlined" style="font-size: 36px;">check_circle</span>
+</div>
+<h3 class="text-text-main text-xl font-bold leading-tight">3. Approve</h3>
+<p class="text-text-muted text-base leading-relaxed max-w-xs">
+                                    Confirm your booking securely through our platform and get ready to shine.
+                                </p>
+</div>
+</div>
+<div class="flex justify-center mt-12">
+<button class="flex min-w-[160px] cursor-pointer items-center justify-center rounded-lg h-12 px-8 bg-primary hover:bg-primary-dark transition-colors text-white text-base font-bold leading-normal shadow-md hover:shadow-lg">
+                                Get Started
+                            </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body></html>

@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Glam Directory - Artist Search</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#FF5A5F", // Rausch Pink as requested
+              "background-light": "#f8f5f5",
+              "background-dark": "#230f0f",
+              "text-dark": "#484848",
+              "text-light": "#767676",
+            },
+            fontFamily: {
+              "display": ["Manrope", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            boxShadow: {
+              'pill': '0 1px 2px rgba(0,0,0,0.08), 0 4px 12px rgba(0,0,0,0.05)',
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #e7dadb;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #d1c2c3;
+        }input[type="checkbox"]:checked {
+            background-color: #FF5A5F;
+            border-color: #FF5A5F;
+            background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z'/%3e%3c/svg%3e");
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased min-h-screen flex flex-col">
+<div class="sticky top-0 z-50 w-full bg-background-light dark:bg-background-dark py-4 border-b border-transparent">
+<div class="max-w-[850px] mx-auto px-4">
+<div class="flex items-center justify-between bg-white dark:bg-[#1a0b0b] rounded-[4px] border border-[#DCE0E0] dark:border-slate-700 shadow-pill py-0 pl-0 pr-0 h-16">
+<div class="flex-1 flex items-center h-full">
+<div class="flex-1 flex items-center gap-3 px-6 h-full border-r border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800/50 cursor-pointer transition-colors">
+<span class="material-symbols-outlined text-primary text-2xl">location_on</span>
+<div class="flex flex-col justify-center w-full">
+<label class="text-[10px] font-bold tracking-wider uppercase text-slate-800 dark:text-slate-200">Location</label>
+<input class="p-0 border-none text-sm text-[#484848] dark:text-slate-300 placeholder:text-slate-400 focus:ring-0 bg-transparent truncate font-medium w-full" placeholder="Where are you going?" type="text" value="New York, NY"/>
+</div>
+</div>
+<div class="flex-1 flex items-center gap-3 px-6 h-full border-r border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800/50 cursor-pointer transition-colors">
+<span class="material-symbols-outlined text-primary text-2xl">calendar_today</span>
+<div class="flex flex-col justify-center w-full">
+<label class="text-[10px] font-bold tracking-wider uppercase text-slate-800 dark:text-slate-200">Date</label>
+<input class="p-0 border-none text-sm text-[#484848] dark:text-slate-300 placeholder:text-slate-400 focus:ring-0 bg-transparent truncate font-medium w-full" placeholder="Add dates" type="text"/>
+</div>
+</div>
+<div class="flex-1 flex items-center gap-3 px-6 h-full hover:bg-slate-50 dark:hover:bg-slate-800/50 cursor-pointer transition-colors">
+<span class="material-symbols-outlined text-primary text-2xl">brush</span>
+<div class="flex flex-col justify-center w-full">
+<label class="text-[10px] font-bold tracking-wider uppercase text-slate-800 dark:text-slate-200">Service</label>
+<input class="p-0 border-none text-sm text-[#484848] dark:text-slate-300 placeholder:text-slate-400 focus:ring-0 bg-transparent truncate font-medium w-full" placeholder="Add guests" type="text"/>
+</div>
+</div>
+</div>
+<div class="pr-2 pl-2 h-full flex items-center">
+<button class="bg-primary hover:bg-primary/90 text-white rounded-[4px] w-12 h-12 flex items-center justify-center shadow-md transition-colors flex-shrink-0">
+<span class="material-symbols-outlined text-[20px] font-bold">search</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<main class="flex-1 w-full max-w-[1440px] mx-auto flex flex-col lg:flex-row gap-8 p-6 lg:p-10 pt-4">
+<aside class="w-full lg:w-80 flex-shrink-0 flex flex-col gap-6 mt-2">
+<div class="pb-6">
+<div class="flex items-center justify-between mb-4">
+<h3 class="text-[#484848] dark:text-slate-100 text-base font-bold">Price Range</h3>
+<span class="text-xs font-medium text-[#767676] dark:text-slate-400">$150 - $1200+</span>
+</div>
+<div class="px-2 pt-2 pb-2">
+<div class="relative h-1.5 w-full rounded-full bg-slate-200 dark:bg-slate-700">
+<div class="absolute h-full rounded-full bg-slate-900 dark:bg-primary left-[10%] right-[30%]"></div>
+<div class="absolute -top-[7px] left-[10%] -ml-1.5 h-5 w-5 rounded-full border-2 border-white dark:border-slate-800 bg-slate-900 dark:bg-primary shadow-md cursor-grab active:cursor-grabbing hover:scale-110 transition-transform"></div>
+<div class="absolute -top-[7px] right-[30%] -mr-1.5 h-5 w-5 rounded-full border-2 border-white dark:border-slate-800 bg-slate-900 dark:bg-primary shadow-md cursor-grab active:cursor-grabbing hover:scale-110 transition-transform"></div>
+</div>
+</div>
+</div>
+<div class="border-t border-slate-200 dark:border-slate-800 pt-6">
+<h3 class="text-[#484848] dark:text-slate-100 text-base font-bold mb-4">Event Type</h3>
+<div class="flex flex-col gap-3">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input checked="" class="h-5 w-5 rounded border-slate-300 text-primary focus:ring-primary/20 transition-all" type="checkbox"/>
+<span class="text-[#767676] dark:text-slate-300 text-sm font-medium group-hover:text-primary transition-colors">Bridal</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="h-5 w-5 rounded border-slate-300 text-primary focus:ring-primary/20 transition-all" type="checkbox"/>
+<span class="text-[#767676] dark:text-slate-300 text-sm font-medium group-hover:text-primary transition-colors">Bridal Party</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="h-5 w-5 rounded border-slate-300 text-primary focus:ring-primary/20 transition-all" type="checkbox"/>
+<span class="text-[#767676] dark:text-slate-300 text-sm font-medium group-hover:text-primary transition-colors">Prom / Formal</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="h-5 w-5 rounded border-slate-300 text-primary focus:ring-primary/20 transition-all" type="checkbox"/>
+<span class="text-[#767676] dark:text-slate-300 text-sm font-medium group-hover:text-primary transition-colors">Editorial</span>
+</label>
+<a class="text-sm font-medium text-[#484848] dark:text-white underline decoration-slate-300 hover:text-primary cursor-pointer mt-1 flex items-center gap-1" href="#">
+              + Show More
+            </a>
+</div>
+</div>
+<div class="border-t border-slate-200 dark:border-slate-800 pt-6">
+<h3 class="text-[#484848] dark:text-slate-100 text-base font-bold mb-4">Makeup Aesthetic</h3>
+<div class="flex flex-col gap-3">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="h-5 w-5 rounded border-slate-300 text-primary focus:ring-primary/20 transition-all" type="checkbox"/>
+<span class="text-[#767676] dark:text-slate-300 text-sm font-medium group-hover:text-primary transition-colors">Natural &amp; Clean</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="h-5 w-5 rounded border-slate-300 text-primary focus:ring-primary/20 transition-all" type="checkbox"/>
+<span class="text-[#767676] dark:text-slate-300 text-sm font-medium group-hover:text-primary transition-colors">Soft Glam</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="h-5 w-5 rounded border-slate-300 text-primary focus:ring-primary/20 transition-all" type="checkbox"/>
+<span class="text-[#767676] dark:text-slate-300 text-sm font-medium group-hover:text-primary transition-colors">Full Glam</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="h-5 w-5 rounded border-slate-300 text-primary focus:ring-primary/20 transition-all" type="checkbox"/>
+<span class="text-[#767676] dark:text-slate-300 text-sm font-medium group-hover:text-primary transition-colors">Avant-Garde</span>
+</label>
+</div>
+</div>
+<div class="border-t border-slate-200 dark:border-slate-800 pt-6">
+<h3 class="text-[#484848] dark:text-slate-100 text-base font-bold mb-4">Techniques</h3>
+<div class="flex flex-col gap-3">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="h-5 w-5 rounded border-slate-300 text-primary focus:ring-primary/20 transition-all" type="checkbox"/>
+<span class="text-[#767676] dark:text-slate-300 text-sm font-medium group-hover:text-primary transition-colors">Airbrush</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="h-5 w-5 rounded border-slate-300 text-primary focus:ring-primary/20 transition-all" type="checkbox"/>
+<span class="text-[#767676] dark:text-slate-300 text-sm font-medium group-hover:text-primary transition-colors">SFX</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="h-5 w-5 rounded border-slate-300 text-primary focus:ring-primary/20 transition-all" type="checkbox"/>
+<span class="text-[#767676] dark:text-slate-300 text-sm font-medium group-hover:text-primary transition-colors">Mature Skin</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="h-5 w-5 rounded border-slate-300 text-primary focus:ring-primary/20 transition-all" type="checkbox"/>
+<span class="text-[#767676] dark:text-slate-300 text-sm font-medium group-hover:text-primary transition-colors">Melanin-Rich Specialty</span>
+</label>
+<a class="text-sm font-medium text-[#484848] dark:text-white underline decoration-slate-300 hover:text-primary cursor-pointer mt-1 flex items-center gap-1" href="#">
+              + Show More
+            </a>
+</div>
+</div>
+<div class="border-t border-slate-200 dark:border-slate-800 pt-6 pb-6">
+<h3 class="text-[#484848] dark:text-slate-100 text-base font-bold mb-4">Preferences</h3>
+<div class="flex flex-col gap-3">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="h-5 w-5 rounded border-slate-300 text-primary focus:ring-primary/20 transition-all" type="checkbox"/>
+<span class="text-[#767676] dark:text-slate-300 text-sm font-medium group-hover:text-primary transition-colors">Cruelty-Free</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="h-5 w-5 rounded border-slate-300 text-primary focus:ring-primary/20 transition-all" type="checkbox"/>
+<span class="text-[#767676] dark:text-slate-300 text-sm font-medium group-hover:text-primary transition-colors">Vegan</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="h-5 w-5 rounded border-slate-300 text-primary focus:ring-primary/20 transition-all" type="checkbox"/>
+<span class="text-[#767676] dark:text-slate-300 text-sm font-medium group-hover:text-primary transition-colors">Clean Beauty</span>
+</label>
+</div>
+</div>
+</aside>
+<section class="flex-1">
+<div class="flex items-center justify-between mb-6">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-slate-400">tune</span>
+<span class="text-sm font-medium text-[#767676] dark:text-slate-400 lg:hidden">Filters</span>
+<span class="text-sm font-medium text-[#767676] dark:text-slate-400 hidden lg:inline-block">Showing 12 of 142 results</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-sm text-[#767676] dark:text-slate-400">Sort by:</span>
+<select class="border-none bg-transparent py-0 pl-2 pr-8 text-sm font-bold text-[#484848] dark:text-slate-100 focus:ring-0 cursor-pointer">
+<option>Recommended</option>
+<option>Price: Low to High</option>
+<option>Price: High to Low</option>
+<option>Highest Rated</option>
+</select>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+<article class="group flex flex-col gap-4 cursor-pointer">
+<div class="relative aspect-[4/5] w-full overflow-hidden rounded-xl bg-slate-100 dark:bg-slate-800">
+<img alt="Portrait of a woman with natural makeup looking confident" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Portrait of a woman with natural makeup looking confident" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAej4OIbtJLE02P25vMp2c9mZDLh0Tcxt5oxvWT5vLjX6q1somhKxPPl7PQIRZ2g_6Fg5ZBR4dehhMuDDkPZTVVQoluFilvZRVOfqthTB2RnVrriHR82fW3UswYpA3Hbz7BQ9DN_SiPeC7WR540z4K36as6Y_nwLnXAI-yznxISaXXBgmHgPtJEQlENj-GmAdds7eWdWnl1OwGo3Ab36DgL9P7DS7r2QfUHDZtAPVeN9f0ETPqk9phLKTmvs7hmdHlFgFmPhwX8EHV2"/>
+<button class="absolute top-3 right-3 p-2 rounded-full bg-white/80 dark:bg-black/50 hover:bg-white dark:hover:bg-black/70 backdrop-blur-sm text-slate-900 dark:text-white transition-colors z-10">
+<span class="material-symbols-outlined text-[20px] font-variation-settings-'FILL' 0">favorite</span>
+</button>
+<div class="absolute bottom-3 left-3 flex gap-2">
+<span class="px-2 py-1 rounded bg-white/90 dark:bg-black/80 backdrop-blur-sm text-[10px] font-bold uppercase tracking-wider text-slate-900 dark:text-white">Bridal</span>
+</div>
+</div>
+<div class="w-full">
+<div class="flex justify-between items-start mb-1">
+<div>
+<h3 class="text-lg font-bold text-[#484848] dark:text-slate-100 leading-tight group-hover:text-primary transition-colors">Sarah Jenkins</h3>
+<p class="text-sm text-[#767676] dark:text-slate-400">New York, NY</p>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-primary text-[16px] font-variation-settings-'FILL' 1">star</span>
+<span class="text-sm font-bold text-[#484848] dark:text-slate-100">4.9</span>
+<span class="text-xs text-[#767676] dark:text-slate-400">(128)</span>
+</div>
+</div>
+<div class="flex items-center mt-1">
+<p class="text-sm font-medium text-[#484848] dark:text-slate-100">Starting at <span class="font-bold">$250</span></p>
+</div>
+</div>
+</article>
+<article class="group flex flex-col gap-4 cursor-pointer">
+<div class="relative aspect-[4/5] w-full overflow-hidden rounded-xl bg-slate-100 dark:bg-slate-800">
+<img alt="Close up of editorial makeup with bold colors" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Close up of editorial makeup with bold colors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAE77UkoR4nsj36FLn4rLy-9K3K2UQQabCPj_HbnyMkj2D382M9E281OT2YyeY43dJ8xDf5Ffu7dfLe_BhhODYFUiRlJVWZ3UhfhaYt7JkPLsLesevhM3Nye3ZaAEK2fFAh_ti6q_xeDXLJ8lYnnwhPD_Zn2kYKyjgNRUSj4E7CPzw_XccjOVHNIP1I39AATjQqm-y9i4dQWRR_kg7loVY-gmUzSx1_uukA_DT62HgjKuRnKuDsm4nWFIfAJzzC86ZAt-KtpsN_11OR"/>
+<button class="absolute top-3 right-3 p-2 rounded-full bg-white/80 dark:bg-black/50 hover:bg-white dark:hover:bg-black/70 backdrop-blur-sm text-slate-900 dark:text-white transition-colors z-10">
+<span class="material-symbols-outlined text-[20px] font-variation-settings-'FILL' 0">favorite</span>
+</button>
+<div class="absolute bottom-3 left-3 flex gap-2">
+<span class="px-2 py-1 rounded bg-white/90 dark:bg-black/80 backdrop-blur-sm text-[10px] font-bold uppercase tracking-wider text-slate-900 dark:text-white">Editorial</span>
+</div>
+</div>
+<div class="w-full">
+<div class="flex justify-between items-start mb-1">
+<div>
+<h3 class="text-lg font-bold text-[#484848] dark:text-slate-100 leading-tight group-hover:text-primary transition-colors">Elena Rodriguez</h3>
+<p class="text-sm text-[#767676] dark:text-slate-400">Brooklyn, NY</p>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-primary text-[16px] font-variation-settings-'FILL' 1">star</span>
+<span class="text-sm font-bold text-[#484848] dark:text-slate-100">5.0</span>
+<span class="text-xs text-[#767676] dark:text-slate-400">(42)</span>
+</div>
+</div>
+<div class="flex items-center mt-1">
+<p class="text-sm font-medium text-[#484848] dark:text-slate-100">Starting at <span class="font-bold">$400</span></p>
+</div>
+</div>
+</article>
+<article class="group flex flex-col gap-4 cursor-pointer">
+<div class="relative aspect-[4/5] w-full overflow-hidden rounded-xl bg-slate-100 dark:bg-slate-800">
+<img alt="Soft glam makeup look for wedding" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Soft glam makeup look for wedding" src="https://lh3.googleusercontent.com/aida-public/AB6AXuByQQ-6YGOvJDJ8JXuk-p-Eq1rbuQHPQ47mtlNJ6rI4Xso5mpdyaSLyiEGWhnNkZ8LLU5aeyX0xPqrjQ-E8yxyN1FjyGaW8tA_rhof2Jy61Ce4ndtPM5QansppcJPdvY_u5ea8LFIs1jytf0f0SLS3C6124KLfJeuNMpT6lS_Cu3iu08oYsvmIj9auYwYYhnfwPKi8aH9nVSAd-xdwXnn7UZsGJayUv3AeTbRhWP2IqbzqzrEKKCoPlr6tI9IcjQIlMMfj0AXvkeWa2"/>
+<button class="absolute top-3 right-3 p-2 rounded-full bg-white/80 dark:bg-black/50 hover:bg-white dark:hover:bg-black/70 backdrop-blur-sm text-slate-900 dark:text-white transition-colors z-10">
+<span class="material-symbols-outlined text-[20px] font-variation-settings-'FILL' 0">favorite</span>
+</button>
+<div class="absolute bottom-3 left-3 flex gap-2">
+<span class="px-2 py-1 rounded bg-white/90 dark:bg-black/80 backdrop-blur-sm text-[10px] font-bold uppercase tracking-wider text-slate-900 dark:text-white">Bridal</span>
+<span class="px-2 py-1 rounded bg-white/90 dark:bg-black/80 backdrop-blur-sm text-[10px] font-bold uppercase tracking-wider text-slate-900 dark:text-white">Top Rated</span>
+</div>
+</div>
+<div class="w-full">
+<div class="flex justify-between items-start mb-1">
+<div>
+<h3 class="text-lg font-bold text-[#484848] dark:text-slate-100 leading-tight group-hover:text-primary transition-colors">Marcus Chen</h3>
+<p class="text-sm text-[#767676] dark:text-slate-400">Manhattan, NY</p>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-primary text-[16px] font-variation-settings-'FILL' 1">star</span>
+<span class="text-sm font-bold text-[#484848] dark:text-slate-100">4.8</span>
+<span class="text-xs text-[#767676] dark:text-slate-400">(215)</span>
+</div>
+</div>
+<div class="flex items-center mt-1">
+<p class="text-sm font-medium text-[#484848] dark:text-slate-100">Starting at <span class="font-bold">$300</span></p>
+</div>
+</div>
+</article>
+<article class="group flex flex-col gap-4 cursor-pointer">
+<div class="relative aspect-[4/5] w-full overflow-hidden rounded-xl bg-slate-100 dark:bg-slate-800">
+<img alt="Avant-garde creative makeup look" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Avant-garde creative makeup look" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKniOiWTrBKjcUhPhXGqz2mVXBLBdJ_0wgsYtfbTFVmzcDH7z1zKVo4AcekB4g7G8soUT--mQv8Y7p2LIprINc4BYEcS3RqjjobeBOiVG_2YhsOQH_OO5ZdTCiRlhzl7-wE_qkRAAlE9GFIBcsO8UVpu1RlonbPI_piF6fB1XI2hItx8r7u4RWwBtzY_vaC9G6TGuNReTdoBiztnn2bRzeQRZvhNE7uEUJJZTFTNxT3Z-xY9oxNsYJ5o9wC_V9yOpBg9Yp2jOp9Zou"/>
+<button class="absolute top-3 right-3 p-2 rounded-full bg-white/80 dark:bg-black/50 hover:bg-white dark:hover:bg-black/70 backdrop-blur-sm text-slate-900 dark:text-white transition-colors z-10">
+<span class="material-symbols-outlined text-[20px] font-variation-settings-'FILL' 0">favorite</span>
+</button>
+<div class="absolute bottom-3 left-3 flex gap-2">
+<span class="px-2 py-1 rounded bg-white/90 dark:bg-black/80 backdrop-blur-sm text-[10px] font-bold uppercase tracking-wider text-slate-900 dark:text-white">Avant-Garde</span>
+</div>
+</div>
+<div class="w-full">
+<div class="flex justify-between items-start mb-1">
+<div>
+<h3 class="text-lg font-bold text-[#484848] dark:text-slate-100 leading-tight group-hover:text-primary transition-colors">Zara X</h3>
+<p class="text-sm text-[#767676] dark:text-slate-400">Queens, NY</p>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-primary text-[16px] font-variation-settings-'FILL' 1">star</span>
+<span class="text-sm font-bold text-[#484848] dark:text-slate-100">4.7</span>
+<span class="text-xs text-[#767676] dark:text-slate-400">(89)</span>
+</div>
+</div>
+<div class="flex items-center mt-1">
+<p class="text-sm font-medium text-[#484848] dark:text-slate-100">Starting at <span class="font-bold">$180</span></p>
+</div>
+</div>
+</article>
+<article class="group flex flex-col gap-4 cursor-pointer">
+<div class="relative aspect-[4/5] w-full overflow-hidden rounded-xl bg-slate-100 dark:bg-slate-800">
+<img alt="Event makeup look on model" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Event makeup look on model" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAaDjRgRh2GXlFvbptyQVr1TXJvSV6QFhGg3YdDphOlR4k-Oq6Ud9wCAmXxicbJnZKETIn04gH4SC4hiOKlZW3Sh1u-9oss2CAyylP0XsSuvZ4czhl-nse3JIP_rrAxCgSuRljlU0HXs19wRzLF0mp4qLInOzmongpXNqf57PHClz9XAKSOG2_HTIWdAn5Y2vxi4vjmoZf-z5AWsWLoNAVSORPsYUwHj8HwQl7mFMf8i3oNDv20esHe3m1e5xTU4TwH6gO8nimHFCn"/>
+<button class="absolute top-3 right-3 p-2 rounded-full bg-white/80 dark:bg-black/50 hover:bg-white dark:hover:bg-black/70 backdrop-blur-sm text-slate-900 dark:text-white transition-colors z-10">
+<span class="material-symbols-outlined text-[20px] font-variation-settings-'FILL' 0">favorite</span>
+</button>
+<div class="absolute bottom-3 left-3 flex gap-2">
+<span class="px-2 py-1 rounded bg-white/90 dark:bg-black/80 backdrop-blur-sm text-[10px] font-bold uppercase tracking-wider text-slate-900 dark:text-white">Event</span>
+</div>
+</div>
+<div class="w-full">
+<div class="flex justify-between items-start mb-1">
+<div>
+<h3 class="text-lg font-bold text-[#484848] dark:text-slate-100 leading-tight group-hover:text-primary transition-colors">Priya Patel</h3>
+<p class="text-sm text-[#767676] dark:text-slate-400">Jersey City, NJ</p>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-primary text-[16px] font-variation-settings-'FILL' 1">star</span>
+<span class="text-sm font-bold text-[#484848] dark:text-slate-100">4.9</span>
+<span class="text-xs text-[#767676] dark:text-slate-400">(156)</span>
+</div>
+</div>
+<div class="flex items-center mt-1">
+<p class="text-sm font-medium text-[#484848] dark:text-slate-100">Starting at <span class="font-bold">$200</span></p>
+</div>
+</div>
+</article>
+<article class="group flex flex-col gap-4 cursor-pointer">
+<div class="relative aspect-[4/5] w-full overflow-hidden rounded-xl bg-slate-100 dark:bg-slate-800">
+<img alt="Bridal makeup on bride" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Bridal makeup on bride" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2cGtFIp37rL8Z2LGfuewMr_1txSMiuLpRZpMXKRRrGPq8rQs0EhSjTgrC6tRWE9PtxjR1LKysTLm-VvyN6WkPLcG0ggNwifcxZw6JMERkVwB6PXuieA-MUYmtJTeo0xYC2k5ZGYuetvjbvnNbQ4LRzORjwUzmda38ykL-4D3zSDByHXPT5F1loTB2_R9iHfbG7Vb5NijC9IphJH-WcLhXP05IHbczA4np6y5b1OT0KREcECls7rQqZOOiwhP027KOtnyjghgcg-Om"/>
+<button class="absolute top-3 right-3 p-2 rounded-full bg-white/80 dark:bg-black/50 hover:bg-white dark:hover:bg-black/70 backdrop-blur-sm text-slate-900 dark:text-white transition-colors z-10">
+<span class="material-symbols-outlined text-[20px] font-variation-settings-'FILL' 0">favorite</span>
+</button>
+<div class="absolute bottom-3 left-3 flex gap-2">
+<span class="px-2 py-1 rounded bg-white/90 dark:bg-black/80 backdrop-blur-sm text-[10px] font-bold uppercase tracking-wider text-slate-900 dark:text-white">Bridal</span>
+</div>
+</div>
+<div class="w-full">
+<div class="flex justify-between items-start mb-1">
+<div>
+<h3 class="text-lg font-bold text-[#484848] dark:text-slate-100 leading-tight group-hover:text-primary transition-colors">Isabella Ross</h3>
+<p class="text-sm text-[#767676] dark:text-slate-400">Staten Island, NY</p>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-primary text-[16px] font-variation-settings-'FILL' 1">star</span>
+<span class="text-sm font-bold text-[#484848] dark:text-slate-100">4.6</span>
+<span class="text-xs text-[#767676] dark:text-slate-400">(67)</span>
+</div>
+</div>
+<div class="flex items-center mt-1">
+<p class="text-sm font-medium text-[#484848] dark:text-slate-100">Starting at <span class="font-bold">$225</span></p>
+</div>
+</div>
+</article>
+</div>
+<div class="mt-12 flex justify-center">
+<nav class="flex items-center gap-2">
+<button class="flex items-center justify-center w-10 h-10 rounded-lg border border-slate-200 dark:border-slate-700 text-[#767676] dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="flex items-center justify-center w-10 h-10 rounded-lg bg-primary text-white font-bold text-sm shadow-md">1</button>
+<button class="flex items-center justify-center w-10 h-10 rounded-lg border border-slate-200 dark:border-slate-700 text-[#767676] dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 font-medium text-sm transition-colors">2</button>
+<button class="flex items-center justify-center w-10 h-10 rounded-lg border border-slate-200 dark:border-slate-700 text-[#767676] dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 font-medium text-sm transition-colors">3</button>
+<span class="text-[#767676] px-2">...</span>
+<button class="flex items-center justify-center w-10 h-10 rounded-lg border border-slate-200 dark:border-slate-700 text-[#767676] dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 font-medium text-sm transition-colors">12</button>
+<button class="flex items-center justify-center w-10 h-10 rounded-lg border border-slate-200 dark:border-slate-700 text-[#767676] dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</nav>
+</div>
+</section>
+</main>
+</body></html>

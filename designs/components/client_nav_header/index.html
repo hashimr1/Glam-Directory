@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ff5c61",
+                        "background-light": "#f8f5f5",
+                        "background-dark": "#230f0f",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<title>Glam Directory</title>
+</head>
+<body class="bg-white font-display antialiased">
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-white group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-[#DCE0E0] px-6 md:px-10 lg:px-20 py-4 bg-white sticky top-0 z-50">
+<div class="flex items-center gap-3">
+<div class="flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl" data-icon="brush">brush</span>
+</div>
+<h1 class="text-[#484848] text-xl font-extrabold leading-tight tracking-tight">
+                        Glam Directory
+                    </h1>
+</div>
+<div class="flex-1"></div>
+<div class="flex items-center gap-4">
+<button class="hidden sm:block px-4 py-2 text-slate-900 hover:text-primary text-sm font-bold transition-colors">
+                        Log In
+                    </button>
+<button class="flex min-w-[100px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-6 bg-primary text-white text-sm font-bold leading-normal tracking-wide shadow-sm hover:opacity-90 transition-opacity">
+<span class="truncate">Sign Up</span>
+</button>
+</div>
+</header>
+</div>
+</div>
+
+</body></html>
